@@ -1,49 +1,84 @@
 {
   "posts": [
     {
-      "_template": "NEWS / ANNOUNCEMENT — Edit or duplicate this block for announcements",
-      "title": "AFOLU Ethiopia Signs New Partnership with Regional Universities",
-      "date": "2026-04-01",
-      "section": "Latest News",
+      "title": "Ethiopia Signs USD 75 Million REDD+ Agreement with Norway",
+      "date": "2025-03-01",
+      "section": "REDD+",
       "type": "Announcement",
       "author": "AFOLU Communications Office",
-      "body": "AFOLU of Ethiopia has signed a memorandum of understanding with three regional universities to strengthen research and capacity building in agriculture, forestry, and land use. The partnership will support student placements, joint research projects, and knowledge exchange programmes starting in mid-2026."
+      "body": "Ethiopia has signed a landmark USD 75 million agreement with Norway to continue investing in the management and conservation of standing forests and the restoration of degraded landscapes. Combined with an earlier USD 40 million commitment from Norway and Denmark for the 2022–2026 period, Ethiopia is on track to transition to the results-based payment phase from 2026. Under the established benefit-sharing plan, forest communities will receive 75 per cent of future carbon credit payments, directly rewarding those who protect Ethiopia's forests."
     },
     {
-      "_template": "EVENT — Edit or duplicate this block for events",
-      "title": "National Conference on Food Security and Climate Resilience — May 2026",
-      "date": "2026-04-01",
-      "section": "Events",
-      "type": "Event",
-      "author": "AFOLU Events Secretariat",
-      "body": "We are hosting a two-day national conference on Food Security and Climate Resilience on 14–15 May 2026 in Finfinnee. The conference will bring together government bodies, development partners, researchers, and farmers to share findings and shape national policy. Registration opens 15 April 2026. Contact afoluofethiopia@gmail.com to participate."
+      "title": "REDD+ Programme Brings Over 1.5 Million Hectares Under Protection",
+      "date": "2026-01-15",
+      "section": "REDD+",
+      "type": "News",
+      "author": "REDD+ National Programme Secretariat",
+      "body": "Ethiopia's REDD+ Investment Programme has made significant strides in forest restoration and community livelihood improvement. Over 1.5 million hectares of land have been preserved across more than 200 districts, particularly in Oromia, Southwest Ethiopia, and Gambella. In Oromia alone, more than 593,000 hectares of natural forest have been brought under Participatory Forest Management (PFM) arrangements, while approximately 30,000 hectares have been afforested and reforested. Nearly two billion birr is invested annually through REDD+ to support forest protection and restoration, and over 100,000 households — many led by women and youth — have benefited from the programme."
     },
     {
-      "_template": "REPORT / PUBLICATION — Edit or duplicate this block for reports and publications",
-      "title": "Annual AFOLU Sector Report 2025 Now Available",
-      "date": "2026-03-25",
-      "section": "Reports & Publications",
-      "type": "Publication",
-      "author": "Research & Documentation Unit",
-      "body": "The AFOLU Ethiopia Annual Sector Report 2025 has been published and is available for download in the Reports & Publications section. The report covers key performance indicators across agriculture, forestry, and land use for the fiscal year, including data on reforestation targets, crop yields, and carbon stock assessments."
-    },
-    {
-      "_template": "WEBSITE CONTENT CHANGE — Edit or duplicate this block to announce site updates",
-      "title": "Website Updated — New Geospatial & GIS Section Added",
-      "date": "2026-03-20",
-      "section": "Geospatial & GIS",
-      "type": "Announcement",
-      "author": "AFOLU Web Team",
-      "body": "Our website has been updated with a new Geospatial & GIS section featuring interactive land-use maps, satellite imagery analyses, and downloadable shapefiles for Ethiopia's major agro-ecological zones. Visit the Geospatial & GIS section from the navigation menu to explore the new resources."
-    },
-    {
-      "_template": "EXTRA EXAMPLE — Delete this block when you are ready to publish",
-      "title": "Green Legacy Initiative Reaches 10 Billion Trees Milestone",
-      "date": "2026-03-10",
+      "title": "Green Legacy Initiative Plants Over 40 Billion Trees Since 2019",
+      "date": "2025-08-01",
       "section": "Green Legacy Initiative",
       "type": "News",
       "author": "Green Legacy Secretariat",
-      "body": "Ethiopia's Green Legacy Initiative has officially reached the 10 billion trees planted milestone, marking a historic achievement in national reforestation and environmental restoration. AFOLU Ethiopia played a key coordination role in achieving this target across all regional states."
+      "body": "Ethiopia's Green Legacy Initiative, launched in 2019 under Prime Minister Abiy Ahmed, has surpassed 40 billion trees planted nationwide, with over 34 billion surviving plants growing across degraded landscapes as of 2024. The initiative has helped increase Ethiopia's forest cover to approximately 23.6 per cent — up from 15 per cent at the start of the programme — and has generated over 767,000 jobs, with significant benefits for women and youth. On 31 July 2025 alone, a record 714.7 million seedlings were planted in a single day by 27 million citizens across the country, under the campaign theme 'Renewal Through Planting'."
+    },
+    {
+      "title": "Record 714.7 Million Seedlings Planted in a Single Day",
+      "date": "2025-07-31",
+      "section": "Green Legacy Initiative",
+      "type": "Announcement",
+      "author": "Government Communication Service",
+      "body": "Ethiopia set a new national record on 31 July 2025, planting 714.7 million tree seedlings in a single 12-hour campaign. The feat, confirmed by Agriculture Minister Girma Amente, saw 27 million citizens mobilised nationwide under the seventh round of the Green Legacy Initiative's mass planting campaign. The achievement forms part of Ethiopia's commitment to plant approximately 8 billion seedlings during the current rainy season to restore degraded lands, enhance biodiversity, and combat climate change. The African Union Staff Association hailed the initiative as a shining example of continental climate action."
+    },
+    {
+      "title": "World Bank's BioCarbon Fund Commits USD 40 Million for AFOLU Sector",
+      "date": "2023-12-01",
+      "section": "Climate Resilience",
+      "type": "Announcement",
+      "author": "AFOLU Communications Office",
+      "body": "The Government of Ethiopia has secured a USD 40 million results-based grant from the World Bank's BioCarbon Fund Initiative for Sustainable Forest Landscapes (ISFL). The project aims to sequester and reduce approximately 4 million tonnes of CO2 equivalent by 2030 through sustainable practices across Ethiopia's AFOLU sector, with implementation focused on a three million hectare area within the Oromia region. As of 2024, the programme has established 51 forest tree nurseries in deforestation hotspots and trained over 22,800 forest users in sustainable land management practices."
+    },
+    {
+      "title": "Climate-Smart Agriculture Practices Show Strong Uptake Across Ethiopia",
+      "date": "2025-03-12",
+      "section": "Climate Resilience",
+      "type": "News",
+      "author": "Ministry of Agriculture — Climate Unit",
+      "body": "Recent research confirms that climate-smart agriculture (CSA) practices are being adopted at scale across Ethiopia. Soil and water conservation is the most widely practised approach at 61.5 per cent of surveyed farmers, followed by integrated soil fertility management at 56.5 per cent and agroforestry at 48 per cent. Studies in Humbo Woreda, Wolaita Zone, found that 85 per cent of farmers who adopted CSA practices reported improved income, while 80 per cent noted increased food consumption. Agroforestry alone has been shown to raise technical efficiency by 54 per cent and reduce the yield gap by 1.16 tonnes per hectare in maize-based systems."
+    },
+    {
+      "title": "National Policy Dialogue Advances Multi-Sector REDD+ Implementation",
+      "date": "2024-11-06",
+      "section": "REDD+",
+      "type": "Event",
+      "author": "African Forestry Forum / UN-REDD Programme",
+      "body": "Ethiopia recently hosted a National Policy Dialogue in Bishoftu bringing together 25 delegates from sectors including agriculture, energy, water, biodiversity, finance, livestock, mining, and wildlife. The dialogue, supported by the African Forestry Forum (AFF) and the UN-REDD Programme, confirmed that a multi-sector approach is central to REDD+ success — ensuring all actors are involved at every level of the process. Key issues addressed included enforcement mechanisms against illegal logging and the alignment of REDD+ with Ethiopia's broader Climate Resilient Green Economy strategy."
+    },
+    {
+      "title": "Agroforestry Integration Boosts Farm Yields and Carbon Sequestration",
+      "date": "2025-01-26",
+      "section": "Agroforestry",
+      "type": "News",
+      "author": "Research & Documentation Unit",
+      "body": "New research published in 2024–2025 confirms that integrating trees into Ethiopia's farming systems delivers measurable gains for both food security and climate mitigation. Agroforestry systems have been shown to reduce soil erosion and nutrient loss by 20 to 82 per cent, while increasing technical efficiency by up to 54 per cent in maize-based systems. In regions like Oromia and the Southern Nations, increased tree cover has led to higher yields and better quality of fruit crops. Participatory forest governance under agroforestry schemes has also produced a 143 per cent average increase in household income for forest-dependent communities, highlighting the strong economic case for expanding these practices."
+    },
+    {
+      "title": "Ethiopia Submits Forest Reference Emissions Level — REDD+ MRV System Strengthened",
+      "date": "2024-06-01",
+      "section": "Geospatial & GIS",
+      "type": "News",
+      "author": "Ministry of Environment, Forest and Climate Change",
+      "body": "With technical support from the FAO, Ethiopia has developed a National Forest Inventory to monitor changes in forest cover — a critical component of its REDD+ Measurement, Reporting and Verification (MRV) system. A key milestone was the adoption of a revised definition of forest cover that now includes dense woodlands, dryland forests, and bamboo forests. GIS and remote sensing technologies are being used to analyse land use and land cover change across Ethiopia's 14 agro-climatic areas, supporting evidence-based decision-making on reforestation, carbon accounting, and land restoration."
+    },
+    {
+      "title": "Ethiopia's Food System Pathway Targets Net Carbon Sink from AFOLU by 2050",
+      "date": "2026-01-26",
+      "section": "Food Security",
+      "type": "Publication",
+      "author": "Alliance Bioversity International – CIAT / SDSN",
+      "body": "A new study using the FABLE (Food, Agriculture, Biodiversity, Land, and Energy) framework finds that only Ethiopia's Long-Term Low Emissions Development Strategy pathway enables achievement of a net carbon sink from the AFOLU sector — driven by forest cover expansion and moderated cropland growth. The research, aligned with Ethiopia's 10-year development plan and its Food System Transformation goals, concludes that improved crop productivity, adoption of climate-smart practices, accelerated afforestation, and more efficient livestock management are the key enablers for achieving both food security and climate commitments simultaneously."
     }
   ]
 }
