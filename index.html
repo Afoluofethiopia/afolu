@@ -1079,6 +1079,136 @@ footer {
 .reveal.visible { opacity: 1; transform: none; }
 .rd1 { transition-delay: 0.1s; } .rd2 { transition-delay: 0.2s; }
 .rd3 { transition-delay: 0.3s; } .rd4 { transition-delay: 0.4s; }
+
+/* ============================================================
+   SITE MAP PANEL
+   ============================================================ */
+.sitemap-fab {
+  position: fixed;
+  bottom: 2rem; right: 2rem;
+  z-index: 2000;
+  background: var(--earth);
+  color: var(--forest);
+  border: none; border-radius: 50px;
+  padding: 0.75rem 1.4rem;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.72rem; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  cursor: pointer;
+  display: flex; align-items: center; gap: 0.5rem;
+  box-shadow: 0 4px 20px rgba(200,150,62,0.45), 0 2px 8px rgba(0,0,0,0.2);
+  transition: all 0.25s;
+}
+.sitemap-fab:hover { background: var(--earth-light); transform: translateY(-2px); box-shadow: 0 8px 28px rgba(200,150,62,0.55); }
+.sitemap-fab svg { flex-shrink: 0; }
+
+.sitemap-overlay {
+  display: none;
+  position: fixed; inset: 0; z-index: 1999;
+  background: rgba(10,20,14,0.72);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  animation: smFadeIn 0.2s ease;
+}
+.sitemap-overlay.open { display: flex; align-items: center; justify-content: center; padding: 1.5rem; }
+@keyframes smFadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+.sitemap-panel {
+  background: var(--white);
+  border-radius: 14px;
+  width: 100%; max-width: 860px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 32px 80px rgba(0,0,0,0.35);
+  animation: smSlideUp 0.25s ease;
+  scrollbar-width: thin;
+  scrollbar-color: var(--forest-light) var(--cream);
+}
+.sitemap-panel::-webkit-scrollbar { width: 4px; }
+.sitemap-panel::-webkit-scrollbar-thumb { background: var(--forest-light); border-radius: 2px; }
+@keyframes smSlideUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+
+.sitemap-header {
+  background: linear-gradient(135deg, var(--forest) 0%, var(--sky) 100%);
+  padding: 1.8rem 2rem 1.5rem;
+  border-radius: 14px 14px 0 0;
+  display: flex; align-items: flex-start; justify-content: space-between;
+  gap: 1rem;
+  position: sticky; top: 0; z-index: 10;
+}
+.sitemap-header-left {}
+.sitemap-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem; font-weight: 700; color: var(--white);
+  line-height: 1.2; margin-bottom: 0.3rem;
+}
+.sitemap-title em { font-style: italic; color: var(--earth-light); font-weight: 400; }
+.sitemap-subtitle { font-size: 0.72rem; color: rgba(255,255,255,0.5); letter-spacing: 0.08em; text-transform: uppercase; }
+.sitemap-close {
+  background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.75); border-radius: 8px;
+  width: 36px; height: 36px;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; font-size: 1.1rem; transition: all 0.2s; flex-shrink: 0;
+}
+.sitemap-close:hover { background: rgba(255,255,255,0.22); color: var(--white); }
+
+.sitemap-body { padding: 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+@media(max-width:580px) { .sitemap-body { grid-template-columns: 1fr; } .sitemap-panel { border-radius: 10px; } }
+
+.sm-group {
+  background: var(--ivory);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.sm-group-head {
+  background: var(--forest);
+  padding: 0.7rem 1.1rem;
+  display: flex; align-items: center; gap: 0.5rem;
+  font-size: 0.65rem; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--white);
+}
+.sm-group-head span { font-size: 0.95rem; }
+.sm-group-accent { width: 3px; height: 14px; border-radius: 2px; background: var(--earth); }
+.sm-items { display: flex; flex-direction: column; }
+.sm-item {
+  display: flex; align-items: center; gap: 0.7rem;
+  padding: 0.6rem 1.1rem;
+  font-size: 0.82rem; color: var(--ink-soft);
+  cursor: pointer; border-bottom: 1px solid var(--border-soft);
+  transition: background 0.15s, color 0.15s, padding-left 0.15s;
+  text-decoration: none;
+}
+.sm-item:last-child { border-bottom: none; }
+.sm-item:hover { background: var(--cream); color: var(--forest); padding-left: 1.5rem; }
+.sm-item-icon { font-size: 0.95rem; width: 20px; text-align: center; flex-shrink: 0; }
+.sm-item-label { flex: 1; }
+.sm-item-arrow { font-size: 0.7rem; color: var(--earth); opacity: 0; transition: opacity 0.15s; }
+.sm-item:hover .sm-item-arrow { opacity: 1; }
+.sm-item.sm-home {
+  background: linear-gradient(135deg, var(--forest) 0%, var(--forest-mid) 100%);
+  color: var(--white); justify-content: center; padding: 0.9rem;
+  font-weight: 700; letter-spacing: 0.05em; font-size: 0.8rem;
+  border-bottom: none;
+}
+.sm-item.sm-home:hover { background: linear-gradient(135deg, var(--forest-mid) 0%, var(--forest-light) 100%); padding-left: 0.9rem; color: var(--white); }
+
+.sitemap-footer {
+  border-top: 1px solid var(--border);
+  padding: 1rem 2rem;
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 0.5rem;
+  background: var(--cream); border-radius: 0 0 14px 14px;
+}
+.sitemap-footer-note { font-size: 0.7rem; color: var(--muted); }
+.sitemap-footer-count {
+  font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--earth); background: rgba(200,150,62,0.1);
+  padding: 0.25rem 0.8rem; border-radius: 20px;
+  border: 1px solid rgba(200,150,62,0.25);
+}
 </style>
 </head>
 <body>
@@ -1096,7 +1226,7 @@ footer {
       +251 911 946 101
     </span>
     <div class="topbar-divider"></div>
-    <span>afoluofethiopia@gmail.com</span>
+    <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6a0b0c05061f050c0f1e0203051a030b2a0d070b030644090507">[email&#160;protected]</a></span>
   </div>
   <div class="topbar-right">
     <a href="https://www.facebook.com/afoluethiopia" target="_blank">
@@ -1683,7 +1813,7 @@ footer {
               <div class="ci-icon">✉</div>
               <div>
                 <div class="ci-label">Email</div>
-                <div class="ci-value">afoluofethiopia@gmail.com</div>
+                <div class="ci-value"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="84e5e2ebe8f1ebe2e1f0ecedebf4ede5c4e3e9e5ede8aae7ebe9">[email&#160;protected]</a></div>
               </div>
             </div>
             <div class="ci-item">
@@ -2244,7 +2374,7 @@ footer {
         <li>Training Manuals — extension and capacity building materials</li>
         <li>Case Studies — community and landscape success stories</li>
       </ul>
-      <p style="margin-top:1.5rem">For the latest publications, contact us at afoluofethiopia@gmail.com</p>
+      <p style="margin-top:1.5rem">For the latest publications, contact us at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="abcacdc4c7dec4cdcedfc3c2c4dbc2caebccc6cac2c785c8c4c6">[email&#160;protected]</a></p>
     </div>
     <div class="view-nav">
       <button class="view-nav-btn" data-view="home">↑ Home</button>
@@ -2303,7 +2433,7 @@ footer {
         <li>GIS and Geospatial Field Data Collection Guides</li>
         <li>REDD+ Community Forest Management Facilitation Manuals</li>
       </ul>
-      <p style="margin-top:1.5rem">To request specific technical manuals, contact afoluofethiopia@gmail.com</p>
+      <p style="margin-top:1.5rem">To request specific technical manuals, contact <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a1c0c7cecdd4cec7c4d5c9c8ced1c8c0e1c6ccc0c8cd8fc2cecc">[email&#160;protected]</a></p>
     </div>
     <div class="view-nav">
       <button class="view-nav-btn" data-view="Geospatial">← Geospatial</button>
@@ -2333,7 +2463,7 @@ footer {
         <li>Agroforestry Value Chain Development for Smallholders</li>
         <li>National Land Cover Monitoring and Forest Inventory Support</li>
       </ul>
-      <p style="margin-top:1.5rem">For project partnership inquiries, contact us at afoluofethiopia@gmail.com</p>
+      <p style="margin-top:1.5rem">For project partnership inquiries, contact us at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6d0c0b020118020b08190504021d040c2d0a000c0401430e0200">[email&#160;protected]</a></p>
     </div>
     <div class="view-nav">
       <button class="view-nav-btn" data-view="home">↑ Home</button>
@@ -2460,7 +2590,7 @@ footer {
         <li><strong>April 30, 2026</strong> — National Symposium on Sustainable Land Management Abstract Deadline</li>
         <li><strong>June 2026</strong> — Annual Green Legacy Community Planting Days (Nationwide)</li>
       </ul>
-      <p style="margin-top:1.5rem">To register for events or submit abstracts, contact afoluofethiopia@gmail.com</p>
+      <p style="margin-top:1.5rem">To register for events or submit abstracts, contact <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="81e0e7eeedf4eee7e4f5e9e8eef1e8e0c1e6ece0e8edafe2eeec">[email&#160;protected]</a></p>
     </div>
     <div class="view-nav">
       <button class="view-nav-btn" data-view="News">← News</button>
@@ -2561,7 +2691,7 @@ footer {
       <ul class="footer-col-links">
         <li><span>📍 Finfinnee / Addis Ababa</span></li>
         <li><a href="tel:+251911946101">📞 +251 911 946 101</a></li>
-        <li><a href="mailto:afoluofethiopia@gmail.com">✉ afoluofethiopia@gmail.com</a></li>
+        <li><a href="/cdn-cgi/l/email-protection#d4b5b2bbb8a1bbb2b1a0bcbdbba4bdb594b3b9b5bdb8fab7bbb9">✉ <span class="__cf_email__" data-cfemail="d3b2b5bcbfa6bcb5b6a7bbbabca3bab293b4beb2babffdb0bcbe">[email&#160;protected]</span></a></li>
         <li><a href="https://www.facebook.com/afoluethiopia" target="_blank">🌐 Facebook</a></li>
       </ul>
     </div>
@@ -2572,7 +2702,121 @@ footer {
   </div>
 </footer>
 
-<script>
+<!-- ============================================================
+     SITE MAP FLOATING BUTTON
+     ============================================================ -->
+<button class="sitemap-fab" id="sitemapFab" aria-label="View Site Map">
+  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
+    <rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>
+  </svg>
+  Site Map
+</button>
+
+<!-- SITE MAP OVERLAY -->
+<div class="sitemap-overlay" id="sitemapOverlay">
+  <div class="sitemap-panel" id="sitemapPanel">
+
+    <!-- Header -->
+    <div class="sitemap-header">
+      <div class="sitemap-header-left">
+        <div class="sitemap-title">Site <em>Directory</em></div>
+        <div class="sitemap-subtitle">Click any section to navigate directly</div>
+      </div>
+      <button class="sitemap-close" id="sitemapClose" aria-label="Close">✕</button>
+    </div>
+
+    <!-- Body -->
+    <div class="sitemap-body">
+
+      <!-- Home -->
+      <div class="sm-group" style="grid-column:1/-1">
+        <div class="sm-group-head"><span>🏠</span><div class="sm-group-accent"></div>Main</div>
+        <div class="sm-items">
+          <div class="sm-item sm-home" data-view="home" data-sm>🏠 &nbsp; Back to Home</div>
+        </div>
+      </div>
+
+      <!-- About -->
+      <div class="sm-group">
+        <div class="sm-group-head"><span>🌱</span><div class="sm-group-accent"></div>About</div>
+        <div class="sm-items">
+          <div class="sm-item" data-view="About" data-sm><span class="sm-item-icon">🌱</span><span class="sm-item-label">About AFOLU</span><span class="sm-item-arrow">→</span></div>
+          <div class="sm-item" data-view="Mission" data-sm><span class="sm-item-icon">🎯</span><span class="sm-item-label">Mission &amp; Vision</span><span class="sm-item-arrow">→</span></div>
+          <div class="sm-item" data-view="Leadership" data-sm><span class="sm-item-icon">👥</span><span class="sm-item-label">Leadership</span><span class="sm-item-arrow">→</span></div>
+          <div class="sm-item" data-view="Organizational" data-sm><span class="sm-item-icon">🏛</span><span class="sm-item-label">Organizational Structure</span><span class="sm-item-arrow">→</span></div>
+        </div>
+      </div>
+
+      <!-- Sectors -->
+      <div class="sm-group">
+        <div class="sm-group-head"><span>🌿</span><div class="sm-group-accent"></div>Technical Sectors</div>
+        <div class="sm-items">
+          <div class="sm-item" data-view="plant-science" data-sm><span class="sm-item-icon">🌾</span><span class="sm-item-label">Plant Science</span><span class="sm-item-arrow">→</span></div>
+          <div class="sm-item" data-view="Natural-Resource-Mgmt" data-sm><span class="sm-item-icon">🌍</span><span class="sm-item-label">Natural Resource Management</span><span class="sm-item-arrow">→</span></div>
+          <div class="sm-item" data-view="agroforestry" data-sm><span class="sm-item-icon">🌿</span><span class="sm-item-label">Agroforestry</span><span class="sm-item-arrow">→</span></div>
+          <div class="sm-item" data-view="animal-science" data-sm><span class="sm-item-icon">🐄</span><span class="sm-item-label">Animal Science</span><span class="sm-item-arrow">→</span></div>
+          <div class="sm-item" data-view="Extension" data-sm><span class="sm-item-icon">🏘</span><span class="sm-item-label">Rural Development</span><span class="sm-item-arrow">→</span></div>
+          <div class="sm-item" data-view="Agro-Economics" data-sm><span class="sm-item-icon">📊</span><span class="sm-item-label">Agro-Economics</span><span class="sm-item-arrow">→</span></div>
+          <div class="sm-item" data-view="forestry" data-sm><span class="sm-item-icon">🌳</span><span class="sm-item-label">Forestry</span><span class="sm-item-arrow">→</span></div>
+          <div class="sm-item" data-view="Wildlife" data-sm><span class="sm-item-icon">🦁</span><span class="sm-item-label">Wildlife &amp; Ecotourism</span><span class="sm-item-arrow">→</span></div>
+        </div>
+      </div>
+
+      <!-- Programs -->
+      <div class="sm-group">
+        <div class="sm-group-head"><span>🚀</span><div class="sm-group-accent"></div>Programs</div>
+        <div class="sm-items">
+          <div class="sm-item" data-view="Legacy" data-sm><span class="sm-item-icon">🌱</span><span class="sm-item-label">Green Legacy Initiative</span><span class="sm-item-arrow">→</span></div>
+          <div class="sm-item" data-view="REDD" data-sm><span class="sm-item-icon">🌳</span><span class="sm-item-label">REDD+ Program</span><span class="sm-item-arrow">→</span></div>
+          <div class="sm-item" data-view="Climate" data-sm><span class="sm-item-icon">🌡</span><span class="sm-item-label">Climate Resilience</span><span class="sm-item-arrow">→</span></div>
+          <div class="sm-item" data-view="Food" data-sm><span class="sm-item-icon">🌾</span><span class="sm-item-label">Food Security</span><span class="sm-item-arrow">→</span></div>
+        </div>
+      </div>
+
+      <!-- Resources -->
+      <div class="sm-group">
+        <div class="sm-group-head"><span>📚</span><div class="sm-group-accent"></div>Resources</div>
+        <div class="sm-items">
+          <div class="sm-item" data-view="Reports" data-sm><span class="sm-item-icon">📄</span><span class="sm-item-label">Reports &amp; Publications</span><span class="sm-item-arrow">→</span></div>
+          <div class="sm-item" data-view="Geospatial" data-sm><span class="sm-item-icon">🛰</span><span class="sm-item-label">Geospatial &amp; GIS</span><span class="sm-item-arrow">→</span></div>
+          <div class="sm-item" data-view="publications" data-sm><span class="sm-item-icon">📘</span><span class="sm-item-label">Technical Manuals</span><span class="sm-item-arrow">→</span></div>
+        </div>
+      </div>
+
+      <!-- Projects -->
+      <div class="sm-group">
+        <div class="sm-group-head"><span>🔬</span><div class="sm-group-accent"></div>Projects</div>
+        <div class="sm-items">
+          <div class="sm-item" data-view="Projects" data-sm><span class="sm-item-icon">🔬</span><span class="sm-item-label">Current Projects</span><span class="sm-item-arrow">→</span></div>
+          <div class="sm-item" data-view="Completed" data-sm><span class="sm-item-icon">✅</span><span class="sm-item-label">Completed Projects</span><span class="sm-item-arrow">→</span></div>
+          <div class="sm-item" data-view="Regional" data-sm><span class="sm-item-icon">🗺</span><span class="sm-item-label">Regional Projects</span><span class="sm-item-arrow">→</span></div>
+        </div>
+      </div>
+
+      <!-- News & Media -->
+      <div class="sm-group">
+        <div class="sm-group-head"><span>📰</span><div class="sm-group-accent"></div>News &amp; Media</div>
+        <div class="sm-items">
+          <div class="sm-item" data-view="News" data-sm><span class="sm-item-icon">📰</span><span class="sm-item-label">Latest News</span><span class="sm-item-arrow">→</span></div>
+          <div class="sm-item" data-view="events" data-sm><span class="sm-item-icon">📅</span><span class="sm-item-label">Events &amp; Announcements</span><span class="sm-item-arrow">→</span></div>
+          <div class="sm-item" data-view="Gallery" data-sm><span class="sm-item-icon">🖼</span><span class="sm-item-label">Photo Gallery</span><span class="sm-item-arrow">→</span></div>
+          <div class="sm-item" data-view="Testimonials" data-sm><span class="sm-item-icon">💬</span><span class="sm-item-label">Testimonials</span><span class="sm-item-arrow">→</span></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="sitemap-footer">
+      <span class="sitemap-footer-note">AFOLU of Ethiopia — Agriculture · Forestry · Land Use · Finfinnee</span>
+      <span class="sitemap-footer-count">28 Sections</span>
+    </div>
+
+  </div>
+</div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 /* ============================================================
    HERO SLIDER
    ============================================================ */
@@ -2745,27 +2989,65 @@ function filterNews() {
       && (!q || [p.title, p.body, p.section, p.author].some(x => (x||'').toLowerCase().includes(q)));
   });
   const parts = [sec, type, q ? `"${q}"` : ''].filter(Boolean);
-  const af = document.getElementById('news-active-filters');
-  if (parts.length) { af.style.display = 'flex'; document.getElementById('news-filter-label').textContent = parts.join(' · '); }
-  else { af.style.display = 'none'; }
+  console.log('Filters active:', parts);
   renderNews(filtered);
 }
 
-function clearNewsFilters() {
-  document.getElementById('news-search').value = '';
-  document.getElementById('news-section-filter').value = '';
-  document.getElementById('news-type-filter').value = '';
-  document.getElementById('news-active-filters').style.display = 'none';
-  renderNews(allNews);
-}
+/* ============================================================
+   SITE MAP PANEL JS
+   ============================================================ */
+(function() {
+  const fab = document.getElementById('sitemapFab');
+  const overlay = document.getElementById('sitemapOverlay');
+  const panel = document.getElementById('sitemapPanel');
+  const closeBtn = document.getElementById('sitemapClose');
+
+  function openSitemap() {
+    overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeSitemap() {
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  fab.addEventListener('click', openSitemap);
+  closeBtn.addEventListener('click', closeSitemap);
+
+  // Close when clicking backdrop (outside panel)
+  overlay.addEventListener('click', function(e) {
+    if (!panel.contains(e.target)) closeSitemap();
+  });
+
+  // Close on Escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeSitemap();
+  });
+
+  // Navigate when clicking a sitemap item
+  document.querySelectorAll('[data-sm]').forEach(function(item) {
+    item.addEventListener('click', function(e) {
+      e.stopPropagation();
+      const view = this.getAttribute('data-view');
+      if (view) {
+        closeSitemap();
+        setTimeout(function() {
+          showView(view);
+          if (view === 'News') loadNews();
+        }, 180);
+      }
+    });
+  });
+})();
 
 /* ============================================================
-   REVEAL ON SCROLL
+   SCROLL REVEAL
    ============================================================ */
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
-}, { threshold: 0.1 });
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+const revealObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revealObserver.unobserve(e.target); } });
+}, { threshold: 0.08 });
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
 </script>
 </body>
 </html>
