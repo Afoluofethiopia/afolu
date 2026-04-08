@@ -1636,50 +1636,117 @@ footer {
     </div>
   </div>
 
-  <!-- STATS BANNER -->
-  <div class="stats-banner">
-    <div class="stats-inner">
-      <div class="stat-block">
-        <div class="stat-num">28B+</div>
-        <div class="stat-label">Seedlings Planted</div>
-        <div class="stat-sub">Green Legacy Initiative</div>
+<div class="stats-banner">
+  <div class="stats-inner">
+
+    <div class="stat-block">
+      <div class="stat-num">
+        <span class="count" data-target="28" data-suffix="B+">0</span>
       </div>
-      <div class="stat-block">
-        <div class="stat-num">15M+</div>
-        <div class="stat-label">Hectares Restored</div>
-        <div class="stat-sub">Nationwide</div>
-      </div>
-      <div class="stat-block">
-        <div class="stat-num">8</div>
-        <div class="stat-label">Technical Sectors</div>
-        <div class="stat-sub">Integrated approach</div>
-      </div>
-      <div class="stat-block">
-        <div class="stat-num">2019</div>
-        <div class="stat-label">Year Established</div>
-        <div class="stat-sub">CRGE aligned</div>
-      </div>
+      <div class="stat-label">Seedlings Planted</div>
+      <div class="stat-sub">Green Legacy Initiative</div>
     </div>
+
+    <div class="stat-block">
+      <div class="stat-num">
+        <span class="count" data-target="15" data-suffix="M+">0</span>
+      </div>
+      <div class="stat-label">Hectares Restored</div>
+      <div class="stat-sub">Nationwide</div>
+    </div>
+
+    <div class="stat-block">
+      <div class="stat-num">
+        <span class="count" data-target="8" data-suffix="">0</span>
+      </div>
+      <div class="stat-label">Technical Sectors</div>
+      <div class="stat-sub">Integrated approach</div>
+    </div>
+
+    <div class="stat-block">
+      <div class="stat-num">
+        <span class="count" data-target="2019" data-suffix="">1900</span>
+      </div>
+      <div class="stat-label">Year Established</div>
+      <div class="stat-sub">CRGE aligned</div>
+    </div>
+
   </div>
+</div>
+
+<script>
+  const counters = document.querySelectorAll('.count');
+
+  const animateCounter = (el) => {
+    const target = +el.getAttribute('data-target');
+    const suffix = el.getAttribute('data-suffix') || '';
+    const start = +el.innerText.replace(/[^0-9]/g, '');
+    const duration = 2000;
+    const stepTime = 16;
+    const steps = duration / stepTime;
+    const increment = (target - start) / steps;
+    let current = start;
+
+    const timer = setInterval(() => {
+      current += increment;
+      if (current >= target) {
+        el.innerText = target + suffix;
+        clearInterval(timer);
+      } else {
+        el.innerText = Math.floor(current) + suffix;
+      }
+    }, stepTime);
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCounter(entry.target);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  counters.forEach(counter => observer.observe(counter));
+</script>
 
   <!-- ABOUT INTRO -->
-  <div class="about-section">
-    <div class="container">
-      <div class="about-grid">
-        <div class="about-visual reveal">
-          <div class="about-visual-card">
-            <div class="about-visual-icon">🌿</div>
-            <div class="about-visual-label">AFOLU Ethiopia</div>
-            <div class="about-visual-sub">Established 2019</div>
-          </div>
-          <div class="about-badge">
-            <div class="about-badge-icon">🌍</div>
-            <div class="about-badge-text">
-              <div class="about-badge-label">Strategy Alignment</div>
-              <div class="about-badge-val">Ethiopia CRGE</div>
-            </div>
+<div class="about-section">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-visual reveal">
+
+        <!-- Main Image -->
+        <div class="about-visual-card" style="
+          padding: 0;
+          overflow: hidden;
+          border-radius: 16px;
+          position: relative;
+          min-height: 320px;
+        ">
+          <img
+            src="https://i.imgur.com/stFhOHw.png"
+            alt="AFOLU Ethiopia"
+            style="
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              display: block;
+              border-radius: 16px;
+            "
+          />
+        </div>
+
+        <!-- Badge stays as is -->
+        <div class="about-badge">
+          <div class="about-badge-icon">🌍</div>
+          <div class="about-badge-text">
+            <div class="about-badge-label">Strategy Alignment</div>
+            <div class="about-badge-val">Ethiopia CRGE</div>
           </div>
         </div>
+
+      </div>
         <div class="about-content reveal rd2">
           <div class="section-eyebrow">About AFOLU Ethiopia</div>
           <h2>Shaping <em>Sustainable</em> Land Use Systems</h2>
