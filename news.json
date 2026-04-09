@@ -1,257 +1,256 @@
 {
   "posts": [
-
     {
       "title": "Sagantaan Ashaaraa Magariisaa Lakkoofsa Biqiltuu Biliyoona 28 Caale",
       "body": "Sagantaan haaromsa naannoo Itoophiyaa bakka bu'u seenaa haaraas gahee, miliyoonota lammiilee sagantaa dhaabuu muka naannoolee hundatti bosorse. Kaayyoon sagantaa kanaa naannoo badaa haaromsuu, hanqina bishaanii xiqqeessuu, fi jireenya hawaasaa baadiyyaa fooyyessuu dha.",
       "date": "2026-04-15",
       "section": "Sagantaa Dhaalota Magariisa",
       "type": "Announcement",
-      "author": "AFOLU Itoophiyaa"
+      "author": "AFOLU Itoophiyaa",
+      "image": "https://i.imgur.com/36K6kb7.png"
     },
-
     {
       "title": "AFOLU Sagantaa Bulchiinsa Bosona Hawaasa REDD+ Haaraa Jalqabe",
       "body": "Sagantaan shoora haaraan kunuunsa kaarbonii fi fooyya'ina jireenya hawaasa bosona sadarkaa dursa qabaniitti naannolee sadii Itoophiyaa keessatti walitti hidha. Sagantaan kun dhaabbilee mootummaa, hawaasa naannoo, fi hirmaattoota misoomaa gidduutti hojii gamtaa jabeessa.",
       "date": "2026-04-08",
       "section": "REDD+",
       "type": "Announcement",
-      "author": "AFOLU Itoophiyaa"
+      "author": "AFOLU Itoophiyaa",
+      "image": "https://i.imgur.com/ksFd2DK.png"
     },
-
     {
       "title": "Haaromsa Bishaanii Heektaarii Miliyoona 15 ol Biyyoolessaan Hammata",
       "body": "Sagantaan bulchiinsa bishaanii walitti hidhamaa AFOLU bal'ataa itti fufa, kunuunsa lafa qaamaa fi sirna bulchiinsa hawaasaa walitti hidha. Sagantaan kun naannoolee Oromiyaa, Amaaraa, fi SNNPR keessatti hojii dirree bal'aa gaggeessa.",
       "date": "2026-04-01",
       "section": "Natural Resource Management",
       "type": "Report",
-      "author": "AFOLU Itoophiyaa"
+      "author": "AFOLU Itoophiyaa",
+      "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=600&q=80"
     },
-
     {
       "title": "Meeshaalee Xiinxala Jiyoospeeshalii Haaraa Hordoffii Fayyadama Lafaatiif Qophaa'e",
       "body": "Teknoolojii sensing fagoo fi GIS ammayyaa amma hordoffii sadarkaa naannoo godinaalee dursa qabaniitti deggera. Meeshaaleen haaraan kun hordoffii bosona, jijjiirama itti fayyadama lafa, fi gabaasa REDD+ ni fooyyessu.",
       "date": "2026-03-22",
       "section": "Geospatial & GIS",
       "type": "Report",
-      "author": "AFOLU Itoophiyaa"
+      "author": "AFOLU Itoophiyaa",
+      "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80"
     },
-
     {
       "title": "Warshaa Qonnaa Qilleensa-Ogummaa — Galmaawwii Banaa",
       "body": "AFOLU Itoophiyaa warshaa guddaa qonnaa qilleensa-ogummaa Addis Ababaatti ni qopheessa. Hirmaattoota hundi — qorattootaa, ogeeyyii dirree, hojjattootaa mootummaa, fi barattoota — baga nagaan simatan. Galmaawwiin torban lama dura cuufama. Nu quunnamuuf: afoluofethiopia@gmail.com",
       "date": "2026-04-10",
       "section": "Dandamachuu Qilleensaa",
       "type": "Event",
-      "author": "AFOLU Itoophiyaa"
+      "author": "AFOLU Itoophiyaa",
+      "image": "https://i.imgur.com/ksFd2DK.png"
     },
-
     {
       "title": "Waamicha Iyyannoo: Sagantaa Hordoffii AFOLU 2026",
       "body": "AFOLU Itoophiyaa barattoota sadarkaa mast'arii fi PhD, akkasumas qorattootaa haarawaa dameelee qonnaa, bosonaa, NRM, agroforestirii, fi wal-qabatanitti sagantaa hordoffii 2026 tti ni affeeruuf baga nagaan simata. Iyyannoon kallattii imeelii afoluofethiopia@gmail.com ergamuun danda'ama.",
       "date": "2026-04-10",
       "section": "Latest News",
       "type": "Announcement",
-      "author": "AFOLU Itoophiyaa"
+      "author": "AFOLU Itoophiyaa",
+      "image": "https://i.imgur.com/TOLgCdy.png"
     },
-
     {
       "title": "Ilaallata Hojiirra Oolmaa Pirojektii REDD+ — Wa'ee Hirmaattoota",
       "body": "Marii hirmaattoota pirojektii REDD+ ilaallatu ni qophaa'a. Hirmaattoota hawaasa naannoo, dhaabbilee mootummaa, fi hirmaattoota misoomaa of keessatti qabata. Marii kana keessatti fooyya'iinsa hojiirra oolmaa sagantichaa fi karoora fuulduraa ni mariyatama.",
       "date": "2026-04-05",
       "section": "REDD+",
       "type": "Event",
-      "author": "AFOLU Itoophiyaa"
+      "author": "AFOLU Itoophiyaa",
+      "image": "https://i.imgur.com/ksFd2DK.png"
     },
-
     {
       "title": "Gabaasa Waggaa 2025 Amma Buufachuuf Jira",
       "body": "Gabaasni waggaa AFOLU Itoophiyaa 2025 amma argachuu ni danda'ama. Gabaasni kun hojiiwwan dhaabbatichaa, bu'aawwan sagantaalee guguddoo, fi karoora waggaa 2026 ilaalchisee odeeffannoo bal'aa ni kenna. Gabaasa argachuuf kallattiin nu quunnamaa: afoluofethiopia@gmail.com",
       "date": "2026-03-30",
       "section": "Gabaasaalee fi Maxxansaalee",
       "type": "Publication",
-      "author": "AFOLU Itoophiyaa"
+      "author": "AFOLU Itoophiyaa",
+      "image": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&q=80"
     },
-
     {
       "title": "Simpooziyeemii Biyyoolessaa Bulchiinsa Lafa Itti Fufiinsa Qabu — Waamicha Barreeffamaa",
       "body": "AFOLU Itoophiyaa simpooziyeemii biyyoolessaa qopheessuuf waamicha barreeffamaa ni baasa. Qorattootaa fi ogeeyyii qonnaa, bosonaa, NRM, jijjiirama qilleensaa, fi bulchiinsa qabeenya uumamaa irratti hojjatan cuunfaa qorannoo isaanii akka erganiif ni affeeramu. Cuunfaan yeroo dhumaa: Ebla 30, 2026.",
       "date": "2026-04-05",
       "section": "Latest News",
       "type": "Event",
-      "author": "AFOLU Itoophiyaa"
+      "author": "AFOLU Itoophiyaa",
+      "image": "https://i.imgur.com/TOLgCdy.png"
     },
-
     {
       "title": "Saayinsii Biqiltuu: Sanyii Fooyyaa'aa Naannoolee Adda Addaatiif Qophaa'e",
       "body": "AFOLU Itoophiyaa qorannoo sanyii fi midhaan fooyyaa'aa naannoolee ikoo-loojii garaagaraatiif madaqfaman irratti bal'inaan hojjechaa jira. Sanyiin fooyyaa'aan kun hanqina bishaanii fi jijjiirama qilleensaatiif danda'amaa ta'uu qaba. Bu'aan qorannoo kanaa qonnaatotaaf babal'ifama.",
       "date": "2026-03-15",
       "section": "Plant Science",
       "type": "Report",
-      "author": "AFOLU Itoophiyaa"
+      "author": "AFOLU Itoophiyaa",
+      "image": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&q=80"
     },
-
     {
       "title": "Agroforestirii: Sirna Mukaa-Qonnaa-Horsiisee Bulee Naannoo Oromiyaatti Bal'ate",
       "body": "Hojiiwwan agroforestirii Oromiyaa keessatti milkaa'inaan itti fufaa jiru. Qonnatooti xiqqaa sirna muka-qonnaa-horsiisee bulee fayyadamuu eegaluun galii isaanii dabalachuu fi naannoon isaanii akka fooyya'u taasisaa jiru. Muuxannoon kun naannolee biroo keessattis ni babal'ata.",
       "date": "2026-03-10",
       "section": "Agroforestry",
       "type": "Report",
-      "author": "AFOLU Itoophiyaa"
+      "author": "AFOLU Itoophiyaa",
+      "image": "https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=600&q=80"
     },
-
     {
       "title": "Saayinsii Bineeldota: Fooyya'iinsa Horsiisee Buleetiin Horiin Ni Baay'ata",
       "body": "Sagantaan fooyya'iinsa horsiisee bulee AFOLU Itoophiyaa naannoolee Oromiyaa fi Somaalee keessatti raawwatame bu'aa gaarii argisiise. Horiin qonnaatota hirmaatan akka 30% dabalatee, tajaajilli veterinaaraa ni cime, fi bulchiinsi dirree fooyyaa'e.",
       "date": "2026-02-28",
       "section": "Animal Science",
       "type": "Report",
-      "author": "AFOLU Itoophiyaa"
+      "author": "AFOLU Itoophiyaa",
+      "image": "https://images.unsplash.com/photo-1560493676-04071c5f467b?w=600&q=80"
     },
-
     {
       "title": "Misooma Baadiyyaa: Mana Barumsaa Qonnaa fi Buufata Mul'ina Haaraan Banaman",
       "body": "Mana barumsaa qonnaa haaraa 12 fi buufata mul'ina 25 naannoolee adda addaa keessatti banaman. Qonnatooti kuma hedduun tajaajila baabal'ina qonnaa fayyadamaa jiru. Dubartootaa fi dargaggoo gabbisuu sagantaan addaan baafame itti fufa.",
       "date": "2026-02-20",
       "section": "Rural Development",
       "type": "Announcement",
-      "author": "AFOLU Itoophiyaa"
+      "author": "AFOLU Itoophiyaa",
+      "image": "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=600&q=80"
     },
-
     {
       "title": "Agiroo-Ekonomiksii: Sarara Gatii Qonnaa Fooyyessuuf Xiinxalli Bahe",
       "body": "AFOLU Itoophiyaa xiinxala sarara gatii qonnaa naannoolee Itoophiyaa adda addaa keessaa baasee maxxanse. Xiinxalli kun hanqinaalee gurguddoo adda baasee, karooraa fi tarkaanfii fooyyessuu ni kenna. Garee pirojektii mootummaa fi dhaabbilee misoomaa waliin ni hojjeta.",
       "date": "2026-02-10",
       "section": "Agro-Economics",
       "type": "Publication",
-      "author": "AFOLU Itoophiyaa"
+      "author": "AFOLU Itoophiyaa",
+      "image": "https://images.unsplash.com/photo-1543286386-713bdd548da4?w=600&q=80"
     },
-
     {
       "title": "Marga: Sagantaan Bulchiinsa Bosona Hawaasaa Naannolee Sadii Keessatti Jalqabe",
       "body": "Sagantaan bulchiinsa bosona hawaasaa haaraan naannolee Oromiyaa, Amaaraa, fi Benishangul-Gumuz keessatti jalqabame. Sagantaan kun hawaasni bosona isaanii bulchuu fi bu'aa argachuu akka danda'u ni taasisa. REDD+ waliin walitti qabamee hojjetama.",
       "date": "2026-01-25",
       "section": "Forestry",
       "type": "Announcement",
-      "author": "AFOLU Itoophiyaa"
+      "author": "AFOLU Itoophiyaa",
+      "image": "https://images.unsplash.com/photo-1448375240586-882707db888b?w=600&q=80"
     },
-
     {
       "title": "Bineensota Bosonaa fi Tuuriizimii: Naannolee Eegumsa Bineensotaa Cimsan",
       "body": "AFOLU Itoophiyaa dhaabbilee eegumsa naannoo waliin ta'uudhaan sagantaa eegumsa bineensotaa fi guddina tuuriizimii ekoo irratti hojii gamtaa jalqabe. Hawaasni naannoo naannoolee eegumsa bineensotaa dhiyoo jiran bu'aa tuuriizimii argachuuf carraa ni argatuu.",
       "date": "2026-01-15",
       "section": "Wildlife & Ecotourism",
       "type": "Announcement",
-      "author": "AFOLU Itoophiyaa"
+      "author": "AFOLU Itoophiyaa",
+      "image": "https://images.unsplash.com/photo-1474511320723-9a56873867b5?w=600&q=80"
     },
-
     {
       "title": "Nageenya Nyaataa: Hojii Gamtaa Haaraan Naannoolee Saaxilamoo Keessatti Jalqabe",
       "body": "Sagantaan nageenya nyaataa haaraan hawaasota naannoolee jijjiirama qilleensaaf saaxilamoo ta'an keessatti hojiirra oola. Sagantaan kun midhaan fooyya'aa, sirna eegumsaa bishaanii, fi dhiyeessii gabaa fiduuf qonnaa itti fufiinsa qabu ni deeggara.",
       "date": "2025-12-20",
       "section": "Nageenya Nyaataa",
       "type": "Announcement",
-      "author": "AFOLU Itoophiyaa"
+      "author": "AFOLU Itoophiyaa",
+      "image": "https://images.unsplash.com/photo-1603048297172-c92544798d5a?w=600&q=80"
     },
-
     {
       "title": "Dandamachuu Qilleensaa: CRGE Tarkaanfii Hojiirra Oolmaa Itoophiyaa Deeggara",
       "body": "AFOLU Itoophiyaa sagantaa CRGE hojiirra oolmaa keessatti gahee guddaa taphataa jira. Dhaabbatichi qonnaa qilleensa-ogummaa, adapteeshn ekosistemii hundaa'e, fi sirna beeksisa waqtii gabaabaatiif karoora hawaasaa deeggara. Bu'aa sagantichaa gabaasa haaraa keessatti ni argatu.",
       "date": "2025-12-10",
       "section": "Dandamachuu Qilleensaa",
       "type": "Report",
-      "author": "AFOLU Itoophiyaa"
+      "author": "AFOLU Itoophiyaa",
+      "image": "https://i.imgur.com/ksFd2DK.png"
     },
-
     {
       "title": "Pirojektii Amma: Haaromsa Bishaanii Oromiyaa fi Amaaraa Keessatti Itti Fufa",
       "body": "Pirojektiin haaromsa bishaanii walitti hidhamaa Oromiyaa fi Amaaraa godinaalee gaaraa keessatti hojiirra oolaa jira. Pirojektiin kun 2024–2026 hojjetamee, bu'uraalee qabatamaa kunuunsa biyyoo fi bishaanii ijaaruu, sirna bulchiinsa hawaasaa qindeessuu, fi hordoffii yeroo dheeraa ni deeggaraa.",
       "date": "2025-11-30",
       "section": "Natural Resource Management",
       "type": "Report",
-      "author": "AFOLU Itoophiyaa"
+      "author": "AFOLU Itoophiyaa",
+      "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=600&q=80"
     },
-
     {
       "title": "Pirojektii Xumurame: Manneen Barumsaa Qonnaa fi Sanyii Biqiltuu Naannoo Oromiyaa",
       "body": "Pirojektiin manneen barumsaa qonnaa fi oomisha sanyii biqiltuu hawaasaa Oromiyaa keessatti milkaa'inaan xumurameera. Pirojektiin kun 2019–2021 hojjatamee, qonnaatoota kuma hedduuf leenjii kenne, buufataalee sanyii hawaasaa 80 ol ijaaruuf gargaare.",
       "date": "2025-11-15",
       "section": "Rural Development",
       "type": "Report",
-      "author": "AFOLU Itoophiyaa"
+      "author": "AFOLU Itoophiyaa",
+      "image": "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=600&q=80"
     },
-
     {
       "title": "Pirojektii Naannoo: Pirojektii Agroforestirii Dirree Gogaa Hundeeffame",
       "body": "AFOLU Itoophiyaa pirojektii agroforestirii dirree gogaa naannoolee Somaalee fi Afaar keessatti hojiirra oolche. Qonnaatotni fi horsiisee buleen dachee gogaa irratti muka agroforestirii dhaabuu fi bulchuudhaan bu'aa argachaa jiru.",
       "date": "2025-10-30",
       "section": "Agroforestry",
       "type": "Report",
-      "author": "AFOLU Itoophiyaa"
+      "author": "AFOLU Itoophiyaa",
+      "image": "https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=600&q=80"
     },
-
     {
       "title": "Gabaasaalee: Maxxansa Haaraan Qorannoo Saayinsii Biqiltuu Irratti Bahe",
       "body": "AFOLU Itoophiyaa maxxansa haaraa qorannoo saayinsii biqiltuu naannoolee ikoo-loojii garaagaraa Itoophiyaa keessaa xumurame maxxanse. Maxxansichi sanyii midhaan adda addaa, sirna qonnaa madaqfamaa, fi dandeettii sanyii haadhoo fooyyaa'aa irratti xiyyeeffata.",
       "date": "2025-10-15",
       "section": "Gabaasaalee fi Maxxansaalee",
       "type": "Publication",
-      "author": "AFOLU Itoophiyaa"
+      "author": "AFOLU Itoophiyaa",
+      "image": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&q=80"
     },
-
     {
       "title": "GIS fi Kaartaalee: Sirni Hordoffii Bosona Haaraan Jalqabame",
       "body": "Sirni hordoffii bosona haaraan satellite-based fi GIS-powered AFOLU Itoophiyaatiin jalqabame. Sirni kun jijjiirama itti fayyadama lafa, hir'ina bosona, fi milkaa'ina sagantaa Ashaaraa Magariisaa hordofuu keessatti gargaara. Odeeffannoon sirna kanarraa mootummaaf ni kennama.",
       "date": "2025-10-01",
       "section": "Geospatial & GIS",
       "type": "Announcement",
-      "author": "AFOLU Itoophiyaa"
+      "author": "AFOLU Itoophiyaa",
+      "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80"
     },
-
     {
       "title": "Qajeelcha Teknikaa: Galmee Haaraa Bulchiinsa Bosona Hawaasaa fi REDD+ Bahe",
       "body": "AFOLU Itoophiyaa galmee haaraa qophii sagantaa bulchiinsa bosona hawaasaa fi hojiirra oolmaa REDD+ irratti mariyate baase. Galmeen kun hojjattootaa dirree, qindeessitootaa hawaasaa, fi dhaabbilee mootummaa bulchiinsa bosona irratti hojjataniif kan qophaa'edha.",
       "date": "2025-09-15",
       "section": "Technical Manuals",
       "type": "Publication",
-      "author": "AFOLU Itoophiyaa"
+      "author": "AFOLU Itoophiyaa",
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80"
     },
-
     {
       "title": "AFOLU Itoophiyaa Hirmaattoota Haaraa 50 ol Simate",
       "body": "AFOLU Itoophiyaa bara 2025–2026 hirmaattoota haaraa 50 ol — dhaabbilee mootummaa, yunivarsiitiiwwan, dhaabbilee misoomaa, fi ogeeyyii dhuunfaa of keessatti qabate — simateera. Hirmaannaan haaraan kun dandeettii dhaabbatichaa fi giddugaleessa beekumsa biyyoolessaa cimsa.",
       "date": "2025-09-01",
       "section": "Latest News",
       "type": "Announcement",
-      "author": "AFOLU Itoophiyaa"
+      "author": "AFOLU Itoophiyaa",
+      "image": "https://i.imgur.com/TOLgCdy.png"
     },
-
     {
       "title": "Guyyaa Dhaabuu Muka Biyyoolessaa 2026 Qopheessuu Jalqabame",
       "body": "AFOLU Itoophiyaa sagantaa dhaabuu muka biyyoolessaa 2026 qopheessuu keessatti gahee guddaa taphatuu beeksise. Sagantaan kun Ji'a Waxabajjii 2026 gaggeeffamuuf qophii ni taasifama. Dhaabbilee, mootummaawwan naannoo, fi dargaggoo affeeramu.",
       "date": "2026-04-05",
       "section": "Sagantaa Dhaalota Magariisa",
       "type": "Event",
-      "author": "AFOLU Itoophiyaa"
+      "author": "AFOLU Itoophiyaa",
+      "image": "https://i.imgur.com/36K6kb7.png"
     },
-
     {
       "title": "Qonnaatotni Oromiyaa Sirna Agroforestirii Irraa Bu'aa Gurguddaa Argatan",
       "body": "Qonnaatotni kuma hedduun naannoo Oromiyaa sirna agroforestirii hojii gamtaa AFOLU Itoophiyaa fi dhaabbilee biraatiin hojiirra oolchu fayyadamuun galii fi haala naannoo isaanii fooyyessan. Muuxannoowwan jijjiiramaa kanneen sagantaa babal'isuu keessatti fayyadamu.",
       "date": "2025-08-20",
       "section": "Agroforestry",
       "type": "Report",
-      "author": "AFOLU Itoophiyaa"
+      "author": "AFOLU Itoophiyaa",
+      "image": "https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=600&q=80"
     },
-
     {
       "title": "Sagantaa Hordoffii AFOLU 2025: Barattoota fi Qorattootni Haaraa Simataman",
       "body": "Sagantaan hordoffii AFOLU 2025 barattoota sadarkaa mast'arii fi PhD 20 simateera. Sagantaan kun dameelee qonnaa, bosonaa, NRM, agroforestirii, fi wal-qabatanitti hordoffiiwwan hojii dirree fi qorannoo ni kenna. Sagantaan 2026 amma banaa dha — iyyannoo ergaa: afoluofethiopia@gmail.com",
       "date": "2025-08-01",
       "section": "Latest News",
       "type": "Announcement",
-      "author": "AFOLU Itoophiyaa"
+      "author": "AFOLU Itoophiyaa",
+      "image": "https://i.imgur.com/TOLgCdy.png"
     }
-
   ]
 }
