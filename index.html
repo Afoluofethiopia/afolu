@@ -3712,7 +3712,7 @@ const EVENT_ICONS = {
 
 let homeEventsData = [];
 let homeEventsPage = 0;
-const HOME_EVENTS_PER_PAGE = 6;
+const HOME_EVENTS_PER_PAGE = 9;
 let homeEventsTimer = null;
 
 function buildHomeEventCard(post) {
@@ -3846,7 +3846,7 @@ async function loadHomeEvents() {
     if (e.key === 'Escape') closeSitemap();
   });
 
-  document.queryAll('[data-sm]').forEach(function(item) {
+  document.querySelectorAll('[data-sm]').forEach(function(item) {
     item.addEventListener('click', function(e) {
       e.stopPropagation();
       const view = this.getAttribute('data-view');
@@ -3861,16 +3861,13 @@ async function loadHomeEvents() {
   });
 })();
 
-/* ============================================================
-   URL BAR — COPY BUTTON
-   ============================================================ */
+/* ── URL BAR COPY ── */
 function copyUrlBar() {
   const bar = document.getElementById('url-bar');
   const slug = bar.getAttribute('data-slug') || 'home';
   const base = window.location.origin + window.location.pathname;
   const hash = (slug === 'home') ? '' : '#' + slug;
   const fullUrl = base + hash;
-
   navigator.clipboard.writeText(fullUrl).then(function() {
     const btn = document.getElementById('url-bar-copy');
     if (btn) { btn.textContent = '✓ Copied'; btn.classList.add('copied'); setTimeout(()=>{ btn.textContent='⎘ Garagalfadhu'; btn.classList.remove('copied'); }, 2000); }
