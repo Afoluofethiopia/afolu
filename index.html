@@ -1,7 +1,10 @@
 <!DOCTYPE html>
-<html lang="om">
+<html lang="om" xml:lang="om">
 <head>
 <meta charset="UTF-8"/>
+<meta http-equiv="Content-Language" content="om"/>
+<meta name="language" content="Afaan Oromo"/>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>AFOLU Itoophiyaa</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -555,42 +558,90 @@ img { display: block; max-width: 100%; }
 @media(max-width:1000px) { .main-layout { grid-template-columns: 1fr; } }
 
 /* News Cards */
-.news-grid { display: flex; flex-direction: column; gap: 0; margin-bottom: 3rem; }
+/* ── News Card Grid (image-top, text-bottom, 2 per row with auto-transition) ── */
+.news-carousel-wrap { position: relative; overflow: hidden; margin-bottom: 2rem; }
+.news-carousel-nav {
+  display: flex; justify-content: flex-end; align-items: center; gap: 0.5rem; margin-bottom: 0.8rem;
+}
+.nc-btn {
+  width: 32px; height: 32px; border-radius: 50%;
+  border: 1.5px solid var(--border); background: var(--white);
+  color: var(--ink-soft); font-size: 0.95rem; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.2s;
+}
+.nc-btn:hover { background: var(--forest); color: var(--white); border-color: var(--forest); }
+.nc-page-label { font-size: 0.72rem; color: var(--muted); margin: 0 0.3rem; }
+.news-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;
+  margin-bottom: 0; animation: newsFadeIn 0.45s ease;
+}
+@keyframes newsFadeIn { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:none; } }
+@media(max-width:680px) { .news-grid { grid-template-columns: 1fr; } }
+.news-carousel-dots {
+  display: flex; justify-content: center; gap: 0.5rem; margin: 1rem 0 1.5rem;
+}
+.nc-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--border); border: none; cursor: pointer;
+  transition: all 0.25s; padding: 0;
+}
+.nc-dot.active { background: var(--earth); transform: scale(1.3); }
 .news-item {
-  display: flex; gap: 1.5rem;
-  padding: 1.5rem 0;
-  border-bottom: 1px solid var(--border-soft);
-  cursor: pointer; transition: all 0.2s;
-  align-items: flex-start;
+  background: var(--white); border: 1px solid var(--border); border-radius: 10px;
+  overflow: hidden; cursor: pointer;
+  transition: transform 0.25s, box-shadow 0.25s;
+  display: flex; flex-direction: column;
 }
-.news-item:hover { padding-left: 0.5rem; }
+.news-item:hover { transform: translateY(-4px); box-shadow: 0 12px 36px rgba(0,0,0,0.1); }
 .news-item:hover .news-title { color: var(--forest); }
-.news-date {
-  background: var(--forest);
-  color: var(--white);
-  border-radius: 6px;
-  min-width: 52px; padding: 0.7rem 0.5rem;
-  text-align: center; flex-shrink: 0;
-  line-height: 1.1;
+.news-img {
+  width: 100%; height: 200px; object-fit: cover; display: block; flex-shrink: 0;
 }
-.news-date-day { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; }
-.news-date-mon { font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.7; margin-top: 2px; }
-.news-body { flex: 1; }
+.news-img-placeholder {
+  width: 100%; height: 200px; flex-shrink: 0;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  font-size: 2.8rem; gap: 0.5rem;
+  background: linear-gradient(135deg, var(--forest) 0%, var(--sky-mid) 100%);
+  color: rgba(255,255,255,0.85);
+  position: relative; overflow: hidden;
+}
+.news-img-placeholder::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(circle at 30% 70%, rgba(200,150,62,0.18), transparent 60%);
+}
+.news-body {
+  padding: 1.1rem 1.2rem 1.3rem; flex: 1;
+  display: flex; flex-direction: column; gap: 0.35rem;
+}
+.news-meta-row {
+  display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.1rem;
+}
+.news-date-str { font-size: 0.72rem; color: var(--muted); font-weight: 500; }
 .news-tag {
-  display: inline-block;
-  font-size: 0.6rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+  display: inline-block; font-size: 0.58rem; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
   color: var(--earth); background: var(--earth-pale);
-  padding: 0.2rem 0.6rem; border-radius: 3px;
-  margin-bottom: 0.5rem;
+  padding: 0.18rem 0.55rem; border-radius: 3px;
 }
 .news-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 1rem; font-weight: 700;
-  color: var(--sky); line-height: 1.4;
-  margin-bottom: 0.4rem;
-  transition: color 0.2s;
+  font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700;
+  color: var(--sky); line-height: 1.4; transition: color 0.2s;
 }
-.news-excerpt { font-size: 0.83rem; color: var(--muted); line-height: 1.7; }
+.news-excerpt {
+  font-size: 0.82rem; color: var(--muted); line-height: 1.65;
+  display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
+}
+.news-card-footer {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-top: auto; padding-top: 0.7rem; border-top: 1px solid var(--border-soft);
+}
+.news-discover {
+  font-size: 0.72rem; font-weight: 700; color: var(--sky-bright);
+  display: flex; align-items: center; gap: 0.3rem; transition: gap 0.2s;
+}
+.news-item:hover .news-discover { gap: 0.55rem; color: var(--forest); }
 
 /* Announcements */
 .ann-list { display: flex; flex-direction: column; gap: 0; }
@@ -1340,7 +1391,7 @@ footer {
       +251 911 946 101
     </span>
     <div class="topbar-divider"></div>
-    <span><a href="mailto:afoluofethiopia@gmail.com">afoluofethiopia@gmail.com</a></span>
+    <span><a href="/cdn-cgi/l/email-protection#3051565f5c455f56554458595f40595170575d51595c1e535f5d"><span class="__cf_email__" data-cfemail="462720292a33292023322e2f29362f2706212b272f2a6825292b">[email&#160;protected]</span></a></span>
   </div>
   <div class="topbar-right">
     <a href="https://www.facebook.com/afoluethiopia" target="_blank">
@@ -1373,56 +1424,56 @@ footer {
         <a>About <span class="chevron"></span></a>
         <div class="dropdown">
           <a data-view="About"><span class="di">🌱</span>Waa'ee AFOLU</a>
-          <a data-view="Mission"><span class="di">🎯</span>Ergamaa fi Muul'ata</a>
-          <a data-view="Leadership"><span class="di">👥</span>Gahee Hooggansaa</a>
-          <a data-view="Organizational"><span class="di">🏛</span>Caasaa Dhaabbataa</a>
+          <a data-view="Mission"><span class="di">🎯</span>Ergama fi Mul'ata</a>
+          <a data-view="Leadership"><span class="di">👥</span>Hoggansi</a>
+          <a data-view="Organizational"><span class="di">🏛</span>Caasaa Dhaabbata</a>
         </div>
       </li>
       <li class="has-drop">
         <a>Sectors <span class="chevron"></span></a>
         <div class="dropdown">
-          <a data-view="plant-science"><span class="di">🌾</span>Saayinsii Biqiltuu (Plant Science)</a>
-          <a data-view="Natural-Resource-Mgmt"><span class="di">🌍</span>Bulchiinsa Qabeenya Uumamaa (NRM)</a>
-          <a data-view="agroforestry"><span class="di">🌿</span>Qonna Walmakaa (Agroforestry)</a>
-          <a data-view="animal-science"><span class="di">🐄</span>Saayinsii Beelladootaa (Animal Science)</a>
-          <a data-view="Extension"><span class="di">🏘</span>Misooma Baadiyyaa (Rural Development)</a>
-          <a data-view="Agro-Economics"><span class="di">📊</span>Agiroo-Ekonomiksii (Agroeconomics)</a>
-          <a data-view="forestry"><span class="di">🌳</span>Bosona (Forestry)</a>
-          <a data-view="Wildlife"><span class="di">🦁</span>Bineensota Bosonaa fi Ikoo-Turiizimii (Wildlife and Ecotourism)</a>
+          <a data-view="plant-science"><span class="di">🌾</span>Saayinsii Biqiltuu</a>
+          <a data-view="Natural-Resource-Mgmt"><span class="di">🌍</span>Bulchiinsa Qabeenya Uumamaa</a>
+          <a data-view="agroforestry"><span class="di">🌿</span>Agroforestirii</a>
+          <a data-view="animal-science"><span class="di">🐄</span>Saayinsii Bineeldota</a>
+          <a data-view="Extension"><span class="di">🏘</span>Misoomaa Baadiyyaa</a>
+          <a data-view="Agro-Economics"><span class="di">📊</span>Agiroo-Ekonomiksii</a>
+          <a data-view="forestry"><span class="di">🌳</span>Marga</a>
+          <a data-view="Wildlife"><span class="di">🦁</span>Bineensota Bosonaa fi Tuuriizimii</a>
         </div>
       </li>
       <li class="has-drop">
         <a>Programs <span class="chevron"></span></a>
         <div class="dropdown">
-          <a data-view="Legacy"><span class="di">🌱</span>Ashaaraa Magariisaa (Green Legacy)</a>
-          <a data-view="Food"><span class="di">🌾</span>Nageenya Nyaataa (Food Security)</a>
-          <a data-view="Climate"><span class="di">🌡</span>Dandamachuu Qilleensaa (Climate Resielence)</a>
+          <a data-view="Legacy"><span class="di">🌱</span>Dhaalota Magariisa</a>
+          <a data-view="Food"><span class="di">🌾</span>Nageenya Nyaataa</a>
+          <a data-view="Climate"><span class="di">🌡</span>Dandamachuu Qilleensaa</a>
           <a data-view="REDD"><span class="di">🌳</span>REDD+</a>
         </div>
       </li>
       <li class="has-drop">
         <a>Resources <span class="chevron"></span></a>
         <div class="dropdown">
-          <a data-view="Reports"><span class="di">📄</span>Gabaasaalee fi Maxxansaalee (Reports and Publication)</a>
-          <a data-view="Geospatial"><span class="di">🛰</span>GIS fi Kaartaalee (Geospatial and GIS)</a>
-          <a data-view="publications"><span class="di">📘</span>Qajeelcha teeknikaa (Technical Manuals)</a>
+          <a data-view="Reports"><span class="di">📄</span>Gabaasaalee fi Maxxansaalee</a>
+          <a data-view="Geospatial"><span class="di">🛰</span>Jiyoospeeshalii fi GIS</a>
+          <a data-view="publications"><span class="di">📘</span>Qajeelcha Teknikaa</a>
         </div>
       </li>
       <li class="has-drop">
         <a>Projects <span class="chevron"></span></a>
         <div class="dropdown">
-          <a data-view="Projects"><span class="di">🔬</span>Pirojektii Amma (Current Project)</a>
-          <a data-view="Completed"><span class="di">✅</span>Pirojektii Xumurame (Completed Project)</a>
-          <a data-view="Regional"><span class="di">🗺</span>Pirojektii Sadarkaa Naannoo (Regional Project)</a>
+          <a data-view="Projects"><span class="di">🔬</span>Pirojektii Amma</a>
+          <a data-view="Completed"><span class="di">✅</span>Pirojektii Xumurame</a>
+          <a data-view="Regional"><span class="di">🗺</span>Pirojektii Naannoo</a>
         </div>
       </li>
       <li class="has-drop">
         <a>News <span class="chevron"></span></a>
         <div class="dropdown">
-          <a data-view="News"><span class="di">📰</span>Odeeffannoo Haaraa (Current News)</a>
-          <a data-view="events"><span class="di">📅</span>Taateewwan (Events)</a>
-          <a data-view="Gallery"><span class="di">🖼</span>Galarii Suuraa (Photo Gallery)</a>
-          <a data-view="Testimonials"><span class="di">💬</span>Dhugaa-Baatii (Testimonials)</a>
+          <a data-view="News"><span class="di">📰</span>Oduu Haaraa</a>
+          <a data-view="events"><span class="di">📅</span>Taateewwan</a>
+          <a data-view="Gallery"><span class="di">🖼</span>Galarii Suuraa</a>
+          <a data-view="Testimonials"><span class="di">💬</span>Ragaalee</a>
         </div>
       </li>
     </ul>
@@ -1500,10 +1551,10 @@ footer {
       Finfinnee · Itoophiyaa
     </div>
     <h1 class="hero-title">AFOLU <em>Itoophiyaa</em></h1>
-    <p class="hero-desc">Qonnaa, Bosonaa fi Itti Fayyadama Lafa — naannoolee itti fufiinsa qabu, dandamachuu qilleensaa, fi jireenya baadiyyaa guddisuuf ecosystemootaa Itoophiyaa gara garaatti.</p>
+    <p class="hero-desc">Qonnaa, Bosonaa fi Fayyadama Lafa — naannoolee itti fufiinsa qabu, dandamachuu qilleensaa, fi jireenya baadiyyaa guddisuuf ecosystemootaa Itoophiyaa gara garaatti.</p>
     <div class="hero-btns">
       <button class="btn-forest" data-view="About">Hojii Keenya Ilaalaa →</button>
-      <button class="btn-ghost" data-view="Legacy">Sagantaa Ashaaraa Magariisa</button>
+      <button class="btn-ghost" data-view="Legacy">Sagantaa Dhaalota Magariisa</button>
     </div>
   </div>
 
@@ -1515,7 +1566,7 @@ footer {
   <!-- Full Background Image -->
   <img
     src="https://i.imgur.com/36K6kb7.png"
-    alt="Sagantaa Ashaaraa Magariisa"
+    alt="Sagantaa Dhaalota Magariisa"
     style="
       position: absolute;
       top: 0; left: 0;
@@ -1551,10 +1602,10 @@ footer {
       <span class="hero-eyebrow-line"></span>
       Sagantaa Guddaa
     </div>
-    <h1 class="hero-title">Ashaaraa <em>Magariisa</em></h1>
+    <h1 class="hero-title">Dhaalota <em>Magariisa</em></h1>
     <p class="hero-desc">Sagantaa haaromsa naannoo hawaasni durfatu guddinaan Itoophiyaa keessatti — loon biqiltuu biliyoona 28 ol 2019 irraa kaasee dhaabame, kan seenaa galmeeffameen tokko guddaa ta'e.</p>
     <div class="hero-btns">
-      <button class="btn-forest" data-view="Legacy">Odeeffannoo Dabalataaf →</button>
+      <button class="btn-forest" data-view="Legacy">Dabalata Baradhu →</button>
       <button class="btn-ghost" data-view="About">Waa'ee AFOLU</button>
     </div>
   </div>
@@ -1567,7 +1618,7 @@ footer {
   <!-- Full Background Image -->
   <img
     src="https://i.imgur.com/ksFd2DK.png"
-    alt="Dandamachuu Qilleensaa"
+    alt="Building Dandamachuu Qilleensaa"
     style="
       position: absolute;
       top: 0; left: 0;
@@ -1603,7 +1654,7 @@ footer {
       <span class="hero-eyebrow-line"></span>
       Tarkaanfii Qilleensaa
     </div>
-    <h1 class="hero-title"> <em>Dandamachuu Qilleensaa</em></h1>
+    <h1 class="hero-title">Building <em>Dandamachuu Qilleensaa</em></h1>
     <p class="hero-desc">Fayyadama lafa walitti hidhamaa naannoolee Itoophiyaa keessatti nageenya nyaataa, eegumsa biodiversity, fi adapteeshn qilleensaa deggeruuf.</p>
     <div class="hero-btns">
       <button class="btn-forest" data-view="Climate">Dandamachuu Qilleensaa →</button>
@@ -1628,11 +1679,11 @@ footer {
       <div class="qlink" data-view="About"><span class="qlink-icon">🌱</span>Waa'ee AFOLU</div>
       <div class="qlink" data-view="Reports"><span class="qlink-icon">📄</span>Maxxansaalee</div>
       <div class="qlink" data-view="Geospatial"><span class="qlink-icon">🛰</span>GIS fi Kaartaalee</div>
-      <div class="qlink" data-view="News"><span class="qlink-icon">📰</span>Odeeffannoo</div>
+      <div class="qlink" data-view="News"><span class="qlink-icon">📰</span>Oduu</div>
       <div class="qlink" data-view="Projects"><span class="qlink-icon">🔬</span>Pirojektii</div>
       <div class="qlink" data-view="events"><span class="qlink-icon">📅</span>Taateewwan</div>
-      <div class="qlink" data-view="Legacy"><span class="qlink-icon">🌳</span>Ashaaraa Magariisaa</div>
-      <div class="qlink" data-view="Gallery"><span class="qlink-icon">🖼</span>Gaalaarii</div>
+      <div class="qlink" data-view="Legacy"><span class="qlink-icon">🌳</span>Dhaalota Magariisa</div>
+      <div class="qlink" data-view="Gallery"><span class="qlink-icon">🖼</span>Galarii</div>
     </div>
   </div>
 
@@ -1643,38 +1694,38 @@ footer {
       <div class="stat-num">
         <span class="count" data-target="28" data-suffix="B+">0</span>
       </div>
-      <div class="stat-label">Biqiltuu hanga yoonaa Dhaabame</div>
-      <div class="stat-sub">Sagantaa Ashaaraa Magariisaa</div>
+      <div class="stat-label">Loon Biqiltuu Dhaabame</div>
+      <div class="stat-sub">Sagantaa Dhaalota Magariisa</div>
     </div>
 
     <div class="stat-block">
       <div class="stat-num">
         <span class="count" data-target="15" data-suffix="M+">0</span>
       </div>
-      <div class="stat-label">Lafa deebihee Haaromfame (Heektaaraan)</div>
+      <div class="stat-label">Heektaarii Haaromfame</div>
       <div class="stat-sub">Biyyoolessaan</div>
     </div>
 
     <div class="stat-block">
       <div class="stat-num">
-        <span class="count" data-target="20" data-suffix="M+">0</span>
+        <span class="count" data-target="8" data-suffix="">0</span>
       </div>
-      <div class="stat-label">Hirmaannaa Lammiilee</div>
-      <div class="stat-sub">waggoota jahan darbaniif</div>
+      <div class="stat-label">Sectors Teknikaa</div>
+      <div class="stat-sub">Haala Walitti Hidhamaa</div>
     </div>
 
     <div class="stat-block">
       <div class="stat-num">
         <span class="count" data-target="2019" data-suffix="">1900</span>
       </div>
-      <div class="stat-label">Bara irraa Eegale</div>
+      <div class="stat-label">Wagga Hundeeffame</div>
       <div class="stat-sub">CRGE wajjin walsimu</div>
     </div>
 
   </div>
 </div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   const counters = document.querySelectorAll('.count');
 
   const animateCounter = (el) => {
@@ -1793,25 +1844,31 @@ footer {
         <div class="about-content reveal rd2">
           <div class="section-eyebrow">Waa'ee AFOLU Itoophiyaa</div>
           
-          <p>AFOLU Ethiopia kan hundeeffame Bara 2019 yoo tahu, kaayyoon guddaan inni hundeeffamef odeeffannoon sirrii fi beekumsi ragaa irratti hundaa’e dhaabbilee, ogeeyyii, qorattoota, barattoota, fi 
-            qooda fudhattoota hawaasaa sirna itti fayyadama lafaa itti fufiinsa qabu irratti bobba’an guutuu Itoophiyaa keessatti akka darbu deeggaruufi. AFOLU Itoophiyaa adda durummaan kan inni irratti 
-            xiyyeeffatu qooda fudhattoota dameelee qonnaa, bosonaa fi qabeenya uummamaa akkasumas haala itti fayyadamaa fi kunuunsa lafa baadiyyaa irratti hojjatan gidduutti walta’iinsa, waljijjiirraa 
-            barumsaa fi beekkumsaa akkasumas marii ogummaa cimsuuf gochuu irrattiidha. Bulchiinsa naannoo bu’a qabeessa ta’e odeeffannoo amanamaa fi tarkaanfii qindoomina qabu argachuu irratti akka hundaa’u 
-            hubachuun, AFOLUn daddabarsa argannoo saayinsii, muuxannoo dirree, hubannoo imaammataa, fi beekumsa naannoo ikoloojii adda addaa fi haala dhaabbilee keessatti haala mijeessa. Sirna ikoo bosona olka’aa 
-            naannoo Raas Daashin irraa kaasee hanga naannoo lafa gogaa Dippireeshinii Dallol, dhaabbanni kun qunnamtii qormaataa fi carraa bulchiinsa lafaa itti fufiinsa qabu irratti hubannoo waliinii cimsu irratti 
-            gadi fageenyaan hojjata. Dhaabbilee barnootaa, dhaabbilee mootummaa, dhaabbilee misoomaa, fi ogeeyyii bu’uuraa gidduutti marii jajjabeessuudhaan, AFOLU murtee odeeffannoo irratti hundaa’e ni deeggara, 
-            akkasumas hojiirra oolmaa bu’aa qorannoo gidduu seensaa itti fayyadama lafaa qabatamaa keessatti ni fooyyessa. Dhaabbatichi karaa workshopii, waltajjiiwwan dijitaalaa, waltajjiiwwan teeknikaa, fi toora 
-            barumsaa walta’iinsaatiin beekumsi bakka ykn damee tokko keessatti maddisiifame hawaasa qonnaa fi qabeenya uumamaa bal’aa keessatti dhaqqabamaa fi faayidaa akka qabaatu gargaara. Kana gochuudhaan AFOLU 
-            aadaa barachuu fi tumsa walitti fufiinsa qabuu kan dandeettii Itiyoophiyaan teessuma lafaa ishee itti fufiinsa qabuun dhaloota ammaa fi egeree bulchuuf qabdu cimsu ijaaruuf gumaacha taasisa.</p>
+          <p>AFOLU Itoophiyaa madda qoodinsa beekumsa biyyoolessaa ta'ee hojjeta dedicated to strengthening the transmission, exchange, and practical application of knowledge among stakeholders working 
+            across agriculture, forestry, and broader natural resource management sectors. Established in 2019, the initiative was created to serve as a collaborative bridge connecting researchers, 
+            universities, government institutions, development organizations, practitioners, students, and local communities in order to support evidence-informed decision-making and promote sustainable 
+            land-use practices across Ethiopia’s diverse ecological landscapes. Recognizing that effective management of agricultural systems and natural resources depends not only on technical innovation 
+            but also on accessible and well-coordinated information flows, AFOLU facilitates dialogue that integrates scientific research, policy experience, indigenous knowledge systems, and field-based 
+            lessons learned from across the country’s agro-ecological zones—from the highland environments surrounding Ras Dashen to the lowland ecosystems of the Dallol Depression. Through workshops, 
+            professional forums, collaborative learning networks, digital outreach platforms, and stakeholder engagement events, AFOLU promotes continuous exchange of ideas that strengthens institutional 
+            cooperation and improves the relevance and usability of research outputs for practitioners and decision-makers alike. Aligned with Ethiopia’s Climate Resilient Green Economy strategy and national 
+            environmental priorities, the platform supports communication pathways that link knowledge producers with knowledge users, ensuring that climate-resilient agriculture, forest landscape restoration, 
+            watershed management, biodiversity conservation, and sustainable land stewardship approaches are informed by both scientific evidence and community-based experience. At the same time, 
+            AFOLU plays an important role in strengthening interdisciplinary collaboration and professional networking by creating opportunities for early-career experts, students, and practitioners to 
+            engage with experienced specialists and contribute actively to national dialogue on environmental sustainability challenges. By encouraging inclusive participation across institutions and sectors, 
+            the platform supports shared learning that enhances technical capacity and strengthens coordination among actors responding to land degradation, climate variability, ecosystem loss, and rural 
+            livelihood pressures. Through its commitment to knowledge dissemination, partnership development, and collaborative learning, AFOLU of Ethiopia contributes to building a strong national culture 
+            of informed engagement in agriculture and natural resource management, ensuring that knowledge generated in research centers, universities, development programs, and community landscapes can be 
+            translated into practical solutions that support resilient ecosystems, productive agricultural systems, and sustainable livelihoods for present and future generations across Ethiopia.</p>
           <div class="pillars">
             <span class="pillar">🌾 Qonnaa Itti Fufiinsa Qabu</span>
-            <span class="pillar">🌳 Eegumsa Bosonaa</span>
+            <span class="pillar">🌳 Eegumsa Bosona</span>
             <span class="pillar">💧 Haaromsa Bishaani</span>
-            <span class="pillar">🌡 Dandamannaa Qilleensaa</span>
+            <span class="pillar">🌡 Adapteeshn Qilleensaa</span>
             <span class="pillar">🦋 Eegumsa Biodiversity</span>
             <span class="pillar">🏘 Jireenya Baadiyyaa</span>
           </div>
-          <button class="btn-outline" data-view="About">Odeeffannoo Dabalataaf →</button>
+          <button class="btn-outline" data-view="About">Dabalata Dubbisi →</button>
         </div>
       </div>
     </div>
@@ -1826,43 +1883,19 @@ footer {
           <div class="section-header reveal">
             <div>
               <div class="section-eyebrow">Haaromsaalee</div>
-              <h2 class="section-title">Odeeffannoo <em>Haaraa</em></h2>
+              <h2 class="section-title">Latest <em>Oduu</em></h2>
             </div>
-            <span class="see-all" data-view="News">Odeeffannoo Hunda Ilaalaa →</span>
+            <span class="see-all" data-view="News">Oduu Hunda Ilaalaa →</span>
           </div>
-          <div class="news-grid reveal rd1">
-            <div class="news-item" data-view="News">
-              <div class="news-date"><div class="news-date-day">15</div><div class="news-date-mon">Apr</div></div>
-              <div class="news-body">
-                <span class="news-tag">Programs</span>
-                <div class="news-title">Sagantaan Dhaalota Magariisa Lakkoofsa Biqiltuu Biliyoona 28 Caale</div>
-                <div class="news-excerpt">Sagantaan haaromsa naannoo Itoophiyaa bakka bu'u seenaa haaraas gahee, miliyoonota lammiilee sagantaa dhaabuu muka naannoolee hundatti bosore.</div>
-              </div>
+          <!-- News Carousel - loaded from news.json -->
+          <div class="news-carousel-wrap reveal rd1">
+            <div class="news-carousel-nav">
+              <span class="nc-page-label" id="homeNewsPageLabel">1 / 1</span>
+              <button class="nc-btn" id="homeNewsPrev" aria-label="Previous">&#8249;</button>
+              <button class="nc-btn" id="homeNewsNext" aria-label="Next">&#8250;</button>
             </div>
-            <div class="news-item" data-view="News">
-              <div class="news-date"><div class="news-date-day">08</div><div class="news-date-mon">Apr</div></div>
-              <div class="news-body">
-                <span class="news-tag">Qilleensa</span>
-                <div class="news-title">AFOLU Sagantaa Bulchiinsa Bosona Hawaasa REDD+ Haaraa Jalqabe</div>
-                <div class="news-excerpt">Sagantaan shoora haaraan kunuunsa kaarbonii fi fooyya'ina jireenya hawaasa bosona sadarkaa dursa qabaniitti naannolee sadii Itoophiyaa keessatti walitti hidha.</div>
-              </div>
-            </div>
-            <div class="news-item" data-view="News">
-              <div class="news-date"><div class="news-date-day">01</div><div class="news-date-mon">Apr</div></div>
-              <div class="news-body">
-                <span class="news-tag">Dameelee</span>
-                <div class="news-title">Watershed Restoration Initiative Covers 15 Million+ Hectares Biyyoolessaan</div>
-                <div class="news-excerpt">Sagantaan bulchiinsa bishaanii walitti hidhamaa AFOLU bal'ataa itti fufa, kunuunsa lafa qaamaa fi sirna bulchiinsa hawaasaa walitti hidha.</div>
-              </div>
-            </div>
-            <div class="news-item" data-view="News">
-              <div class="news-date"><div class="news-date-day">22</div><div class="news-date-mon">Mar</div></div>
-              <div class="news-body">
-                <span class="news-tag">Qorannoo</span>
-                <div class="news-title">Meeshaalee Xiinxala Jiyoospeeshalii Haaraa Hordoffii Fayyadama Lafaatiif Qophaa'e</div>
-                <div class="news-excerpt">Teknoolojii sensing fagoo fi GIS ammayyaa amma hordoffii sadarkaa naannoo godinaalee dursa qabaniitti deggera.</div>
-              </div>
-            </div>
+            <div class="news-grid" id="homeNewsGrid"></div>
+            <div class="news-carousel-dots" id="homeNewsDots"></div>
           </div>
 
           <div class="section-header reveal" style="margin-top:3rem">
@@ -2164,7 +2197,7 @@ footer {
               <div class="ci-icon">✉</div>
               <div>
                 <div class="ci-label">Imeelii</div>
-                <div class="ci-value"><a href="mailto:afoluofethiopia@gmail.com">afoluofethiopia@gmail.com</a></div>
+                <div class="ci-value"><a href="/cdn-cgi/l/email-protection#462720292a33292023322e2f29362f2706212b272f2a6825292b"><span class="__cf_email__" data-cfemail="4120272e2d342e27243529282e31282001262c20282d6f222e2c">[email&#160;protected]</span></a></div>
               </div>
             </div>
             <div class="ci-item">
@@ -2748,7 +2781,7 @@ footer {
         <li>Training Manuals — extension and capacity building materials</li>
         <li>Case Studies — community and landscape success stories</li>
       </ul>
-      <p style="margin-top:1.5rem">For the latest publications, contact us at <a href="mailto:afoluofethiopia@gmail.com">afoluofethiopia@gmail.com</a></p>
+      <p style="margin-top:1.5rem">For the latest publications, contact us at <a href="/cdn-cgi/l/email-protection#f190979e9d849e97948599989e819890b1969c90989ddf929e9c"><span class="__cf_email__" data-cfemail="fb9a9d94978e949d9e8f9392948b929abb9c969a9297d5989496">[email&#160;protected]</span></a></p>
     </div>
     <div class="view-nav">
       <button class="view-nav-btn" data-view="home">↑ Home</button>
@@ -2807,7 +2840,7 @@ footer {
         <li>GIS and Geospatial Field Data Collection Guides</li>
         <li>REDD+ Community Forest Management Facilitation Manuals</li>
       </ul>
-      <p style="margin-top:1.5rem">To request specific technical manuals, contact <a href="mailto:afoluofethiopia@gmail.com">afoluofethiopia@gmail.com</a></p>
+      <p style="margin-top:1.5rem">To request specific technical manuals, contact <a href="/cdn-cgi/l/email-protection#1372757c7f667c7576677b7a7c637a7253747e727a7f3d707c7e"><span class="__cf_email__" data-cfemail="28494e47445d474e4d5c404147584149684f45494144064b4745">[email&#160;protected]</span></a></p>
     </div>
     <div class="view-nav">
       <button class="view-nav-btn" data-view="Geospatial">← Geospatial</button>
@@ -2837,7 +2870,7 @@ footer {
         <li>Agroforestry Value Chain Development for Smallholders</li>
         <li>National Land Cover Monitoring and Forest Inventory Support</li>
       </ul>
-      <p style="margin-top:1.5rem">For project partnership inquiries, contact us at <a href="mailto:afoluofethiopia@gmail.com">afoluofethiopia@gmail.com</a></p>
+      <p style="margin-top:1.5rem">For project partnership inquiries, contact us at <a href="/cdn-cgi/l/email-protection#7d1c1b121108121b18091514120d141c3d1a101c1411531e1210"><span class="__cf_email__" data-cfemail="b7d6d1d8dbc2d8d1d2c3dfded8c7ded6f7d0dad6dedb99d4d8da">[email&#160;protected]</span></a></p>
     </div>
     <div class="view-nav">
       <button class="view-nav-btn" data-view="home">↑ Home</button>
@@ -2964,7 +2997,7 @@ footer {
         <li><strong>April 30, 2026</strong> — National Symposium on Sustainable Land Management Abstract Deadline</li>
         <li><strong>June 2026</strong> — Annual Green Legacy Community Planting Days (Biyyoolessaan)</li>
       </ul>
-      <p style="margin-top:1.5rem">To register for events or submit abstracts, contact <a href="mailto:afoluofethiopia@gmail.com">afoluofethiopia@gmail.com</a></p>
+      <p style="margin-top:1.5rem">To register for events or submit abstracts, contact <a href="/cdn-cgi/l/email-protection#cfaea9a0a3baa0a9aabba7a6a0bfa6ae8fa8a2aea6a3e1aca0a2"><span class="__cf_email__" data-cfemail="d6b7b0b9baa3b9b0b3a2bebfb9a6bfb796b1bbb7bfbaf8b5b9bb">[email&#160;protected]</span></a></p>
     </div>
     <div class="view-nav">
       <button class="view-nav-btn" data-view="News">← News</button>
@@ -3065,7 +3098,7 @@ footer {
       <ul class="footer-col-links">
         <li><span>📍 Finfinnee / Addis Ababa</span></li>
         <li><a href="tel:+251911946101">📞 +251 911 946 101</a></li>
-        <li><a href="mailto:afoluofethiopia@gmail.com">✉ afoluofethiopia@gmail.com</a></li>
+        <li><a href="/cdn-cgi/l/email-protection#0160676e6d746e67647569686e71686041666c60686d2f626e6c">✉ <span class="__cf_email__" data-cfemail="d5b4b3bab9a0bab3b0a1bdbcbaa5bcb495b2b8b4bcb9fbb6bab8">[email&#160;protected]</span></a></li>
         <li><a href="https://www.facebook.com/afoluethiopia" target="_blank">🌐 Facebook</a></li>
       </ul>
     </div>
@@ -3190,7 +3223,7 @@ footer {
   </div>
 </div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 /* ============================================================
    HERO SLIDER
    ============================================================ */
@@ -3392,6 +3425,9 @@ window.addEventListener('popstate', function(e) {
   }
 })();
 
+/* Load home news carousel on startup */
+loadHomeNews();
+
 /* ============================================================
    NEWS SYSTEM
    ============================================================ */
@@ -3408,6 +3444,135 @@ const SECTION_VIEW_MAP = {
 };
 let allNews = [];
 
+
+/* ── Home News Carousel ── */
+const HOME_NEWS_ICONS = {
+  'Sagantaa Dhaalota Magariisa':'🌱','REDD+':'🌳','Dandamachuu Qilleensaa':'🌡',
+  'Nageenya Nyaataa':'🌾','Natural Resource Management':'🌍','Plant Science':'🌾',
+  'Agroforestry':'🌿','Animal Science':'🐄','Rural Development':'🏘',
+  'Agro-Economics':'📊','Forestry':'🌳','Wildlife & Ecotourism':'🦁',
+  'Geospatial & GIS':'🛰','Technical Manuals':'📘','Latest News':'📰',
+  'Gabaasaalee fi Maxxansaalee':'📄','Taateewwan':'📅',
+};
+/* Section-image map — add real image URLs here as you get them */
+const HOME_NEWS_IMAGES = {
+  'Sagantaa Dhaalota Magariisa': 'https://i.imgur.com/36K6kb7.png',
+  'REDD+':                       'https://i.imgur.com/ksFd2DK.png',
+  'Dandamachuu Qilleensaa':      'https://i.imgur.com/ksFd2DK.png',
+  'Natural Resource Management': 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=600&q=80',
+  'Plant Science':               'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&q=80',
+  'Agroforestry':                'https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=600&q=80',
+  'Animal Science':              'https://images.unsplash.com/photo-1560493676-04071c5f467b?w=600&q=80',
+  'Rural Development':           'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=600&q=80',
+  'Agro-Economics':              'https://images.unsplash.com/photo-1543286386-713bdd548da4?w=600&q=80',
+  'Forestry':                    'https://images.unsplash.com/photo-1448375240586-882707db888b?w=600&q=80',
+  'Wildlife & Ecotourism':       'https://images.unsplash.com/photo-1474511320723-9a56873867b5?w=600&q=80',
+  'Geospatial & GIS':            'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80',
+  'Nageenya Nyaataa':            'https://images.unsplash.com/photo-1603048297172-c92544798d5a?w=600&q=80',
+  'Gabaasaalee fi Maxxansaalee': 'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&q=80',
+  'Technical Manuals':           'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80',
+  'Latest News':                 'https://i.imgur.com/TOLgCdy.png',
+  'Taateewwan':                  'https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=600&q=80',
+};
+
+let homeNewsData = [];
+let homeNewsPage = 0;
+const HOME_NEWS_PER_PAGE = 4; /* 2 rows x 2 cols */
+let homeNewsTimer = null;
+
+function buildHomeNewsCard(post) {
+  const d = new Date(post.date);
+  const dateStr = d.toLocaleDateString('en-GB', { day:'numeric', month:'short', year:'numeric' });
+  const icon = HOME_NEWS_ICONS[post.section] || '📰';
+  const imgUrl = post.image || HOME_NEWS_IMAGES[post.section] || '';
+  const vt = SECTION_VIEW_MAP[post.section] || 'News';
+  const imgHtml = imgUrl
+    ? `<img class="news-img" src="${imgUrl}" alt="${post.title}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">`
+      + `<div class="news-img-placeholder" style="display:none">${icon}</div>`
+    : `<div class="news-img-placeholder">${icon}</div>`;
+  return `<div class="news-item" onclick="showView('${vt}')">
+    ${imgHtml}
+    <div class="news-body">
+      <div class="news-meta-row">
+        <span class="news-date-str">${dateStr}</span>
+        ${post.section ? `<span class="news-tag">${post.section}</span>` : ''}
+      </div>
+      <div class="news-title">${post.title}</div>
+      <div class="news-excerpt">${post.body}</div>
+      <div class="news-card-footer">
+        <span style="font-size:0.72rem;color:var(--muted)">${post.author || ''}</span>
+        <span class="news-discover">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+          Odeeffannoo Haaraa Argadhu →
+        </span>
+      </div>
+    </div>
+  </div>`;
+}
+
+function renderHomeNewsPage(page) {
+  const grid = document.getElementById('homeNewsGrid');
+  const dotsEl = document.getElementById('homeNewsDots');
+  const label = document.getElementById('homeNewsPageLabel');
+  if (!grid || !homeNewsData.length) return;
+  const totalPages = Math.ceil(homeNewsData.length / HOME_NEWS_PER_PAGE);
+  const start = page * HOME_NEWS_PER_PAGE;
+  const slice = homeNewsData.slice(start, start + HOME_NEWS_PER_PAGE);
+  grid.style.animation = 'none';
+  grid.offsetHeight; /* reflow */
+  grid.style.animation = 'newsFadeIn 0.45s ease';
+  grid.innerHTML = slice.map(buildHomeNewsCard).join('');
+  /* Dots */
+  if (dotsEl) {
+    dotsEl.innerHTML = Array.from({length: totalPages}, (_, i) =>
+      `<button class="nc-dot${i===page?' active':''}" onclick="goHomeNewsPage(${i})"></button>`
+    ).join('');
+  }
+  if (label) label.textContent = (page+1) + ' / ' + totalPages;
+  homeNewsPage = page;
+}
+
+function goHomeNewsPage(page) {
+  clearInterval(homeNewsTimer);
+  renderHomeNewsPage(page);
+  startHomeNewsTimer();
+}
+
+function startHomeNewsTimer() {
+  homeNewsTimer = setInterval(function() {
+    const total = Math.ceil(homeNewsData.length / HOME_NEWS_PER_PAGE);
+    renderHomeNewsPage((homeNewsPage + 1) % total);
+  }, 6000);
+}
+
+document.getElementById('homeNewsPrev') && document.getElementById('homeNewsPrev').addEventListener('click', function() {
+  const total = Math.ceil(homeNewsData.length / HOME_NEWS_PER_PAGE);
+  goHomeNewsPage((homeNewsPage - 1 + total) % total);
+});
+document.getElementById('homeNewsNext') && document.getElementById('homeNewsNext').addEventListener('click', function() {
+  const total = Math.ceil(homeNewsData.length / HOME_NEWS_PER_PAGE);
+  goHomeNewsPage((homeNewsPage + 1) % total);
+});
+
+async function loadHomeNews() {
+  try {
+    const res = await fetch('news.json?v=' + Date.now());
+    if (!res.ok) throw new Error('not found');
+    const data = await res.json();
+    homeNewsData = (data.posts || []).sort((a, b) => new Date(b.date) - new Date(a.date));
+    renderHomeNewsPage(0);
+    if (homeNewsData.length > HOME_NEWS_PER_PAGE) startHomeNewsTimer();
+  } catch(e) {
+    const grid = document.getElementById('homeNewsGrid');
+    if (grid) grid.innerHTML = `
+      <div style="grid-column:1/-1;background:var(--ivory);border:1px solid var(--border);border-left:4px solid var(--earth);border-radius:8px;padding:1.5rem 2rem">
+        <div style="font-weight:700;color:var(--forest);margin-bottom:0.4rem">⚠ Odeeffannoo Hin Argamne</div>
+        <p style="font-size:0.85rem;color:var(--muted)">news.json faayilii HTML wajjin tokkoo ol kaa'i. Gaafii kamifuu: afoluofethiopia@gmail.com</p>
+      </div>`;
+  }
+}
+
+
 async function loadNews() {
   const feed = document.getElementById('news-feed');
   const loading = document.getElementById('news-loading');
@@ -3422,6 +3587,12 @@ async function loadNews() {
     if (!res.ok) throw new Error('not found');
     const data = await res.json();
     allNews = (data.posts || []).sort((a, b) => new Date(b.date) - new Date(a.date));
+    /* Also refresh home carousel if visible */
+    if (homeNewsData.length === 0) {
+      homeNewsData = allNews;
+      renderHomeNewsPage(0);
+      if (homeNewsData.length > HOME_NEWS_PER_PAGE) startHomeNewsTimer();
+    }
     loading.style.display = 'none';
     renderNews(allNews);
   } catch {
@@ -3534,7 +3705,7 @@ function copyUrlBar() {
 
   navigator.clipboard.writeText(fullUrl).then(function() {
     const btn = document.getElementById('url-bar-copy');
-    if (btn) { btn.textContent = '✓ Copied'; btn.classList.add('copied'); setTimeout(()=>{ btn.textContent='⎘ Copy'; btn.classList.remove('copied'); }, 2000); }
+    if (btn) { btn.textContent = '✓ Copied'; btn.classList.add('copied'); setTimeout(()=>{ btn.textContent='⎘ Garagalfadhu'; btn.classList.remove('copied'); }, 2000); }
   }).catch(() => {
     const btn = document.getElementById('url-bar-copy');
     if (btn) btn.textContent = 'Error';
