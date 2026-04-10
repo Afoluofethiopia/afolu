@@ -1922,6 +1922,22 @@ footer {
 </div>
 
 
+
+/* ── Detail popup table + rich content styles ── */
+.detail-full table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:0.88rem;border:1px solid var(--border);border-radius:8px;overflow:hidden}
+.detail-full table thead tr{background:var(--forest);color:var(--white)}
+.detail-full table thead th{padding:0.7rem 1rem;text-align:left;font-weight:700;font-size:0.82rem}
+.detail-full table tbody tr:nth-child(even){background:var(--ivory)}
+.detail-full table tbody tr:hover{background:var(--earth-pale)}
+.detail-full table tbody td{padding:0.6rem 1rem;border-bottom:1px solid var(--border-soft);color:var(--ink-soft);vertical-align:top}
+.detail-full table tbody tr:last-child td{border-bottom:none}
+.detail-full .dtable-wrap{overflow-x:auto;margin:1rem 0;border-radius:8px;border:1px solid var(--border)}
+.detail-full h2{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--forest);margin:1.2rem 0 0.5rem;padding-bottom:0.3rem;border-bottom:2px solid var(--earth-pale)}
+.detail-full h3{font-size:0.95rem;font-weight:700;color:var(--sky);margin:1rem 0 0.4rem}
+.detail-full ul,.detail-full ol{padding-left:1.4rem;margin:0.5rem 0}
+.detail-full li{font-size:0.93rem;line-height:1.8;color:var(--ink-soft);margin-bottom:0.2rem}
+.detail-full hr{border:none;border-top:1px solid var(--border);margin:1.2rem 0}
+
 /* ── Share Toast Notification ── */
 .share-toast {
   position: fixed;
@@ -1947,6 +1963,22 @@ footer {
   transform: translateX(-50%) translateY(0);
 }
 
+
+
+/* ── Detail popup table + rich content styles ── */
+.detail-full table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:0.88rem;border:1px solid var(--border);border-radius:8px;overflow:hidden}
+.detail-full table thead tr{background:var(--forest);color:var(--white)}
+.detail-full table thead th{padding:0.7rem 1rem;text-align:left;font-weight:700;font-size:0.82rem}
+.detail-full table tbody tr:nth-child(even){background:var(--ivory)}
+.detail-full table tbody tr:hover{background:var(--earth-pale)}
+.detail-full table tbody td{padding:0.6rem 1rem;border-bottom:1px solid var(--border-soft);color:var(--ink-soft);vertical-align:top}
+.detail-full table tbody tr:last-child td{border-bottom:none}
+.detail-full .dtable-wrap{overflow-x:auto;margin:1rem 0;border-radius:8px;border:1px solid var(--border)}
+.detail-full h2{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--forest);margin:1.2rem 0 0.5rem;padding-bottom:0.3rem;border-bottom:2px solid var(--earth-pale)}
+.detail-full h3{font-size:0.95rem;font-weight:700;color:var(--sky);margin:1rem 0 0.4rem}
+.detail-full ul,.detail-full ol{padding-left:1.4rem;margin:0.5rem 0}
+.detail-full li{font-size:0.93rem;line-height:1.8;color:var(--ink-soft);margin-bottom:0.2rem}
+.detail-full hr{border:none;border-top:1px solid var(--border);margin:1.2rem 0}
 
 /* ── Share Toast Notification ── */
 .share-toast {
@@ -4680,9 +4712,20 @@ function fallbackCopy(text) {
     /* Full detail */
     var fe = document.getElementById('detailFull');
     if (post.detail) {
-      fe.innerHTML = post.detail.split('\n\n')
-        .filter(function(p) { return p.trim(); })
-        .map(function(p) { return '<p>' + p.trim() + '</p>'; }).join('');
+      var dt = post.detail;
+      /* If detail contains HTML tags, render directly — supports tables, lists, headings */
+      var hasHTML = dt.indexOf('<table') !== -1 || dt.indexOf('<ul') !== -1 ||
+                    dt.indexOf('<ol') !== -1 || dt.indexOf('<h2') !== -1 ||
+                    dt.indexOf('<h3') !== -1 || dt.indexOf('<strong') !== -1 ||
+                    dt.indexOf('<br') !== -1;
+      if (hasHTML) {
+        fe.innerHTML = dt;
+      } else {
+        fe.innerHTML = dt.split('\n\n')
+          .filter(function(p){ return p.trim(); })
+          .map(function(p){ return '<p>'+p.trim().replace(/\n/g,'<br>')+'</p>'; })
+          .join('');
+      }
     } else {
       fe.innerHTML = '<div class="detail-no-detail">Odeeffannoo bal\'aa hin jiru. "detail" field news.json keessatti guutaa.</div>';
     }
