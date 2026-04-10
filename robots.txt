@@ -1,1 +1,12 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://afoluethiopia.cv/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1
+
+# Block crawlers from non-content paths
+Disallow: /cdn-cgi/
 
