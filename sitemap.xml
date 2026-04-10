@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
   <url>
@@ -166,14 +165,6 @@
       <image:loc>https://i.imgur.com/36K6kb7.png</image:loc>
       <image:title>Guyyaa Dhaabuu Muka Biyyoolessaa 2026 — Hirmaannaa Lammiilee</image:title>
     </image:image>
-    <news:news>
-      <news:publication>
-        <news:name>AFOLU Itoophiyaa</news:name>
-        <news:language>om</news:language>
-      </news:publication>
-      <news:publication_date>2026-06-01</news:publication_date>
-      <news:title>Guyyaa Dhaabuu Muka Biyyoolessaa 2026 — Hirmaannaa Lammiilee</news:title>
-    </news:news>
   </url>
 
   <url>
@@ -182,17 +173,9 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80</image:loc>
+      <image:loc>https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&amp;q=80</image:loc>
       <image:title>Waltajjii Biyyoolessaa Qabeenya Uumamaa — Marii Ogeeyyii</image:title>
     </image:image>
-    <news:news>
-      <news:publication>
-        <news:name>AFOLU Itoophiyaa</news:name>
-        <news:language>om</news:language>
-      </news:publication>
-      <news:publication_date>2026-05-20</news:publication_date>
-      <news:title>Waltajjii Biyyoolessaa Qabeenya Uumamaa — Marii Ogeeyyii</news:title>
-    </news:news>
   </url>
 
   <url>
@@ -201,17 +184,9 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=600&q=80</image:loc>
+      <image:loc>https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=600&amp;q=80</image:loc>
       <image:title>Leenjii Agroforestirii — Qonnaatotaaf Carraa Barumsaa</image:title>
     </image:image>
-    <news:news>
-      <news:publication>
-        <news:name>AFOLU Itoophiyaa</news:name>
-        <news:language>om</news:language>
-      </news:publication>
-      <news:publication_date>2026-05-15</news:publication_date>
-      <news:title>Leenjii Agroforestirii — Qonnaatotaaf Carraa Barumsaa</news:title>
-    </news:news>
   </url>
 
   <url>
@@ -223,14 +198,6 @@
       <image:loc>https://i.imgur.com/ksFd2DK.png</image:loc>
       <image:title>Sagantaa REDD+ — Konfaransii Hirmaattoota Naannoo</image:title>
     </image:image>
-    <news:news>
-      <news:publication>
-        <news:name>AFOLU Itoophiyaa</news:name>
-        <news:language>om</news:language>
-      </news:publication>
-      <news:publication_date>2026-05-10</news:publication_date>
-      <news:title>Sagantaa REDD+ — Konfaransii Hirmaattoota Naannoo</news:title>
-    </news:news>
   </url>
 
   <url>
@@ -239,17 +206,9 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&q=80</image:loc>
+      <image:loc>https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&amp;q=80</image:loc>
       <image:title>Waamicha Qorannoo: Saayinsii Biqiltuu fi Nageenya Nyaataa</image:title>
     </image:image>
-    <news:news>
-      <news:publication>
-        <news:name>AFOLU Itoophiyaa</news:name>
-        <news:language>om</news:language>
-      </news:publication>
-      <news:publication_date>2026-05-05</news:publication_date>
-      <news:title>Waamicha Qorannoo: Saayinsii Biqiltuu fi Nageenya Nyaataa</news:title>
-    </news:news>
   </url>
 
   <url>
@@ -258,17 +217,9 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=600&q=80</image:loc>
+      <image:loc>https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=600&amp;q=80</image:loc>
       <image:title>Konfaransii Dandamachuu Qilleensaa — Karaa Furmaataa</image:title>
     </image:image>
-    <news:news>
-      <news:publication>
-        <news:name>AFOLU Itoophiyaa</news:name>
-        <news:language>om</news:language>
-      </news:publication>
-      <news:publication_date>2026-04-28</news:publication_date>
-      <news:title>Konfaransii Dandamachuu Qilleensaa — Karaa Furmaataa</news:title>
-    </news:news>
   </url>
 
   <url>
@@ -277,17 +228,9 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=600&q=80</image:loc>
+      <image:loc>https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=600&amp;q=80</image:loc>
       <image:title>Sagantaa Hordoffii AFOLU 2026 — Iyyannoo Fudhachuu Itti Fufa</image:title>
     </image:image>
-    <news:news>
-      <news:publication>
-        <news:name>AFOLU Itoophiyaa</news:name>
-        <news:language>om</news:language>
-      </news:publication>
-      <news:publication_date>2026-04-20</news:publication_date>
-      <news:title>Sagantaa Hordoffii AFOLU 2026 — Iyyannoo Fudhachuu Itti Fufa</news:title>
-    </news:news>
   </url>
 
   <url>
@@ -299,14 +242,6 @@
       <image:loc>https://i.imgur.com/36K6kb7.png</image:loc>
       <image:title>Sagantaan Ashaaraa Magariisaa Lakkoofsa Biqiltuu Biliyoona 28 Caale</image:title>
     </image:image>
-    <news:news>
-      <news:publication>
-        <news:name>AFOLU Itoophiyaa</news:name>
-        <news:language>om</news:language>
-      </news:publication>
-      <news:publication_date>2026-04-15</news:publication_date>
-      <news:title>Sagantaan Ashaaraa Magariisaa Lakkoofsa Biqiltuu Biliyoona 28 Caale</news:title>
-    </news:news>
   </url>
 
   <url>
@@ -315,17 +250,9 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://images.unsplash.com/photo-1560493676-04071c5f467b?w=600&q=80</image:loc>
+      <image:loc>https://images.unsplash.com/photo-1560493676-04071c5f467b?w=600&amp;q=80</image:loc>
       <image:title>Simpooziyeemii Saayinsii Bineeldota fi Misoomaa Baadiyyaa</image:title>
     </image:image>
-    <news:news>
-      <news:publication>
-        <news:name>AFOLU Itoophiyaa</news:name>
-        <news:language>om</news:language>
-      </news:publication>
-      <news:publication_date>2026-04-12</news:publication_date>
-      <news:title>Simpooziyeemii Saayinsii Bineeldota fi Misoomaa Baadiyyaa</news:title>
-    </news:news>
   </url>
 
   <url>
@@ -337,14 +264,6 @@
       <image:loc>https://i.imgur.com/ksFd2DK.png</image:loc>
       <image:title>Warshaa Qonnaa Qilleensa-Ogummaa — Galmaawwii Banaa</image:title>
     </image:image>
-    <news:news>
-      <news:publication>
-        <news:name>AFOLU Itoophiyaa</news:name>
-        <news:language>om</news:language>
-      </news:publication>
-      <news:publication_date>2026-04-10</news:publication_date>
-      <news:title>Warshaa Qonnaa Qilleensa-Ogummaa — Galmaawwii Banaa</news:title>
-    </news:news>
   </url>
 
   <url>
@@ -356,14 +275,6 @@
       <image:loc>https://i.imgur.com/TOLgCdy.png</image:loc>
       <image:title>Waamicha Iyyannoo: Sagantaa Hordoffii AFOLU 2026</image:title>
     </image:image>
-    <news:news>
-      <news:publication>
-        <news:name>AFOLU Itoophiyaa</news:name>
-        <news:language>om</news:language>
-      </news:publication>
-      <news:publication_date>2026-04-10</news:publication_date>
-      <news:title>Waamicha Iyyannoo: Sagantaa Hordoffii AFOLU 2026</news:title>
-    </news:news>
   </url>
 
   <url>
@@ -375,14 +286,6 @@
       <image:loc>https://i.imgur.com/ksFd2DK.png</image:loc>
       <image:title>AFOLU Sagantaa Bulchiinsa Bosona Hawaasa REDD+ Haaraa Jalqabe</image:title>
     </image:image>
-    <news:news>
-      <news:publication>
-        <news:name>AFOLU Itoophiyaa</news:name>
-        <news:language>om</news:language>
-      </news:publication>
-      <news:publication_date>2026-04-08</news:publication_date>
-      <news:title>AFOLU Sagantaa Bulchiinsa Bosona Hawaasa REDD+ Haaraa Jalqabe</news:title>
-    </news:news>
   </url>
 
   <url>
@@ -392,16 +295,8 @@
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://i.imgur.com/ksFd2DK.png</image:loc>
-      <image:title>Ilaallata Hojiirra Oolmaa Pirojektii REDD+ — Wa'ee Hirmaattoota</image:title>
+      <image:title>Ilaallata Hojiirra Oolmaa Pirojektii REDD+ — Wa&apos;ee Hirmaattoota</image:title>
     </image:image>
-    <news:news>
-      <news:publication>
-        <news:name>AFOLU Itoophiyaa</news:name>
-        <news:language>om</news:language>
-      </news:publication>
-      <news:publication_date>2026-04-05</news:publication_date>
-      <news:title>Ilaallata Hojiirra Oolmaa Pirojektii REDD+ — Wa'ee Hirmaattoota</news:title>
-    </news:news>
   </url>
 
   <url>
@@ -413,14 +308,6 @@
       <image:loc>https://i.imgur.com/TOLgCdy.png</image:loc>
       <image:title>Simpooziyeemii Biyyoolessaa Bulchiinsa Lafa Itti Fufiinsa Qabu — Waamicha Barreeffamaa</image:title>
     </image:image>
-    <news:news>
-      <news:publication>
-        <news:name>AFOLU Itoophiyaa</news:name>
-        <news:language>om</news:language>
-      </news:publication>
-      <news:publication_date>2026-04-05</news:publication_date>
-      <news:title>Simpooziyeemii Biyyoolessaa Bulchiinsa Lafa Itti Fufiinsa Qabu — Waamicha Barreeffamaa</news:title>
-    </news:news>
   </url>
 
   <url>
@@ -432,14 +319,6 @@
       <image:loc>https://i.imgur.com/36K6kb7.png</image:loc>
       <image:title>Guyyaa Dhaabuu Muka Biyyoolessaa 2026 Qopheessuu Jalqabame</image:title>
     </image:image>
-    <news:news>
-      <news:publication>
-        <news:name>AFOLU Itoophiyaa</news:name>
-        <news:language>om</news:language>
-      </news:publication>
-      <news:publication_date>2026-04-05</news:publication_date>
-      <news:title>Guyyaa Dhaabuu Muka Biyyoolessaa 2026 Qopheessuu Jalqabame</news:title>
-    </news:news>
   </url>
 
   <url>
@@ -448,17 +327,9 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=600&q=80</image:loc>
+      <image:loc>https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=600&amp;q=80</image:loc>
       <image:title>Haaromsa Bishaanii Heektaarii Miliyoona 15 ol Biyyoolessaan Hammata</image:title>
     </image:image>
-    <news:news>
-      <news:publication>
-        <news:name>AFOLU Itoophiyaa</news:name>
-        <news:language>om</news:language>
-      </news:publication>
-      <news:publication_date>2026-04-01</news:publication_date>
-      <news:title>Haaromsa Bishaanii Heektaarii Miliyoona 15 ol Biyyoolessaan Hammata</news:title>
-    </news:news>
   </url>
 
   <url>
@@ -467,17 +338,9 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&q=80</image:loc>
+      <image:loc>https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&amp;q=80</image:loc>
       <image:title>Gabaasa Waggaa 2025 Amma Buufachuuf Jira</image:title>
     </image:image>
-    <news:news>
-      <news:publication>
-        <news:name>AFOLU Itoophiyaa</news:name>
-        <news:language>om</news:language>
-      </news:publication>
-      <news:publication_date>2026-03-30</news:publication_date>
-      <news:title>Gabaasa Waggaa 2025 Amma Buufachuuf Jira</news:title>
-    </news:news>
   </url>
 
   <url>
@@ -486,17 +349,9 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80</image:loc>
-      <image:title>Meeshaalee Xiinxala Jiyoospeeshalii Haaraa Hordoffii Fayyadama Lafaatiif Qophaa'e</image:title>
+      <image:loc>https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&amp;q=80</image:loc>
+      <image:title>Meeshaalee Xiinxala Jiyoospeeshalii Haaraa Hordoffii Fayyadama Lafaatiif Qophaa&apos;e</image:title>
     </image:image>
-    <news:news>
-      <news:publication>
-        <news:name>AFOLU Itoophiyaa</news:name>
-        <news:language>om</news:language>
-      </news:publication>
-      <news:publication_date>2026-03-22</news:publication_date>
-      <news:title>Meeshaalee Xiinxala Jiyoospeeshalii Haaraa Hordoffii Fayyadama Lafaatiif Qophaa'e</news:title>
-    </news:news>
   </url>
 
   <url>
@@ -505,17 +360,9 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&q=80</image:loc>
-      <image:title>Saayinsii Biqiltuu: Sanyii Fooyyaa'aa Naannoolee Adda Addaatiif Qophaa'e</image:title>
+      <image:loc>https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&amp;q=80</image:loc>
+      <image:title>Saayinsii Biqiltuu: Sanyii Fooyyaa&apos;aa Naannoolee Adda Addaatiif Qophaa&apos;e</image:title>
     </image:image>
-    <news:news>
-      <news:publication>
-        <news:name>AFOLU Itoophiyaa</news:name>
-        <news:language>om</news:language>
-      </news:publication>
-      <news:publication_date>2026-03-15</news:publication_date>
-      <news:title>Saayinsii Biqiltuu: Sanyii Fooyyaa'aa Naannoolee Adda Addaatiif Qophaa'e</news:title>
-    </news:news>
   </url>
 
   <url>
@@ -524,17 +371,9 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=600&q=80</image:loc>
-      <image:title>Agroforestirii: Sirna Mukaa-Qonnaa-Horsiisee Bulee Naannoo Oromiyaatti Bal'ate</image:title>
+      <image:loc>https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=600&amp;q=80</image:loc>
+      <image:title>Agroforestirii: Sirna Mukaa-Qonnaa-Horsiisee Bulee Naannoo Oromiyaatti Bal&apos;ate</image:title>
     </image:image>
-    <news:news>
-      <news:publication>
-        <news:name>AFOLU Itoophiyaa</news:name>
-        <news:language>om</news:language>
-      </news:publication>
-      <news:publication_date>2026-03-10</news:publication_date>
-      <news:title>Agroforestirii: Sirna Mukaa-Qonnaa-Horsiisee Bulee Naannoo Oromiyaatti Bal'ate</news:title>
-    </news:news>
   </url>
 
   <url>
@@ -543,17 +382,9 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://images.unsplash.com/photo-1560493676-04071c5f467b?w=600&q=80</image:loc>
-      <image:title>Saayinsii Bineeldota: Fooyya'iinsa Horsiisee Buleetiin Horiin Ni Baay'ata</image:title>
+      <image:loc>https://images.unsplash.com/photo-1560493676-04071c5f467b?w=600&amp;q=80</image:loc>
+      <image:title>Saayinsii Bineeldota: Fooyya&apos;iinsa Horsiisee Buleetiin Horiin Ni Baay&apos;ata</image:title>
     </image:image>
-    <news:news>
-      <news:publication>
-        <news:name>AFOLU Itoophiyaa</news:name>
-        <news:language>om</news:language>
-      </news:publication>
-      <news:publication_date>2026-02-28</news:publication_date>
-      <news:title>Saayinsii Bineeldota: Fooyya'iinsa Horsiisee Buleetiin Horiin Ni Baay'ata</news:title>
-    </news:news>
   </url>
 
   <url>
@@ -562,17 +393,9 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=600&q=80</image:loc>
-      <image:title>Misooma Baadiyyaa: Mana Barumsaa Qonnaa fi Buufata Mul'ina Haaraan Banaman</image:title>
+      <image:loc>https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=600&amp;q=80</image:loc>
+      <image:title>Misooma Baadiyyaa: Mana Barumsaa Qonnaa fi Buufata Mul&apos;ina Haaraan Banaman</image:title>
     </image:image>
-    <news:news>
-      <news:publication>
-        <news:name>AFOLU Itoophiyaa</news:name>
-        <news:language>om</news:language>
-      </news:publication>
-      <news:publication_date>2026-02-20</news:publication_date>
-      <news:title>Misooma Baadiyyaa: Mana Barumsaa Qonnaa fi Buufata Mul'ina Haaraan Banaman</news:title>
-    </news:news>
   </url>
 
   <url>
@@ -581,17 +404,9 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://images.unsplash.com/photo-1543286386-713bdd548da4?w=600&q=80</image:loc>
+      <image:loc>https://images.unsplash.com/photo-1543286386-713bdd548da4?w=600&amp;q=80</image:loc>
       <image:title>Agiroo-Ekonomiksii: Sarara Gatii Qonnaa Fooyyessuuf Xiinxalli Bahe</image:title>
     </image:image>
-    <news:news>
-      <news:publication>
-        <news:name>AFOLU Itoophiyaa</news:name>
-        <news:language>om</news:language>
-      </news:publication>
-      <news:publication_date>2026-02-10</news:publication_date>
-      <news:title>Agiroo-Ekonomiksii: Sarara Gatii Qonnaa Fooyyessuuf Xiinxalli Bahe</news:title>
-    </news:news>
   </url>
 
   <url>
@@ -600,17 +415,9 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://images.unsplash.com/photo-1448375240586-882707db888b?w=600&q=80</image:loc>
+      <image:loc>https://images.unsplash.com/photo-1448375240586-882707db888b?w=600&amp;q=80</image:loc>
       <image:title>Marga: Sagantaan Bulchiinsa Bosona Hawaasaa Naannolee Sadii Keessatti Jalqabe</image:title>
     </image:image>
-    <news:news>
-      <news:publication>
-        <news:name>AFOLU Itoophiyaa</news:name>
-        <news:language>om</news:language>
-      </news:publication>
-      <news:publication_date>2026-01-25</news:publication_date>
-      <news:title>Marga: Sagantaan Bulchiinsa Bosona Hawaasaa Naannolee Sadii Keessatti Jalqabe</news:title>
-    </news:news>
   </url>
 
   <url>
@@ -619,17 +426,9 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://images.unsplash.com/photo-1474511320723-9a56873867b5?w=600&q=80</image:loc>
+      <image:loc>https://images.unsplash.com/photo-1474511320723-9a56873867b5?w=600&amp;q=80</image:loc>
       <image:title>Bineensota Bosonaa fi Tuuriizimii: Naannolee Eegumsa Bineensotaa Cimsan</image:title>
     </image:image>
-    <news:news>
-      <news:publication>
-        <news:name>AFOLU Itoophiyaa</news:name>
-        <news:language>om</news:language>
-      </news:publication>
-      <news:publication_date>2026-01-15</news:publication_date>
-      <news:title>Bineensota Bosonaa fi Tuuriizimii: Naannolee Eegumsa Bineensotaa Cimsan</news:title>
-    </news:news>
   </url>
 
   <url>
@@ -638,17 +437,9 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://images.unsplash.com/photo-1603048297172-c92544798d5a?w=600&q=80</image:loc>
+      <image:loc>https://images.unsplash.com/photo-1603048297172-c92544798d5a?w=600&amp;q=80</image:loc>
       <image:title>Nageenya Nyaataa: Hojii Gamtaa Haaraan Naannoolee Saaxilamoo Keessatti Jalqabe</image:title>
     </image:image>
-    <news:news>
-      <news:publication>
-        <news:name>AFOLU Itoophiyaa</news:name>
-        <news:language>om</news:language>
-      </news:publication>
-      <news:publication_date>2025-12-20</news:publication_date>
-      <news:title>Nageenya Nyaataa: Hojii Gamtaa Haaraan Naannoolee Saaxilamoo Keessatti Jalqabe</news:title>
-    </news:news>
   </url>
 
   <url>
@@ -660,14 +451,6 @@
       <image:loc>https://i.imgur.com/ksFd2DK.png</image:loc>
       <image:title>Dandamachuu Qilleensaa: CRGE Tarkaanfii Hojiirra Oolmaa Itoophiyaa Deeggara</image:title>
     </image:image>
-    <news:news>
-      <news:publication>
-        <news:name>AFOLU Itoophiyaa</news:name>
-        <news:language>om</news:language>
-      </news:publication>
-      <news:publication_date>2025-12-10</news:publication_date>
-      <news:title>Dandamachuu Qilleensaa: CRGE Tarkaanfii Hojiirra Oolmaa Itoophiyaa Deeggara</news:title>
-    </news:news>
   </url>
 
   <url>
@@ -676,17 +459,9 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=600&q=80</image:loc>
+      <image:loc>https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=600&amp;q=80</image:loc>
       <image:title>Pirojektii Amma: Haaromsa Bishaanii Oromiyaa fi Amaaraa Keessatti Itti Fufa</image:title>
     </image:image>
-    <news:news>
-      <news:publication>
-        <news:name>AFOLU Itoophiyaa</news:name>
-        <news:language>om</news:language>
-      </news:publication>
-      <news:publication_date>2025-11-30</news:publication_date>
-      <news:title>Pirojektii Amma: Haaromsa Bishaanii Oromiyaa fi Amaaraa Keessatti Itti Fufa</news:title>
-    </news:news>
   </url>
 
   <url>
@@ -695,17 +470,9 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=600&q=80</image:loc>
+      <image:loc>https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=600&amp;q=80</image:loc>
       <image:title>Pirojektii Xumurame: Manneen Barumsaa Qonnaa fi Sanyii Biqiltuu Naannoo Oromiyaa</image:title>
     </image:image>
-    <news:news>
-      <news:publication>
-        <news:name>AFOLU Itoophiyaa</news:name>
-        <news:language>om</news:language>
-      </news:publication>
-      <news:publication_date>2025-11-15</news:publication_date>
-      <news:title>Pirojektii Xumurame: Manneen Barumsaa Qonnaa fi Sanyii Biqiltuu Naannoo Oromiyaa</news:title>
-    </news:news>
   </url>
 
   <url>
@@ -714,17 +481,9 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=600&q=80</image:loc>
+      <image:loc>https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=600&amp;q=80</image:loc>
       <image:title>Pirojektii Naannoo: Pirojektii Agroforestirii Dirree Gogaa Hundeeffame</image:title>
     </image:image>
-    <news:news>
-      <news:publication>
-        <news:name>AFOLU Itoophiyaa</news:name>
-        <news:language>om</news:language>
-      </news:publication>
-      <news:publication_date>2025-10-30</news:publication_date>
-      <news:title>Pirojektii Naannoo: Pirojektii Agroforestirii Dirree Gogaa Hundeeffame</news:title>
-    </news:news>
   </url>
 
   <url>
@@ -733,17 +492,9 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&q=80</image:loc>
+      <image:loc>https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&amp;q=80</image:loc>
       <image:title>Gabaasaalee: Maxxansa Haaraan Qorannoo Saayinsii Biqiltuu Irratti Bahe</image:title>
     </image:image>
-    <news:news>
-      <news:publication>
-        <news:name>AFOLU Itoophiyaa</news:name>
-        <news:language>om</news:language>
-      </news:publication>
-      <news:publication_date>2025-10-15</news:publication_date>
-      <news:title>Gabaasaalee: Maxxansa Haaraan Qorannoo Saayinsii Biqiltuu Irratti Bahe</news:title>
-    </news:news>
   </url>
 
   <url>
@@ -752,17 +503,9 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80</image:loc>
+      <image:loc>https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&amp;q=80</image:loc>
       <image:title>GIS fi Kaartaalee: Sirni Hordoffii Bosona Haaraan Jalqabame</image:title>
     </image:image>
-    <news:news>
-      <news:publication>
-        <news:name>AFOLU Itoophiyaa</news:name>
-        <news:language>om</news:language>
-      </news:publication>
-      <news:publication_date>2025-10-01</news:publication_date>
-      <news:title>GIS fi Kaartaalee: Sirni Hordoffii Bosona Haaraan Jalqabame</news:title>
-    </news:news>
   </url>
 
   <url>
@@ -771,17 +514,9 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80</image:loc>
+      <image:loc>https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&amp;q=80</image:loc>
       <image:title>Qajeelcha Teknikaa: Galmee Haaraa Bulchiinsa Bosona Hawaasaa fi REDD+ Bahe</image:title>
     </image:image>
-    <news:news>
-      <news:publication>
-        <news:name>AFOLU Itoophiyaa</news:name>
-        <news:language>om</news:language>
-      </news:publication>
-      <news:publication_date>2025-09-15</news:publication_date>
-      <news:title>Qajeelcha Teknikaa: Galmee Haaraa Bulchiinsa Bosona Hawaasaa fi REDD+ Bahe</news:title>
-    </news:news>
   </url>
 
   <url>
@@ -793,14 +528,6 @@
       <image:loc>https://i.imgur.com/TOLgCdy.png</image:loc>
       <image:title>AFOLU Itoophiyaa Hirmaattoota Haaraa 50 ol Simate</image:title>
     </image:image>
-    <news:news>
-      <news:publication>
-        <news:name>AFOLU Itoophiyaa</news:name>
-        <news:language>om</news:language>
-      </news:publication>
-      <news:publication_date>2025-09-01</news:publication_date>
-      <news:title>AFOLU Itoophiyaa Hirmaattoota Haaraa 50 ol Simate</news:title>
-    </news:news>
   </url>
 
   <url>
@@ -809,17 +536,9 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=600&q=80</image:loc>
-      <image:title>Qonnaatotni Oromiyaa Sirna Agroforestirii Irraa Bu'aa Gurguddaa Argatan</image:title>
+      <image:loc>https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=600&amp;q=80</image:loc>
+      <image:title>Qonnaatotni Oromiyaa Sirna Agroforestirii Irraa Bu&apos;aa Gurguddaa Argatan</image:title>
     </image:image>
-    <news:news>
-      <news:publication>
-        <news:name>AFOLU Itoophiyaa</news:name>
-        <news:language>om</news:language>
-      </news:publication>
-      <news:publication_date>2025-08-20</news:publication_date>
-      <news:title>Qonnaatotni Oromiyaa Sirna Agroforestirii Irraa Bu'aa Gurguddaa Argatan</news:title>
-    </news:news>
   </url>
 
   <url>
@@ -831,14 +550,6 @@
       <image:loc>https://i.imgur.com/TOLgCdy.png</image:loc>
       <image:title>Sagantaa Hordoffii AFOLU 2025: Barattoota fi Qorattootni Haaraa Simataman</image:title>
     </image:image>
-    <news:news>
-      <news:publication>
-        <news:name>AFOLU Itoophiyaa</news:name>
-        <news:language>om</news:language>
-      </news:publication>
-      <news:publication_date>2025-08-01</news:publication_date>
-      <news:title>Sagantaa Hordoffii AFOLU 2025: Barattoota fi Qorattootni Haaraa Simataman</news:title>
-    </news:news>
   </url>
 
 </urlset>
