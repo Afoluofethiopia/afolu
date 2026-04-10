@@ -3,13 +3,83 @@
 <head>
 <meta charset="UTF-8"/>
 <meta http-equiv="Content-Language" content="om"/>
-<meta name="language" content="Afaan Oromo"/>
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>AFOLU Itoophiyaa</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="icon" type="image/png" href="https://i.imgur.com/TOLgCdy.png">
+
+<!-- ═══ PRIMARY SEO META ═══ -->
+<title>AFOLU Itoophiyaa — Agriculture, Forestry &amp; Other Land Use</title>
+<meta name="description" content="AFOLU Itoophiyaa — Qonnaa, Bosonaa fi Fayyadama Lafa. Agriculture, Forestry and Other Land Use organization working for sustainable land management, Green Legacy, REDD+, climate resilience and food security across Ethiopia."/>
+<meta name="keywords" content="AFOLU Ethiopia, Agriculture Forestry Land Use, Green Legacy Ethiopia, REDD+ Ethiopia, Climate Resilience, Food Security Ethiopia, Agroforestry, NRM Ethiopia, Sustainable Land Management"/>
+<meta name="author" content="AFOLU Itoophiyaa"/>
+<meta name="language" content="Afaan Oromo, English, Amharic"/>
+<meta name="robots" content="index, follow"/>
+<meta name="revisit-after" content="7 days"/>
+<link rel="canonical" href="https://afoluethiopia.cv/"/>
+
+<!-- ═══ OPEN GRAPH (Facebook, WhatsApp, LinkedIn) ═══ -->
+<meta property="og:type"        content="website"/>
+<meta property="og:site_name"   content="AFOLU Itoophiyaa"/>
+<meta property="og:title"       content="AFOLU Itoophiyaa — Agriculture, Forestry &amp; Other Land Use"/>
+<meta property="og:description" content="Qonnaa, Bosonaa fi Fayyadama Lafa — Working for sustainable ecosystems, climate resilience and rural livelihoods across Ethiopia."/>
+<meta property="og:image"       content="https://i.imgur.com/36K6kb7.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="og:url"         content="https://afoluethiopia.cv/"/>
+<meta property="og:locale"      content="om_ET"/>
+
+<!-- ═══ TWITTER / X CARD ═══ -->
+<meta name="twitter:card"        content="summary_large_image"/>
+<meta name="twitter:site"        content="@afoluethiopia"/>
+<meta name="twitter:title"       content="AFOLU Itoophiyaa — Agriculture, Forestry &amp; Other Land Use"/>
+<meta name="twitter:description" content="Qonnaa, Bosonaa fi Fayyadama Lafa — sustainable ecosystems, climate resilience, and rural livelihoods across Ethiopia."/>
+<meta name="twitter:image"       content="https://i.imgur.com/36K6kb7.png"/>
+
+<!-- ═══ SCHEMA.ORG STRUCTURED DATA ═══ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "AFOLU Itoophiyaa",
+  "alternateName": "AFOLU Ethiopia",
+  "url": "https://afoluethiopia.cv",
+  "logo": "https://i.imgur.com/TOLgCdy.png",
+  "description": "Agriculture, Forestry and Other Land Use organization working for sustainable land management across Ethiopia.",
+  "email": "afoluofethiopia@gmail.com",
+  "foundingDate": "2019",
+  "areaServed": "Ethiopia",
+  "sameAs": ["https://www.facebook.com/afoluethiopia"],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "afoluofethiopia@gmail.com",
+    "contactType": "General Enquiries",
+    "availableLanguage": ["Afaan Oromo", "English", "Amharic"]
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "AFOLU Itoophiyaa",
+  "url": "https://afoluethiopia.cv",
+  "description": "Official website of AFOLU Itoophiyaa — Agriculture, Forestry and Other Land Use",
+  "inLanguage": ["om", "en", "am"],
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://afoluethiopia.cv/#news?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+<!-- ═══ FAVICONS & TOUCH ICONS ═══ -->
+<link rel="icon" type="image/png" sizes="32x32" href="https://i.imgur.com/TOLgCdy.png"/>
+<link rel="apple-touch-icon"      href="https://i.imgur.com/TOLgCdy.png"/>
+<link rel="shortcut icon"         href="https://i.imgur.com/TOLgCdy.png"/>
+
+<!-- ═══ FONTS ═══ -->
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap"/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
 <style>
 /* ============================================================
@@ -1501,6 +1571,90 @@ footer {
   .detail-title { font-size: 1.15rem; }
 }
 
+
+/* ═══ ACCESSIBILITY ═══ */
+.skip-link {
+  position: absolute; top: -100px; left: 1rem; z-index: 9999;
+  background: var(--forest); color: var(--white);
+  padding: 0.6rem 1.2rem; border-radius: 5px; font-size: 0.85rem; font-weight: 700;
+  text-decoration: none; transition: top 0.2s;
+}
+.skip-link:focus { top: 1rem; }
+
+:focus-visible {
+  outline: 3px solid var(--earth) !important;
+  outline-offset: 3px !important;
+  border-radius: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ═══ BACK TO TOP BUTTON ═══ */
+.back-to-top {
+  position: fixed; bottom: 5.5rem; right: 1.5rem; z-index: 800;
+  width: 44px; height: 44px; border-radius: 50%;
+  background: var(--forest); color: var(--white);
+  border: none; cursor: pointer; font-size: 1.1rem;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 14px rgba(13,40,24,0.35);
+  opacity: 0; transform: translateY(10px);
+  transition: opacity 0.3s, transform 0.3s;
+  pointer-events: none;
+}
+.back-to-top.visible { opacity: 1; transform: translateY(0); pointer-events: all; }
+.back-to-top:hover { background: var(--forest-light); transform: translateY(-2px); }
+
+/* ═══ GLOBAL SEARCH BAR ═══ */
+.global-search-wrap {
+  position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 4000;
+  background: rgba(10,20,14,0.75); backdrop-filter: blur(6px);
+  display: none; align-items: flex-start; justify-content: center;
+  padding-top: 8rem;
+}
+.global-search-wrap.open { display: flex; }
+.global-search-box {
+  background: var(--white); border-radius: 12px;
+  width: 100%; max-width: 600px; margin: 0 1.5rem;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.3);
+  overflow: hidden;
+}
+.global-search-input-row {
+  display: flex; align-items: center; padding: 1rem 1.2rem; gap: 0.7rem;
+  border-bottom: 1px solid var(--border-soft);
+}
+.global-search-input {
+  flex: 1; font-family: 'DM Sans', sans-serif;
+  font-size: 1rem; border: none; outline: none;
+  background: transparent; color: var(--ink);
+}
+.global-search-close {
+  background: none; border: none; font-size: 1.1rem;
+  cursor: pointer; color: var(--muted); padding: 0;
+  transition: color 0.2s;
+}
+.global-search-close:hover { color: var(--ink); }
+.global-search-results {
+  max-height: 55vh; overflow-y: auto;
+  padding: 0.5rem 0;
+}
+.gs-result {
+  padding: 0.75rem 1.2rem; cursor: pointer;
+  border-bottom: 1px solid var(--border-soft);
+  transition: background 0.15s;
+}
+.gs-result:hover { background: var(--ivory); }
+.gs-result:last-child { border-bottom: none; }
+.gs-result-title { font-size: 0.88rem; font-weight: 600; color: var(--sky); margin-bottom: 0.15rem; }
+.gs-result-meta { font-size: 0.72rem; color: var(--muted); }
+.gs-empty { padding: 2rem; text-align: center; font-size: 0.88rem; color: var(--muted); }
+.gs-hint { padding: 0.75rem 1.2rem; font-size: 0.72rem; color: var(--muted); }
+
 /* ============================================================
    REVEAL ANIMATIONS
    ============================================================ */
@@ -1914,6 +2068,7 @@ footer {
 <div id="view-home">
 
   <!-- HERO SLIDER -->
+  <a id="main-content" style="display:block;height:0;overflow:hidden" tabindex="-1"></a>
   <div class="hero-slider" id="heroSlider">
 
 <!-- Slide 1 -->
@@ -3937,6 +4092,27 @@ footer {
   </div>
 </div>
 
+
+<!-- Skip to main content (accessibility) -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- Global Search Overlay -->
+<div class="global-search-wrap" id="globalSearchWrap">
+  <div class="global-search-box">
+    <div class="global-search-input-row">
+      <span style="font-size:1rem;color:var(--muted)">🔍</span>
+      <input class="global-search-input" id="globalSearchInput" type="text" placeholder="Search all updates, sectors, programs..." autocomplete="off" aria-label="Search"/>
+      <button class="global-search-close" id="globalSearchClose" aria-label="Close search">✕</button>
+    </div>
+    <div class="global-search-results" id="globalSearchResults">
+      <div class="gs-hint">Start typing to search all news, events and publications...</div>
+    </div>
+  </div>
+</div>
+
+<!-- Back to Top -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top" title="Back to top">↑</button>
+
 <!-- ============================================================
      SITE MAP FLOATING BUTTON
      ============================================================ -->
@@ -4376,6 +4552,76 @@ populateAllSections();
 
 /* URL BAR COPY */
 function copyUrlBar(){var bar=document.getElementById('url-bar'),slug=bar.getAttribute('data-slug')||'home',base=window.location.origin+window.location.pathname,hash=(slug==='home')?'':'#'+slug;navigator.clipboard.writeText(base+hash).then(function(){var btn=document.getElementById('url-bar-copy');if(btn){btn.textContent='✓ Copied';btn.classList.add('copied');setTimeout(function(){btn.textContent='⎘ Garagalfadhu';btn.classList.remove('copied');},2000);}}).catch(function(){var btn=document.getElementById('url-bar-copy');if(btn)btn.textContent='Error';});}
+
+/* ═══ BACK TO TOP ═══ */
+(function(){
+  var btn = document.getElementById('backToTop');
+  if (!btn) return;
+  window.addEventListener('scroll', function(){
+    if (window.scrollY > 400) btn.classList.add('visible');
+    else btn.classList.remove('visible');
+  }, {passive: true});
+  btn.addEventListener('click', function(){
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  });
+})();
+
+/* ═══ GLOBAL SEARCH ═══ */
+(function(){
+  var wrap   = document.getElementById('globalSearchWrap');
+  var input  = document.getElementById('globalSearchInput');
+  var results= document.getElementById('globalSearchResults');
+  var closeBtn = document.getElementById('globalSearchClose');
+  var navBtn = document.getElementById('navSearchBtn');
+
+  function openSearch(){
+    wrap.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    setTimeout(function(){ input.focus(); }, 80);
+  }
+  function closeSearch(){
+    wrap.classList.remove('open');
+    document.body.style.overflow = '';
+    input.value = '';
+    results.innerHTML = '<div class="gs-hint">Start typing to search all news, events and publications...</div>';
+  }
+
+  if (navBtn) navBtn.addEventListener('click', openSearch);
+  if (closeBtn) closeBtn.addEventListener('click', closeSearch);
+  wrap.addEventListener('click', function(e){ if (e.target === wrap) closeSearch(); });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape' && wrap.classList.contains('open')) closeSearch();
+    if ((e.ctrlKey || e.metaKey) && e.key === 'k'){ e.preventDefault(); openSearch(); }
+  });
+
+  input.addEventListener('input', function(){
+    var q = input.value.trim().toLowerCase();
+    if (!q){ results.innerHTML = '<div class="gs-hint">Start typing...</div>'; return; }
+    var posts = window._allLoadedPosts || [];
+    var hits = posts.filter(function(p){
+      return [p.title, p.body, p.section, p.type, p.author, p.detail]
+        .some(function(x){ return (x||'').toLowerCase().includes(q); });
+    }).slice(0, 12);
+    if (!hits.length){
+      results.innerHTML = '<div class="gs-empty">No results for "' + input.value + '"</div>';
+      return;
+    }
+    results.innerHTML = hits.map(function(post){
+      var d = new Date(post.date).toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'});
+      return '<div class="gs-result" data-post-idx="' + posts.indexOf(post) + '">' +
+        '<div class="gs-result-title">' + (post.title||'') + '</div>' +
+        '<div class="gs-result-meta">' + (post.section||'') + ' · ' + d + (post.type?' · '+post.type:'') + '</div>' +
+        '</div>';
+    }).join('');
+    results.querySelectorAll('.gs-result').forEach(function(el){
+      el.addEventListener('click', function(){
+        var idx = +el.getAttribute('data-post-idx');
+        var post = posts[idx];
+        if (post){ closeSearch(); openDetailPopup(post); }
+      });
+    });
+  });
+})();
 
 </script>
 </body>
