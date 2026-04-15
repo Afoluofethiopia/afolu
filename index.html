@@ -1921,6 +1921,132 @@ footer {
   <img src="your-image.png" alt="your description" />
 </div>
 
+/* =========================================
+   AFOLU ETHIOPIA – LEADERSHIP (STANDALONE)
+========================================= */
+
+.leadership-intro p{
+font-size:.95rem;
+line-height:1.9;
+color:var(--ink-soft);
+margin-bottom:1.1rem
+}
+
+/* DIRECTOR CARDS */
+
+.directors-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:1.6rem;
+margin-top:2.5rem
+}
+
+@media(max-width:820px){
+.directors-grid{
+grid-template-columns:1fr
+}
+}
+
+.director-card{
+background:#ffffff;
+border-radius:16px;
+padding:1.8rem 1.9rem;
+border:1px solid var(--border);
+box-shadow:0 14px 36px rgba(0,0,0,.06);
+text-align:left;
+position:relative
+}
+
+.director-card::before{
+content:'';
+position:absolute;
+top:0;
+left:0;
+right:0;
+height:4px;
+background:var(--forest)
+}
+
+.director-card h3{
+font-size:1.05rem;
+font-weight:800;
+color:var(--forest);
+margin-bottom:.8rem
+}
+
+.director-card p{
+font-size:.9rem;
+line-height:1.85;
+color:var(--ink-soft);
+margin-bottom:1rem
+}
+
+/* TECHNICAL PILLARS */
+
+.pillars-wrap{
+margin-top:1.3rem
+}
+
+.pillars-title{
+font-size:.75rem;
+font-weight:800;
+letter-spacing:.12em;
+text-transform:uppercase;
+color:var(--earth);
+margin-bottom:.8rem
+}
+
+.pillars-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:.8rem
+}
+
+.pillar{
+display:flex;
+gap:.65rem;
+background:#f7f7f4;
+border-radius:12px;
+padding:.7rem .8rem;
+border:1px solid rgba(0,0,0,.05)
+}
+
+.pillar-icon{
+font-size:1.2rem;
+flex-shrink:0
+}
+
+.pillar-text{
+font-size:.78rem;
+line-height:1.5
+}
+
+.pillar-text strong{
+display:block;
+color:var(--forest);
+font-weight:800
+}
+
+/* CLOSING */
+
+.leadership-closing{
+margin-top:3rem;
+background:linear-gradient(135deg,#f7f6f3,#eceae6);
+border-radius:18px;
+padding:2.3rem;
+text-align:center
+}
+
+.leadership-closing p{
+font-size:.92rem;
+line-height:1.9;
+color:var(--ink-soft)
+}
+
+.leadership-closing strong{
+color:var(--forest)
+}
+``
 /* ══ MISSION & VISION VIEW ══ */
 
 .mv-hero-row{
@@ -3479,7 +3605,7 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
   <div class="quote-section reveal">
     <div class="quote-inner">
       <div class="quote-oromo">Jechoota Hayyoota Oromoo</div>
-      <p class="quote-text">"Lafa itti dhalanne, bishaanii itti dhugnee fi bosona itti guddanne eeguun dirqama dhaloota har'aa fi bor'aa."</p>
+      <p class="quote-text">"Lafa itti dhalanne, bishaanii itti dhugnee fi bosona itti guddanne eeguun dirqama dhaloota har'aa fi boruuti."</p>
       <p class="quote-text"><em>"Protection of the land where we were born, the water we drank, and the forest where we grew is the duty of today's and tomorrow's generations."</em></p>
       <div class="quote-source">— Aadaa fi Duudhaa Oromoo irraa</div>
     </div>
@@ -3736,18 +3862,52 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
           <div class="mv-card-icon">&#127919;</div>
           <div class="mv-card-badge">Ergamaa &#8212; Mission</div>
           <h2 class="mv-card-title">
-            <span class="mv-om">Kaayyoo Keenya</span>
+            <span class="mv-om">Ergama Keenya &#8212;</span>
             <span class="mv-en">Our Mission</span>
           </h2>
-          <p class="mv-card-body-om">AFOLU Itoophiyaa kaayyoon isaa guddaan qonna, bosona eeguu fi bulchiinsa lafaa walitti hidhamaa sirna ragaa saayinsii irratti hundaawa&#x2019;een, hirmaannaa hawaasaatiin fi sagantaalee dandeettii damdamannaa qilleensaa qabaniin Itoophiyaa keessatti fooyyessuu dha.</p>
-          <p class="mv-card-body-en">AFOLU Ethiopia&#x2019;s mission is to advance sustainable agriculture, forest conservation, and integrated land use management across Ethiopia through evidence-based advocacy, community participation, and climate-resilient development programs.</p>
+            <div class="mv-info-lang-row">
+          <span class="mv-lang-pill mv-lang-en">&#127758; Afaan Oromiffaa</span>
+        </div>
+          <p class="mv-card-body-om">Kaayyoon guddaan AFOLU Itoophiyaa sirna qonnaa, eegumsa bosonaa fi bulchiinsa lafaa walitti 
+            hidhamiinsa qabu jabeessuun jireenya hawaasaa fooyyessuu dha. Kunis kan raawwatamu ragaalee saayinsii irratti 
+            hundaahuun tajaajila gorsa ogummaa kennuu fi hojiwwan misoomaa hirmaannaa uummataa mirkaneessan babal’isuun. 
+            Hojiin kun hiyyummaa hir’isuu qofa osoo hin taane, qabeenya uumamaa biyyattii haala itti fufiinsa qabuun dhaloota 
+            dhufuuf dabarsuuf kaayyeffata.</p>
+            <p class="mv-card-body-om">Ergamni AFOLU Itoophiyaa inni guddaan qonna ammayyaa fi itti fufiinsa qabu guddisuun wabii 
+              nyaataa mirkaneessuu dha. Dhaabbatichi hojiilee misoomaa jijjiirama qilleensaa damdamachuu danda’an qopheessuun, 
+              qonni biyyattii dhibbaa qilleensaa irraa akka of eegu taasisa. Akkasumas, madda ragaa saayinsii ta’uun qorannoowwan 
+              adda addaa gaggeessuun madda beekumsaa ta’ee tajaajila; kunis misooma qonnaa fi bosonaa keessatti tarkaanfii ragaa 
+              qabatamaa irratti hundaa’e akka fudhatamu gargaara.</p>
+              <p class="mv-card-body-om">Dabalataan, AFOLU Itoophiyaa bulchiinsa lafaa walitti hidhamaa ta’e hojiirra oolchuuf 
+                kutannoon hojjata. Hirmaannaa hawaasaa giddu-galeessa godhachuun, eegumsa bosonaa fi naannoo irratti xiyyeeffannoo 
+                guddaa kenna. Sagantaalee dandeettii damdamannaa qilleensaa qabaniin, hawaasni naannoo isaa akka kunuunsuu fi 
+                qabeenya uumamaa irraa haala madaalawaa ta’een akka fayyadamu gochuun ergama isaa ijoo dha.</p>
+              <div class="mv-info-lang-row">
+          <span class="mv-lang-pill mv-lang-en">&#127758; English</span>
+        </div>
+            
+          <p class="mv-card-body-en">The primary goal of AFOLU Ethiopia is to enhance the livelihoods of the community by 
+            strengthening integrated agricultural systems, forest conservation, and land-use management. This is achieved through 
+            evidence-based scientific advocacy and development initiatives that ensure active community participation. 
+            Beyond poverty reduction, these efforts aim to preserve Ethiopia’s natural resources in a sustainable manner for 
+            future generations.</p>
+            <p class="mv-card-body-en">The mission of AFOLU Ethiopia focuses on advancing modern, sustainable agriculture to 
+              ensure food security across the nation. By implementing climate-resilient development programs, the organization 
+              empowers the agricultural sector to withstand the impacts of climate change. Furthermore, it serves as a vital hub 
+              for scientific research, providing the evidence-based knowledge necessary to make informed decisions regarding 
+              agricultural and forestry development.</p>
+             <p class="mv-card-body-en">In addition, AFOLU Ethiopia is committed to implementing integrated land-use management 
+              practices that prioritize environmental protection. By placing the community at the heart of its operations, the 
+              organization fosters local stewardship of forests and natural landscapes. Through these climate-smart programs, 
+              it ensures that the population can utilize natural resources effectively while maintaining the ecological balance 
+              essential for long-term resilience.</p> 
         </div>
 
         <div class="mv-hero-card mv-vision-card">
           <div class="mv-card-icon">&#127752;</div>
           <div class="mv-card-badge">Mul&#x2019;ata &#8212; Vision</div>
           <h2 class="mv-card-title">
-            <span class="mv-om">Mul&#x2019;ata Keenya</span>
+            <span class="mv-om">Muul'ata Keenya &#8212;</span>
             <span class="mv-en">Our Vision</span>
           </h2>
           <p class="mv-card-body-om">Egeree Itoophiyaa keessatti naannooleen biyya tana ekoloojiidhaan fayyaa ta&#x2019;an, oomishtummaa qaban, jijjiirama qilleensaa fi dabalata ummataatti dandamatan &#8212; hawaasni hundinuu qabeenya uumamaa badhaadhina isaaniif barbaachisu argatu.</p>
@@ -3857,31 +4017,153 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
 <div id="view-Leadership" class="content-view">
   <div class="view-header">
     <div class="view-header-inner">
-      <div class="view-crumb"><a data-view="home">Home</a><span class="view-crumb-sep"> › </span><a data-view="About">Waa'ee Keenya</a><span class="view-crumb-sep"> › </span><span class="view-crumb-cur">Hoggansi</span></div>
-      <div class="view-badge">👥 About</div>
-      <h1 class="view-h1"><em>Hoggansi</em></h1>
+      <div class="view-crumb">
+        <a data-view="home">Home</a>
+        <span class="view-crumb-sep"> › </span>
+        <span class="view-crumb-cur">Hoggansa AFOLU</span>
+      </div>
+      <div class="view-badge">🌳 Leadership</div>
+      <h1 class="view-h1">Hoggansa <em>AFOLU Itoophiyaa</em></h1>
     </div>
   </div>
-  <div class="view-body-wrap"><div class="view-content">
-    <div class="view-body">
-      <p>AFOLU Ethiopia is guided by experienced and dedicated leadership committed to advancing sustainable land use across Ethiopia. The leadership team brings together expertise in agricultural science, forestry, environmental policy, and development economics — creating a diverse and capable foundation for the organization's work.</p>
-      <p>The Hogganaa Waliigalaa provides strategic oversight and institutional direction, working closely with technical directorate heads to ensure that AFOLU's programs are grounded in both scientific excellence and community relevance. The Daayirektooreettii Sagantaalee manages flagship initiatives while the Biiroo Hirmaannaa cultivates the relationships that extend AFOLU's reach and impact.</p>
-      <div class="view-h3">Leadership Structure</div>
-      <ul class="view-list">
-        <li>Hogganaa Waliigalaa — Strategic leadership and institutional oversight</li>
-        <li>Daayirektooreettii Teknikaa — Coordination of eight specialized technical sectors</li>
-        <li>Daayirektooreettii Sagantaalee — Flagship program management and reporting</li>
-        <li>Partnerships &amp; Research Office — International and domestic partnerships</li>
-        <li>Finance &amp; Administration — Institutional governance and accountability</li>
-      </ul>
-    </div>
-    <div class="view-nav">
-      <button class="view-nav-btn" data-view="Mission">← Mission</button>
-      <button class="view-nav-btn" data-view="Organizational">Org. Structure →</button>
-    </div>
-  </div></div>
-</div>
 
+  <div class="view-body-wrap">
+    <div class="view-content">
+      <div class="view-body">
+
+        <!-- INTRO -->
+        <div class="leadership-intro">
+          <p>
+            <strong>AFOLU Itoophiyaa</strong> pilaatfoormii beekumsaa biyyaalessaa bara
+            <strong>2019</strong> hundeeffame yoo ta’u, ragaa qorannoo saayinsaawaa,
+            muuxannoo hojii qabatamaa fi beekumsa dhalootaa walitti fiduun,
+            qonnaa, bosonaa fi itti fayyadama lafaa Itoophiyaa keessatti
+            jijjiirama waaraa fiduudhaaf hojjecha.
+          </p>
+          <p>
+            Hoggansi AFOLU Itoophiyaa riqqicha beekumsaa fi hojiirra oolmaa
+            gidduutti ijaaramee, murtii ragaa irratti hundaa’e gara tarkaanfii
+            misoomaatti jijjiiruudhaan, dachee jijjiirama qilleensaa
+            dandamattu dhaloota dhufuuf mirkaneessuuf hojjechaa jira.
+          </p>
+        </div>
+
+        <!-- DIRECTORS -->
+        <div class="directors-grid">
+
+          <!-- EXECUTIVE DIRECTOR -->
+          <div class="director-card">
+            <h3>Daayreektara Olaanaa</h3>
+            <p>
+              Hoggansa waliigalaa AFOLU Itoophiyaa kenna. Karoora tarsiimoo
+              dheeraa fi waggaa qopheessuu, hojiilee kutaa hundaa
+              qindeessuu fi dhaabbata bakka bu’ee mootummaa,
+              michoota misoomaa fi qaamolee idil‑addunyaa waliin
+              hojjetuu irratti itti gaafatamummaa qaba.
+            </p>
+            <p>
+              Hojii daayreektara olaanaa hundi kaayyoo AFOLU —
+              beekumsa gara jijjiirama lafa irratti mul’atuutti jijjiiru —
+              irratti xiyyeeffata.
+            </p>
+          </div>
+
+          <!-- KNOWLEDGE & TECH -->
+          <div class="director-card">
+            <h3>Daayreektara Hoggansa Beekumsaa fi Teeknikaa</h3>
+            <p>
+              Hoggansa hojii ogummaa AFOLU Itoophiyaa ni kenna.
+              Qorannoo saayinsaawaa, muuxannoo hojii qabatamaa
+              fi beekumsa dhalootaa walitti fiduun,
+              <strong>utuboota ogummaa AFOLU saddeet</strong>
+              qindoominaan akka hojjetan hoggana.
+            </p>
+            <p>
+              Hojii isa hunda saayinsii gara hojiitti,
+              hojii gara jijjiirama lafa irratti mul’atuutti
+              jijjiiru irratti ijaaree,
+              hojii Ashaaraa Magariisaa saayinsiin deeggaruu
+              fi dandeettii ogeessotaa fi dargaggootaa ijaaru
+              irratti xiyyeeffata.
+            </p>
+
+            <div class="pillars-wrap">
+              <div class="pillars-title">Utuboota Ogummaa AFOLU (8)</div>
+              <div class="pillars-grid">
+                <div class="pillar"><div class="pillar-icon">🌾</div><div class="pillar-text"><strong>Saayinsii Bilqitoolaa</strong>Oomishtummaa qonnaa cimsuu</div></div>
+                <div class="pillar"><div class="pillar-icon">🌍</div><div class="pillar-text"><strong>Bulchiinsa Qabeenya Uumamaa</strong>Ekoosistemaa tikfachuu</div></div>
+                <div class="pillar"><div class="pillar-icon">🌳</div><div class="pillar-text"><strong>Agroforestirii</strong>Qonna & bosona walitti hidhuu</div></div>
+                <div class="pillar"><div class="pillar-icon">📊</div><div class="pillar-text"><strong>Biostatistics</strong>Ragaa xiinxaluu</div></div>
+                <div class="pillar"><div class="pillar-icon">🏘️</div><div class="pillar-text"><strong>Misooma Baadiyyaa</strong>Jireenya baadiyyaa cimsuu</div></div>
+                <div class="pillar"><div class="pillar-icon">💰</div><div class="pillar-text"><strong>Dinagdee Qonnaa</strong>Gabaa & galii guddisuu</div></div>
+                <div class="pillar"><div class="pillar-icon">🌲</div><div class="pillar-text"><strong>Saayinsii Bosonaa</strong>Bosona deebisuu</div></div>
+                <div class="pillar"><div class="pillar-icon">🐘</div><div class="pillar-text"><strong>Bineensota & Turiizimii</strong>Biodiversitii eeguu</div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- GEOSPATIAL -->
+          <div class="director-card">
+            <h3>Daayreektara Odeeffannoo Lafaa fi Teeknooloojii</h3>
+            <p>
+              Bulchiinsa odeeffannoo lafaa fi teeknooloojii
+              dijitaalaa AFOLU Itoophiyaa hoggana.
+              GIS, Remote Sensing fi kuusaa daataa fayyadamuun,
+              hojii qonnaa, bosonaa fi qabeenya uumamaa
+              irratti murtii ragaa irratti hundaa’e
+              akka fudhatamu taasisuu irratti hojjecha.
+            </p>
+            <p>
+              Hojiin isaa hundi AFOLU akka dhaabbata
+              ragaa irratti ijaarameetti tajaajilu
+              fi jijjiirama itti fufiinsa qabu
+              mirkaneessu irratti kan xiyyeeffatu dha.
+            </p>
+          </div>
+
+          <!-- POLICY -->
+          <div class="director-card">
+            <h3>Daayreektara Qunnamtii fi Imaammataa</h3>
+            <p>
+              Qunnamtii, imaammata fi beekumsa
+              wal‑qooddachuu AFOLU Itoophiyaa hoggana.
+              Bu’aa qorannoo saayinsaawaa fi muuxannoo
+              hojii gara afaan hawaasaa, imaammata
+              mootummaa fi murtii biyyaalessaatti
+              hiikuun, AFOLU akka sagalee saayinsaawaa
+              amansiisaa ta’u taasisa.
+            </p>
+            <p>
+              Hojiin isaa hundi beekumsa
+              akka hojiitti hiikamu taasisuu
+              fi jijjiirama waaraa deeggaruu
+              irratti xiyyeeffata.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- CLOSING -->
+        <div class="leadership-closing">
+          <p>
+            <strong>AFOLU Itoophiyaa</strong> —
+            beekumsa wal‑qooddannee,
+            qonna, bosonaa fi lafaa ammayyeessinee,
+            egeree jijjiirama qilleensaa hin dukkanoofne
+            dhaloota dhufuuf dhaalchisu.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="view-nav">
+        <button class="view-nav-btn" data-view="Mission">← Mission & Vision</button>
+        <button class="view-nav-btn" data-view="home">↑ Home</button>
+      </div>
+
+    </div>
+  </div>
+</div>
 <!-- ORGANIZATIONAL STRUCTURE -->
 <div id="view-Organizational" class="content-view">
   <div class="view-header">
@@ -5537,7 +5819,7 @@ function copyUrlBar(){var bar=document.getElementById('url-bar'),slug=bar.getAtt
    ============================================================ */
 (function(){
   var DAY_NAMES_OM  = ['Dilbata','Wiixata','Qibxata','Roobii','Kamisa','Jimaata','Sanbata'];
-  var DAY_SHORT_OM  = ['Dil','Wix','Qib','Rob','Kam','Jim','San'];
+  var DAY_SHORT_OM  = ['Dil','Wix','Kib','Rob','Kam','Jim','San'];
   var MON_NAMES_EN  = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
   var MON_FULL_EN   = ['January','February','March','April','May','June','July','August','September','October','November','December'];
   var visitStart    = Date.now();
