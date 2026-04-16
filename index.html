@@ -1921,7 +1921,351 @@ footer {
   <img src="your-image.png" alt="your description" />
 </div>
 
+/* ════════════════════════════════════════════════════
+   MV2 — MISSION & VISION STYLES
+   All classes prefixed mv2- to prevent any CSS clash
+   ════════════════════════════════════════════════════ */
 
+/* ── Section title bar ── */
+.mv2-section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem; font-weight: 700;
+  color: var(--forest); margin: 2.6rem 0 1.2rem;
+  padding-bottom: 0.65rem;
+  border-bottom: 2px solid var(--earth);
+  display: flex; align-items: center; gap: 0.6rem;
+}
+.mv2-section-title::before {
+  content: ''; display: inline-block;
+  width: 5px; height: 20px; border-radius: 3px;
+  background: var(--earth); flex-shrink: 0;
+}
+
+/* ── Intro block ── */
+.mv2-intro {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--forest);
+  border-radius: 0 10px 10px 0;
+  padding: 1.6rem 2rem;
+  margin-bottom: 2rem;
+}
+.mv2-intro p {
+  font-size: 0.93rem; color: var(--ink-soft);
+  line-height: 1.9; margin-bottom: 0.7rem;
+}
+.mv2-intro p:last-child { margin-bottom: 0; }
+
+/* ── Hero row: Mission card + Vision card side by side ── */
+.mv2-hero-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.4rem;
+  margin-bottom: 2rem;
+}
+@media(max-width: 720px) { .mv2-hero-row { grid-template-columns: 1fr; } }
+
+.mv2-hero-card {
+  border-radius: 14px;
+  padding: 2rem 1.9rem;
+  display: flex; flex-direction: column; gap: 0.7rem;
+  position: relative; overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--white);
+  box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+  transition: transform 0.22s, box-shadow 0.22s;
+}
+.mv2-hero-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 36px rgba(13,40,24,0.11);
+}
+.mv2-hero-card::after {
+  content: '';
+  position: absolute; top: -40px; right: -40px;
+  width: 160px; height: 160px; border-radius: 50%;
+  background: rgba(0,0,0,0.02);
+  border: 1px solid rgba(0,0,0,0.04);
+  pointer-events: none;
+}
+.mv2-mission-card { border-top: 4px solid var(--forest); }
+.mv2-vision-card  { border-top: 4px solid var(--sky); }
+
+.mv2-card-icon { font-size: 2rem; margin-bottom: 0.2rem; }
+.mv2-card-badge {
+  font-size: 0.6rem; font-weight: 700; letter-spacing: 0.14em;
+  text-transform: uppercase; display: inline-block;
+  padding: 0.18rem 0.72rem; border-radius: 20px;
+}
+.mv2-mission-card .mv2-card-badge {
+  color: var(--forest);
+  background: rgba(13,40,24,0.07);
+  border: 1px solid rgba(13,40,24,0.14);
+}
+.mv2-vision-card .mv2-card-badge {
+  color: var(--sky);
+  background: rgba(26,58,92,0.07);
+  border: 1px solid rgba(26,58,92,0.14);
+}
+.mv2-card-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem; font-weight: 700;
+  color: var(--forest); line-height: 1.3;
+}
+.mv2-card-title span { display: block; font-size: 0.68rem; color: var(--muted); font-style: italic; font-weight: 400; margin-top: 0.15rem; }
+
+/* Language pill */
+.mv2-lang-pill {
+  display: inline-flex; align-items: center; gap: 0.3rem;
+  font-size: 0.6rem; font-weight: 700; letter-spacing: 0.08em;
+  text-transform: uppercase; padding: 0.2rem 0.65rem;
+  border-radius: 20px; margin: 0.2rem 0 0.5rem;
+}
+.mv2-lang-om { background: var(--forest); color: var(--earth-light); }
+.mv2-lang-en { background: var(--sky); color: var(--white); }
+
+.mv2-card-body-om {
+  font-size: 0.88rem; color: var(--ink);
+  line-height: 1.85; font-weight: 400;
+}
+.mv2-card-body-en {
+  font-size: 0.82rem; color: var(--ink-soft);
+  line-height: 1.8; font-style: italic;
+  border-left: 3px solid var(--earth-pale);
+  padding-left: 0.9rem; font-weight: 300;
+}
+
+/* ── CRGE Info section ── */
+.mv2-info-block {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--sky);
+  border-radius: 0 10px 10px 0;
+  padding: 1.5rem 1.8rem;
+  margin-bottom: 1.6rem;
+}
+.mv2-info-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem; font-weight: 700;
+  color: var(--forest); margin-bottom: 0.7rem; line-height: 1.3;
+}
+.mv2-info-body {
+  font-size: 0.88rem; color: var(--ink-soft);
+  line-height: 1.85; margin-bottom: 0.8rem; font-weight: 300;
+}
+.mv2-info-body:last-child { margin-bottom: 0; }
+.mv2-info-body strong { color: var(--sky); font-weight: 700; }
+
+/* ── Stats row ── */
+.mv2-stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+@media(max-width: 700px) { .mv2-stats-row { grid-template-columns: repeat(2, 1fr); } }
+
+.mv2-stat-card {
+  background: linear-gradient(135deg, var(--forest) 0%, var(--forest-mid) 100%);
+  border-radius: 12px; padding: 1.2rem 1rem;
+  text-align: center; color: var(--white);
+  box-shadow: 0 4px 18px rgba(13,40,24,0.18);
+  transition: transform 0.2s;
+}
+.mv2-stat-card:hover { transform: translateY(-3px); }
+.mv2-stat-icon { font-size: 1.5rem; margin-bottom: 0.4rem; }
+.mv2-stat-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem; font-weight: 900;
+  color: var(--earth-light); line-height: 1;
+  margin-bottom: 0.3rem;
+}
+.mv2-stat-label {
+  font-size: 0.68rem; font-weight: 700;
+  color: var(--white); line-height: 1.4;
+}
+.mv2-stat-sub {
+  font-size: 0.6rem; color: rgba(255,255,255,0.5);
+  margin-top: 0.25rem;
+}
+
+/* ── Mission pillars grid ── */
+.mv2-pillars-wrap {
+  background: linear-gradient(135deg, var(--forest) 0%, var(--sky) 100%);
+  border-radius: 14px; padding: 2rem 1.8rem;
+  margin-bottom: 2rem;
+}
+.mv2-pillars-eyebrow {
+  font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--earth-light);
+  text-align: center; margin-bottom: 1.3rem;
+  display: flex; align-items: center; justify-content: center; gap: 0.6rem;
+}
+.mv2-pillars-eyebrow::before,
+.mv2-pillars-eyebrow::after {
+  content: ''; flex: 1; max-width: 80px;
+  height: 1px; background: rgba(200,150,62,0.4);
+}
+.mv2-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.85rem;
+}
+@media(max-width: 720px) { .mv2-pillars-grid { grid-template-columns: repeat(2, 1fr); } }
+@media(max-width: 480px) { .mv2-pillars-grid { grid-template-columns: 1fr; } }
+
+.mv2-pillar-card {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 10px; padding: 1rem 1.1rem;
+  display: flex; align-items: flex-start; gap: 0.7rem;
+  transition: all 0.2s;
+}
+.mv2-pillar-card:hover {
+  background: rgba(255,255,255,0.18);
+  transform: translateY(-2px);
+}
+.mv2-pillar-card.full { grid-column: span 3; }
+@media(max-width: 720px) { .mv2-pillar-card.full { grid-column: span 2; } }
+@media(max-width: 480px) { .mv2-pillar-card.full { grid-column: span 1; } }
+
+.mv2-pillar-icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 0.1rem; }
+.mv2-pillar-om {
+  font-size: 0.82rem; font-weight: 700;
+  color: var(--white); line-height: 1.4; display: block; margin-bottom: 0.2rem;
+}
+.mv2-pillar-en {
+  font-size: 0.7rem; color: rgba(255,255,255,0.6);
+  font-style: italic; line-height: 1.4;
+}
+
+/* ── Strategic Objectives grid ── */
+.mv2-objectives-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+@media(max-width: 680px) { .mv2-objectives-grid { grid-template-columns: 1fr; } }
+
+.mv2-obj-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 10px; padding: 1.2rem 1.3rem;
+  display: flex; align-items: flex-start; gap: 1rem;
+  position: relative; overflow: hidden;
+  transition: all 0.2s;
+}
+.mv2-obj-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+.mv2-obj-card::before {
+  content: '';
+  position: absolute; left: 0; top: 0; bottom: 0;
+  width: 4px;
+  background: linear-gradient(to bottom, var(--forest), var(--sky));
+}
+.mv2-obj-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem; font-weight: 900;
+  color: var(--earth-light); line-height: 1; flex-shrink: 0; min-width: 2rem;
+}
+.mv2-obj-icon { font-size: 1.3rem; flex-shrink: 0; margin-top: 0.15rem; }
+.mv2-obj-om {
+  font-size: 0.85rem; font-weight: 700;
+  color: var(--forest); line-height: 1.45; margin-bottom: 0.3rem;
+}
+.mv2-obj-en {
+  font-size: 0.74rem; color: var(--muted);
+  line-height: 1.55; font-style: italic;
+}
+
+/* ── CRGE / Strategy alignment table ── */
+.mv2-crge-table {
+  width: 100%; border-collapse: collapse; font-size: 0.82rem;
+  margin: 1rem 0 1.6rem;
+  border: 1px solid var(--border); border-radius: 8px; overflow: hidden;
+}
+.mv2-crge-table thead tr { background: var(--forest); }
+.mv2-crge-table thead th {
+  padding: 0.7rem 1rem; text-align: left;
+  font-weight: 700; font-size: 0.75rem;
+  color: var(--white); letter-spacing: 0.03em;
+}
+.mv2-crge-table tbody tr:nth-child(even) { background: var(--ivory); }
+.mv2-crge-table tbody tr:hover { background: var(--earth-pale); }
+.mv2-crge-table tbody td {
+  padding: 0.65rem 1rem;
+  border-bottom: 1px solid var(--border-soft);
+  color: var(--ink-soft); vertical-align: top; line-height: 1.6;
+}
+.mv2-crge-table tbody tr:last-child td { border-bottom: none; }
+.mv2-crge-table .chk { color: var(--forest-light); font-weight: 900; text-align: center; font-size: 0.88rem; }
+.mv2-crge-table .rh  { font-weight: 700; color: var(--forest); background: var(--cream) !important; }
+.mv2-tag {
+  font-size: 0.6rem; font-weight: 700; letter-spacing: 0.07em;
+  text-transform: uppercase; padding: 0.13rem 0.45rem;
+  border-radius: 3px; display: inline-block;
+}
+.mv2-tag-g { background: rgba(252, 252, 252, 0.12); color: var(--forest-mid); }
+.mv2-tag-s { background: rgba(26,58,92,0.1);  color: var(--sky); }
+.mv2-tag-e { background: var(--earth-pale);   color: #000000a0; }
+
+/* ── Highlight quote block ── */
+.mv2-highlight {
+  background: var(--ivory);
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--forest-light);
+  border-radius: 0 8px 8px 0;
+  padding: 1.3rem 1.8rem;
+  margin: 1.5rem 0;
+  font-style: italic; font-size: 0.93rem;
+  color: var(--ink-soft); line-height: 1.85;
+}
+
+/* ── Closing block ── */
+.mv2-closing {
+  background: linear-gradient(135deg, #adf5ca 0%, #ffffff 100%);
+  border-radius: 12px; padding: 2.5rem 2.8rem;
+  text-align: center; position: relative; overflow: hidden;
+  margin-top: 1.5rem;
+  border: 1px solid rgba(200,150,62,0.25);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+}
+.mv2-closing::before {
+  content: '"'; position: absolute; top: -2rem; left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Playfair Display', serif; font-size: 14rem;
+  color: rgba(200,150,62,0.07); line-height: 1;
+  pointer-events: none; z-index: 0;
+}
+.mv2-closing-inner { position: relative; z-index: 1; max-width: 720px; margin: 0 auto; }
+.mv2-closing-om {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.05rem, 2.2vw, 1.35rem);
+  font-style: italic; font-weight: 600;
+  color: #000000;        /* earth-pale — very high contrast on dark bg */
+  line-height: 1.8;
+  margin-bottom: 1.2rem;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+}
+.mv2-closing-en {
+  font-size: 0.9rem;
+  color: #c8d8e8;        /* light blue-white — easily readable on dark bg */
+  line-height: 1.85; font-style: italic; margin-bottom: 1.2rem;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+}
+.mv2-closing-tagline {
+  font-size: 0.72rem; font-weight: 800; letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #000000;        /* earth-light — gold, high contrast */
+  display: flex; align-items: center; justify-content: center; gap: 0.7rem;
+}
+.mv2-closing-tagline::before,
+.mv2-closing-tagline::after {
+  content: ''; width: 48px; height: 1.5px;
+  background: rgba(200,150,62,0.7);
+}
 /* ─── LEADERSHIP STYLES ─── */
 .lorg-lead-intro {
   background: var(--white);
@@ -3825,175 +4169,434 @@ footer {
   </div></div>
 </div>
 
-<!-- MISSION -->
+<!-- ================================================================
+     VIEW: ERGAMAA FI MUL'ATA — MISSION & VISION
+     id="view-Mission"
+     ================================================================ -->
 <div id="view-Mission" class="content-view">
+
+  <!-- VIEW HEADER -->
   <div class="view-header">
     <div class="view-header-inner">
-      <div class="view-crumb"><a data-view="home">Home</a><span class="view-crumb-sep"> &#x203a; </span><a data-view="About">Waa&#x2019;ee Keenya</a><span class="view-crumb-sep"> &#x203a; </span><span class="view-crumb-cur">Ergamaa fi Mul&#x2019;ata</span></div>
-      <div class="view-badge">&#127919; Mission &amp; Vision</div>
-      <h1 class="view-h1">Ergamaa fi <em>Mul&#x2019;ata</em></h1>
+      <div class="view-crumb">
+        <a data-view="home">Home</a>
+        <span class="view-crumb-sep"> › </span>
+        <a data-view="About">Waa'ee Keenya</a>
+        <span class="view-crumb-sep"> › </span>
+        <span class="view-crumb-cur">Ergamaa fi Mul'ata</span>
+      </div>
+      <div class="view-badge">🎯 Mission &amp; Vision</div>
+      <h1 class="view-h1">Ergamaa fi <em>Mul'ata</em></h1>
     </div>
   </div>
-  <div class="view-body-wrap"><div class="view-content">
-    <div class="view-body">
 
-      <!-- MISSION + VISION HERO CARDS -->
-      <div class="mv-hero-row">
+  <div class="view-body-wrap">
+    <div class="view-content">
+      <div class="view-body">
 
-        <div class="mv-hero-card mv-mission-card">
-          <div class="mv-card-icon">&#127919;</div>
-          <div class="mv-card-badge">Ergamaa &#8212; Mission</div>
-          <h2 class="mv-card-title">
-            <span class="mv-om">Ergama Keenya &#8212;</span>
-            <span class="mv-en">Our Mission</span>
-          </h2>
-            <div class="mv-info-lang-row">
-          <span class="mv-lang-pill mv-lang-en">&#127758; Afaan Oromiffaa</span>
-        </div>
-          <p class="mv-card-body-om">Kaayyoon guddaan AFOLU Itoophiyaa sirna qonnaa, eegumsa bosonaa fi bulchiinsa lafaa walitti 
-            hidhamiinsa qabu jabeessuun jireenya hawaasaa fooyyessuu dha. Kunis kan raawwatamu ragaalee saayinsii irratti 
-            hundaahuun tajaajila gorsa ogummaa kennuu fi hojiwwan misoomaa hirmaannaa uummataa mirkaneessan babal’isuun. 
-            Hojiin kun hiyyummaa hir’isuu qofa osoo hin taane, qabeenya uumamaa biyyattii haala itti fufiinsa qabuun dhaloota 
-            dhufuuf dabarsuuf kaayyeffata.</p>
-            <p class="mv-card-body-om">Ergamni AFOLU Itoophiyaa inni guddaan qonna ammayyaa fi itti fufiinsa qabu guddisuun wabii 
-              nyaataa mirkaneessuu dha. Dhaabbatichi hojiilee misoomaa jijjiirama qilleensaa damdamachuu danda’an qopheessuun, 
-              qonni biyyattii dhibbaa qilleensaa irraa akka of eegu taasisa. Akkasumas, madda ragaa saayinsii ta’uun qorannoowwan 
-              adda addaa gaggeessuun madda beekumsaa ta’ee tajaajila; kunis misooma qonnaa fi bosonaa keessatti tarkaanfii ragaa 
-              qabatamaa irratti hundaa’e akka fudhatamu gargaara.</p>
-              <p class="mv-card-body-om">Dabalataan, AFOLU Itoophiyaa bulchiinsa lafaa walitti hidhamaa ta’e hojiirra oolchuuf 
-                kutannoon hojjata. Hirmaannaa hawaasaa giddu-galeessa godhachuun, eegumsa bosonaa fi naannoo irratti xiyyeeffannoo 
-                guddaa kenna. Sagantaalee dandeettii damdamannaa qilleensaa qabaniin, hawaasni naannoo isaa akka kunuunsuu fi 
-                qabeenya uumamaa irraa haala madaalawaa ta’een akka fayyadamu gochuun ergama isaa ijoo dha.</p>
-              <div class="mv-info-lang-row">
-          <span class="mv-lang-pill mv-lang-en">&#127758; English</span>
-        </div>
-            
-          <p class="mv-card-body-en">The primary goal of AFOLU Ethiopia is to enhance the livelihoods of the community by 
-            strengthening integrated agricultural systems, forest conservation, and land-use management. This is achieved through 
-            evidence-based scientific advocacy and development initiatives that ensure active community participation. 
-            Beyond poverty reduction, these efforts aim to preserve Ethiopia’s natural resources in a sustainable manner for 
-            future generations.</p>
-            <p class="mv-card-body-en">The mission of AFOLU Ethiopia focuses on advancing modern, sustainable agriculture to 
-              ensure food security across the nation. By implementing climate-resilient development programs, the organization 
-              empowers the agricultural sector to withstand the impacts of climate change. Furthermore, it serves as a vital hub 
-              for scientific research, providing the evidence-based knowledge necessary to make informed decisions regarding 
-              agricultural and forestry development.</p>
-             <p class="mv-card-body-en">In addition, AFOLU Ethiopia is committed to implementing integrated land-use management 
-              practices that prioritize environmental protection. By placing the community at the heart of its operations, the 
-              organization fosters local stewardship of forests and natural landscapes. Through these climate-smart programs, 
-              it ensures that the population can utilize natural resources effectively while maintaining the ecological balance 
-              essential for long-term resilience.</p> 
+        <!-- ── INTRO ── -->
+        <div class="mv2-intro">
+          <p>
+            AFOLU Itoophiyaa ergamaa fi mul'ata isaa irratti hundaa'uun, qonnaa, bosonaa fi itti fayyadama
+            lafaa Itoophiyaa keessatti jijjiirama waaraa fiduuf hojjecha. Pilaatfoormiin kun — saayinsii,
+            imaammata fi hawaasa bu'uuraa walitti hidhuun — dachee jijjiirama qilleensaa dandamattu
+            dhaloota dhufuuf dhaalchistudha.
+          </p>
+          <p>
+            AFOLU Ethiopia's mission and vision represent a living commitment: that sustainable land use
+            is not a distant ideal but a daily practice — grounded in science, driven by community,
+            and anchored in Ethiopia's ecological heritage.
+          </p>
         </div>
 
-        <div class="mv-hero-card mv-vision-card">
-          <div class="mv-card-icon">&#127752;</div>
-          <div class="mv-card-badge">Mul&#x2019;ata &#8212; Vision</div>
-          <h2 class="mv-card-title">
-            <span class="mv-om">Muul'ata Keenya &#8212;</span>
-            <span class="mv-en">Our Vision</span>
-          </h2>
-          <p class="mv-card-body-om">Egeree Itoophiyaa keessatti naannooleen biyya tana ekoloojiidhaan fayyaa ta&#x2019;an, oomishtummaa qaban, jijjiirama qilleensaa fi dabalata ummataatti dandamatan &#8212; hawaasni hundinuu qabeenya uumamaa badhaadhina isaaniif barbaachisu argatu.</p>
-          <p class="mv-card-body-en">The vision of AFOLU Ethiopia is a future in which Ethiopia&#x2019;s landscapes are ecologically healthy, productively managed, and resilient to the pressures of climate change and population growth &#8212; a future in which every community has access to the natural resources they need to thrive.</p>
+        <!-- ── STATS ROW ── -->
+        <div class="mv2-stats-row">
+          <div class="mv2-stat-card">
+            <div class="mv2-stat-icon">🌿</div>
+            <div class="mv2-stat-num">2019</div>
+            <div class="mv2-stat-label">Bara Hundeeffame</div>
+            <div class="mv2-stat-sub">Year Founded</div>
+          </div>
+          <div class="mv2-stat-card">
+            <div class="mv2-stat-icon">🌍</div>
+            <div class="mv2-stat-num">80%</div>
+            <div class="mv2-stat-label">Ummata Itoophiyaa AFOLU irratti hirkatu</div>
+            <div class="mv2-stat-sub">Population dependent on AFOLU</div>
+          </div>
+          <div class="mv2-stat-card">
+            <div class="mv2-stat-icon">🌱</div>
+            <div class="mv2-stat-num">48B+</div>
+            <div class="mv2-stat-label">Biqiltuu dhaabame — Green Legacy</div>
+            <div class="mv2-stat-sub">Seedlings planted since 2019</div>
+          </div>
+          <div class="mv2-stat-card">
+            <div class="mv2-stat-icon">🎯</div>
+            <div class="mv2-stat-num">7</div>
+            <div class="mv2-stat-label">Kallattii Ijoo — Core Pillars</div>
+            <div class="mv2-stat-sub">Strategic focus areas</div>
+          </div>
         </div>
 
+        <!-- ══ 1. ERGAMAA + MUL'ATA CARDS ══ -->
+        <h2 class="mv2-section-title">🎯 1. Ergamaa fi Mul'ata — Mission &amp; Vision</h2>
+
+        <div class="mv2-hero-row">
+
+          <!-- MISSION -->
+          <div class="mv2-hero-card mv2-mission-card">
+            <div class="mv2-card-icon">🎯</div>
+            <span class="mv2-card-badge">Ergamaa — Mission</span>
+            <div class="mv2-card-title">
+              Ergama Keenya
+              <span>Our Mission</span>
+            </div>
+
+            <span class="mv2-lang-pill mv2-lang-om">🇪🇹 Afaan Oromoo</span>
+            <p class="mv2-card-body-om">
+              Kaayyoon guddaan AFOLU Itoophiyaa sirna qonnaa, eegumsa bosonaa fi bulchiinsa lafaa
+              walitti hidhamiinsa qabu jabeessuun jireenya hawaasaa fooyyessuu dha. Kunis kan raawwatamu
+              ragaalee saayinsii irratti hundaahuun tajaajila gorsa ogummaa kennuu fi hojiwwan misoomaa
+              hirmaannaa uummataa mirkaneessan babal'isuun. Hojiin kun hiyyummaa hir'isuu qofa osoo hin
+              taane, qabeenya uumamaa biyyattii haala itti fufiinsa qabuun dhaloota dhufuuf dabarsuuf
+              kaayyeffata.
+            </p>
+            <p class="mv2-card-body-om">
+              Ergamni AFOLU Itoophiyaa inni guddaan qonna ammayyaa fi itti fufiinsa qabu guddisuun wabii
+              nyaataa mirkaneessuu dha. Dhaabbatichi hojiilee misoomaa jijjiirama qilleensaa damdamachuu
+              danda'an qopheessuun, qonni biyyattii dhibbaa qilleensaa irraa akka of eegu taasisa.
+              Akkasumas, madda ragaa saayinsii ta'uun qorannoowwan gaggeessuun, misooma qonnaa fi bosonaa
+              keessatti tarkaanfii ragaa qabatamaa irratti hundaa'e akka fudhatamu gargaara.
+            </p>
+            <p class="mv2-card-body-om">
+              Dabalataan, bulchiinsa lafaa walitti hidhamaa ta'e hojiirra oolchuuf kutannoon hojjata.
+              Hirmaannaa hawaasaa giddu-galeessa godhachuun, eegumsa bosonaa fi naannoo irratti
+              xiyyeeffannoo guddaa kenna. Hawaasni naannoo isaa akka kunuunsuu fi qabeenya uumamaa
+              irraa haala madaalawaa ta'een akka fayyadamu gochuun ergama isaa ijoo dha.
+            </p>
+
+            <span class="mv2-lang-pill mv2-lang-en" style="margin-top:0.5rem">🌍 English</span>
+            <p class="mv2-card-body-en">
+              The primary goal of AFOLU Ethiopia is to enhance the livelihoods of the community by
+              strengthening integrated agricultural systems, forest conservation, and land-use management.
+              This is achieved through evidence-based scientific advocacy and development initiatives that
+              ensure active community participation. Beyond poverty reduction, these efforts aim to preserve
+              Ethiopia's natural resources sustainably for future generations.
+            </p>
+            <p class="mv2-card-body-en">
+              AFOLU Ethiopia focuses on advancing modern, sustainable agriculture to ensure food security
+              across the nation. By implementing climate-resilient development programs, the organization
+              empowers the agricultural sector to withstand the impacts of climate change, while serving as
+              a vital hub for scientific research and evidence-based decision-making in forestry and
+              agricultural development.
+            </p>
+          </div>
+
+          <!-- VISION -->
+          <div class="mv2-hero-card mv2-vision-card">
+            <div class="mv2-card-icon">🌅</div>
+            <span class="mv2-card-badge">Mul'ata — Vision</span>
+            <div class="mv2-card-title">
+              Mul'ata Keenya
+              <span>Our Vision</span>
+            </div>
+
+            <span class="mv2-lang-pill mv2-lang-om">🇪🇹 Afaan Oromoo</span>
+            <p class="mv2-card-body-om">
+              Egeree Itoophiyaa keessatti naannooleen biyya tana ekoloojiidhaan fayyaa ta'an, oomishtummaa
+              qaban, jijjiirama qilleensaa fi dabalata ummataatti dandamatan — hawaasni hundinuu qabeenya
+              uumamaa badhaadhina isaaniif barbaachisu argatu.
+            </p>
+            <p class="mv2-card-body-om">
+              Mul'atni AFOLU Itoophiyaa biyya tokko ijaara — qonnaan bulaan saayinsii argatee hojjetu,
+              bosoni tikfamee guddatu, sululni bishaan itti of eegu, fi dargaggoonni ogeessota ta'anii
+              lafaa tiksan biyya isaaniif. Itoophiyaa kan jijjiirama qilleensaatti dandamattu, kan
+              hawaasni oomishtummaa fi itti fufiinsa walitti makee jiraatu, fi kan dhaloota dhufuuf
+              dachee badhaatuu dhaalchisan.
+            </p>
+
+            <span class="mv2-lang-pill mv2-lang-en" style="margin-top:0.5rem">🌍 English</span>
+            <p class="mv2-card-body-en">
+              The vision of AFOLU Ethiopia is a future in which Ethiopia's landscapes are ecologically
+              healthy, productively managed, and resilient to the pressures of climate change and
+              population growth — a future in which every community has access to the natural resources
+              they need to thrive.
+            </p>
+            <p class="mv2-card-body-en">
+              It is a vision of a country where farmers work with science, where forests grow and
+              regenerate, where watersheds sustain themselves, and where the next generation of
+              professionals stewards the land with knowledge, care, and commitment. A climate-resilient
+              Ethiopia, where productivity and sustainability coexist — and where every generation
+              inherits a richer land than the one before.
+            </p>
+
+            <!-- Vision highlight -->
+            <div style="background:rgba(26,58,92,0.06);border:1px solid rgba(26,58,92,0.14);border-radius:8px;padding:1.1rem 1.2rem;margin-top:0.8rem">
+              <div style="font-size:0.62rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--sky);margin-bottom:0.5rem">Mul'ata Gabaabinaan — Vision in Brief</div>
+              <div style="font-family:'Playfair Display',serif;font-size:0.92rem;font-style:italic;color:var(--sky);line-height:1.65">
+                "Itoophiyaa dacheen isii ekoloojiidhaan fayyaa, hawaasni isii badhaadhaa, fi dhalooti isii
+                qabeenya uumamaa dhaala."
+              </div>
+            </div>
+          </div>
+
+        </div><!-- end mv2-hero-row -->
+
+        <!-- ══ 2. KALLATTII IJOO — CORE PILLARS ══ -->
+        <h2 class="mv2-section-title">🌿 2. Kallattii Ijoo 7 — Seven Core Pillars</h2>
+        <p style="font-size:0.88rem;color:var(--muted);margin-bottom:1.2rem;line-height:1.75">
+          Ergamaa fi mul'ata keenya gara hojiitti jijjiiruuf, AFOLU Itoophiyaa kallattii ijoo torban irratti
+          hunda'a. These seven pillars define our work — from soil to policy, from community to ecosystem.
+        </p>
+
+        <div class="mv2-pillars-wrap">
+          <div class="mv2-pillars-eyebrow">Madda Hojii Keenya — Our Core Pillars</div>
+          <div class="mv2-pillars-grid">
+
+            <div class="mv2-pillar-card">
+              <span class="mv2-pillar-icon">🌾</span>
+              <div>
+                <span class="mv2-pillar-om">Qonna Itti Fufiinsa Qabu fi Sirna Nyaataa Cimsu</span>
+                <span class="mv2-pillar-en">Sustainable agriculture and food system strengthening</span>
+              </div>
+            </div>
+
+            <div class="mv2-pillar-card">
+              <span class="mv2-pillar-icon">🌳</span>
+              <div>
+                <span class="mv2-pillar-om">Bosonaa Tiksuu fi Lafa Baldaa Deebisuuf Hojjechuu</span>
+                <span class="mv2-pillar-en">Forest conservation and landscape restoration</span>
+              </div>
+            </div>
+
+            <div class="mv2-pillar-card">
+              <span class="mv2-pillar-icon">💧</span>
+              <div>
+                <span class="mv2-pillar-om">Laga, Haroo fi Bishaan Kunuunsu</span>
+                <span class="mv2-pillar-en">Watershed rehabilitation and water resource management</span>
+              </div>
+            </div>
+
+            <div class="mv2-pillar-card">
+              <span class="mv2-pillar-icon">🌡</span>
+              <div>
+                <span class="mv2-pillar-om">Jijjiirama Qilleensaatti Adda Ba'uu fi Ittisuu</span>
+                <span class="mv2-pillar-en">Climate change mitigation and adaptation</span>
+              </div>
+            </div>
+
+            <div class="mv2-pillar-card">
+              <span class="mv2-pillar-icon">🦋</span>
+              <div>
+                <span class="mv2-pillar-om">Bineensota fi Uumama Dachee Eeguu</span>
+                <span class="mv2-pillar-en">Biodiversity protection and wildlife conservation</span>
+              </div>
+            </div>
+
+            <div class="mv2-pillar-card">
+              <span class="mv2-pillar-icon">🏘</span>
+              <div>
+                <span class="mv2-pillar-om">Jireenya Baadiyaa Fooyyessuu fi Hawaasa Gargaaruu</span>
+                <span class="mv2-pillar-en">Rural livelihood development and community empowerment</span>
+              </div>
+            </div>
+
+            <div class="mv2-pillar-card full">
+              <span class="mv2-pillar-icon">📋</span>
+              <div>
+                <span class="mv2-pillar-om">Dambii Ragaa Irratti Hunda'e fi Beekumsa Walqooddachuu — Evidence-based policy advocacy and knowledge sharing</span>
+                <span class="mv2-pillar-en">Bridging science, policy, and community action across Ethiopia's diverse landscapes.</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ══ 3. XIYYEEFFANNOOLEE TARSIIMOO — STRATEGIC OBJECTIVES ══ -->
+        <h2 class="mv2-section-title">📌 3. Xiyyeeffannoolee Tarsiimoo 6 — Six Strategic Objectives</h2>
+        <p style="font-size:0.88rem;color:var(--muted);margin-bottom:1.2rem;line-height:1.75">
+          Ergamaa fi mul'ata keenya xiyyeeffannoolee tarsiimoo jaharraan hojiirra oolchina. Kunneen
+          tarkaanfii saayinsii irratti hundaa'e, hirmaannaa hawaasaa fi imaammataa walitti hidha.
+        </p>
+
+        <div class="mv2-objectives-grid">
+
+          <div class="mv2-obj-card">
+            <div class="mv2-obj-num">01</div>
+            <div class="mv2-obj-icon">📈</div>
+            <div>
+              <div class="mv2-obj-om">Imaammataa bulchiinsa lafaa itti fufiinsa qabu ragaa irratti hundaa'e Itoophiyaa guutuu cimsuu</div>
+              <div class="mv2-obj-en">Advance evidence-based sustainable land management policy across Ethiopia</div>
+            </div>
+          </div>
+
+          <div class="mv2-obj-card">
+            <div class="mv2-obj-num">02</div>
+            <div class="mv2-obj-icon">🌿</div>
+            <div>
+              <div class="mv2-obj-om">Naannoolee manca'an deebisuu fi hawaasa waliin hojjechuun ekoosistema haaromsu</div>
+              <div class="mv2-obj-en">Restore degraded landscapes through community-driven ecosystem rehabilitation</div>
+            </div>
+          </div>
+
+          <div class="mv2-obj-card">
+            <div class="mv2-obj-num">03</div>
+            <div class="mv2-obj-icon">🌡</div>
+            <div>
+              <div class="mv2-obj-om">Hawaasota qonnaa fi bosona irratti hirkatan keessatti dandeettii damdamannaa qilleensaa ijaaruu</div>
+              <div class="mv2-obj-en">Build climate resilience in vulnerable agricultural and forest-dependent communities</div>
+            </div>
+          </div>
+
+          <div class="mv2-obj-card">
+            <div class="mv2-obj-num">04</div>
+            <div class="mv2-obj-icon">🦋</div>
+            <div>
+              <div class="mv2-obj-om">Kunuunsa biodiversitii gosa ekoosistemaa dursa kennamu hunda keessatti cimsu</div>
+              <div class="mv2-obj-en">Strengthen biodiversity conservation across priority ecosystem types</div>
+            </div>
+          </div>
+
+          <div class="mv2-obj-card">
+            <div class="mv2-obj-num">05</div>
+            <div class="mv2-obj-icon">🏘</div>
+            <div>
+              <div class="mv2-obj-om">Jireenya baadiyaa ol'aanaa value chain AFOLU walitti hidhamaa ta'een fooyyessuu</div>
+              <div class="mv2-obj-en">Improve rural livelihoods through integrated AFOLU value chain development</div>
+            </div>
+          </div>
+
+          <div class="mv2-obj-card">
+            <div class="mv2-obj-num">06</div>
+            <div class="mv2-obj-icon">🌍</div>
+            <div>
+              <div class="mv2-obj-om">Waadaalee qilleensaa biyyaalessaa Itoophiyaa gara hojiitti jijjiiruuf kutaalee AFOLU gargaaruu</div>
+              <div class="mv2-obj-en">Contribute to Ethiopia's national climate commitments through AFOLU sector action</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- ══ 4. AFOLU FI CRGE ══ -->
+        <h2 class="mv2-section-title">🇪🇹 4. AFOLU fi Tarsiimoo CRGE Itoophiyaa</h2>
+
+        <div class="mv2-info-block">
+          <span class="mv2-lang-pill mv2-lang-en">🌍 English</span>
+          <h3 class="mv2-info-title" style="margin-top:0.6rem">AFOLU &amp; Ethiopia's Climate-Resilient Green Economy (CRGE)</h3>
+          <p class="mv2-info-body">
+            The Agriculture, Forestry, and Other Land Use (AFOLU) sector is the backbone of Ethiopia's
+            economy, providing livelihoods for over <strong>80% of the population</strong> and
+            contributing significantly to the national GDP. However, this sector also accounts for nearly
+            <strong>80% of total greenhouse gas emissions</strong> due to activities like livestock
+            production, traditional farming, and land-use changes.
+          </p>
+          <p class="mv2-info-body">
+            To address these challenges, Ethiopia has integrated AFOLU into its
+            <strong>Climate-Resilient Green Economy (CRGE)</strong> strategy, aiming to achieve
+            middle-income status through sustainable and carbon-neutral growth. Ethiopia's AFOLU strategy
+            focuses on four main pillars: improving crop and livestock production, protecting and
+            re-establishing forests as carbon sinks, and scaling up climate-smart interventions nationwide.
+          </p>
+          <p class="mv2-info-body">
+            Initiatives like the <strong>Green Legacy Initiative</strong> — which has led to the planting
+            of over 48 billion seedlings — demonstrate the country's commitment to restoring over
+            <strong>20 million hectares</strong> of degraded land. AFOLU Itoophiyaa supports this
+            national vision by providing the evidence base, technical capacity, and community engagement
+            needed for lasting change.
+          </p>
+        </div>
+
+        <div class="mv2-info-block" style="border-left-color:var(--forest)">
+          <span class="mv2-lang-pill mv2-lang-om">🇪🇹 Afaan Oromoo</span>
+          <h3 class="mv2-info-title" style="margin-top:0.6rem">AFOLU fi Tarsiimoo Dinagdee Magariisaa Itoophiyaa</h3>
+          <p class="mv2-info-body" style="font-style:normal;color:var(--ink);border:none;padding:0;font-weight:400">
+            Dameen Qonnya, Bosona, fi Ittifayyadama Lafaa Biroo (AFOLU) utubaa dinagdee Itoophiyaa yoo
+            ta'u, jireenya uummata biyyattii <strong>dhibbeentaa 80 ol</strong> ta'aniif madda galii
+            ta'uun gumaacha olaanaa guddina biyyaa (GDP) keessatti qaba. Ta'us, dameen kun sababa
+            gochaalee akka horsiisa loonii, qonna aadaa, fi jijjiirama itti fayyadama lafaatiin gaasii
+            ho'ina dabalan <strong>dhibbeentaa 80 gumaacha.</strong>
+          </p>
+          <p class="mv2-info-body" style="font-style:normal;color:var(--ink);border:none;padding:0;font-weight:400">
+            Rakkoo kana hiikuuf, Itoophiyaan AFOLU tarsiimoo <strong>Dinagdee Madaqama Qilleensaa fi
+            Magariisa (CRGE)</strong> keessatti qindaysuun, guddina kaarboonii hin maddisiisneen biyya
+            galii giddu-galeessaa qabdu ta'uuf karoorfattee hojjechaa jirti. Inisheetiivonni akka
+            <strong>Ashaaraa Magariisaa (Green Legacy)</strong>, kan biiliyoonaan muka dhaabuu
+            dandeessise, biyyattiin lafa manca'e hektaara miiliyoona 20 ol deebistee misoomsuuf
+            waadaa galte agarsiisa.
+          </p>
+        </div>
+
+        <!-- CRGE Table -->
+        <table class="mv2-crge-table">
+          <thead>
+            <tr>
+              <th>Tarsiimoo CRGE / CRGE Strategy</th>
+              <th>AFOLU Gahee / Role</th>
+              <th>Sagantaa / Program</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="rh">Oomishtummaa Qonnaa Guddisuu</td>
+              <td>Qorannoo sanyii fi teeknoloojii ammayyaa</td>
+              <td><span class="mv2-tag mv2-tag-e">🌾 Wabii Nyaataa</span></td>
+            </tr>
+            <tr>
+              <td class="rh">Bosona Haaromsu fi Tiksuu</td>
+              <td>Ashaaraa Magariisaa fi REDD+ deeggaruu</td>
+              <td><span class="mv2-tag mv2-tag-g">🌱 Green Legacy</span></td>
+            </tr>
+            <tr>
+              <td class="rh">Kaarboonii Hir'isuu</td>
+              <td>Forest carbon accounting fi MRV</td>
+              <td><span class="mv2-tag mv2-tag-s">🌳 REDD+</span></td>
+            </tr>
+            <tr>
+              <td class="rh">Qonna Jijjiirama Qilleensaatti Madaqe</td>
+              <td>CSA teeknoloojii fi leenjii</td>
+              <td><span class="mv2-tag mv2-tag-g">🌡 Dandamachuu</span></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- ══ 5. HIGHLIGHT QUOTE ══ -->
+        <div class="mv2-highlight">
+          "AFOLU Itoophiyaa ergamaa fi mul'ati isaa kallattii fi waamicha hojii ta'uun tajaajila —
+          amantii itti fufiinsa itti fayyadama lafaa bu'uura ta'uu isaa irratti ijaarame. AFOLU Ethiopia's
+          mission and vision serve as both a compass and a call to action — a living framework anchored
+          in the conviction that sustainable land use is essential to Ethiopia's ecological and
+          social future."
+        </div>
+
+        <!-- ══ CLOSING ══ -->
+        <div class="mv2-closing">
+          <div class="mv2-closing-inner">
+            <p class="mv2-closing-om">
+              "Lafa itti dhalanne, bishaanii itti dhugnee fi bosona itti guddanne eeguun dirqama
+              dhaloota har'aa fi boruuti."
+            </p>
+            <p class="mv2-closing-en">
+              "Protection of the land where we were born, the water we drank, and the forest
+              where we grew is the duty of today's and tomorrow's generations."
+            </p>
+            <div class="mv2-closing-tagline">
+              Aadaa fi Duudhaa Oromoo irraa — From Oromo Cultural Wisdom
+            </div>
+          </div>
+        </div>
+
+      </div><!-- view-body -->
+
+      <!-- NAV -->
+      <div class="view-nav">
+        <button class="view-nav-btn" data-view="About">← Waa'ee AFOLU</button>
+        <button class="view-nav-btn" data-view="Leadership">Gahee Hooggansaa →</button>
+        <button class="view-nav-btn" data-view="home">↑ Home</button>
       </div>
 
-      <!-- AFOLU & CRGE INFO SECTION -->
-      <div class="mv-info-section">
-        <div class="mv-info-lang-row">
-          <span class="mv-lang-pill mv-lang-en">&#127758; English</span>
-        </div>
-        <h3 class="mv-info-title">AFOLU &amp; Ethiopia&#x2019;s Climate-Resilient Green Economy</h3>
-        <p class="mv-info-body">The Agriculture, Forestry, and Other Land Use (AFOLU) sector is the backbone of Ethiopia&#x2019;s economy, providing livelihoods for over <strong>80% of the population</strong> and contributing significantly to the national GDP. However, this sector also accounts for nearly <strong>80% of total greenhouse gas emissions</strong> due to activities like livestock production, traditional farming, and land-use changes.</p>
-        <p class="mv-info-body">To address these challenges, Ethiopia has integrated AFOLU into its <strong>Climate-Resilient Green Economy (CRGE)</strong> strategy, aiming to achieve middle-income status through sustainable and carbon-neutral growth. Ethiopia&#x2019;s AFOLU strategy focuses on four main pillars: improving crop and livestock production, protecting and re-establishing forests as carbon sinks, and scaling up climate-smart interventions nationwide.</p>
-        <p class="mv-info-body">Initiatives like the <strong>Green Legacy Initiative</strong> &#8212; which has led to the planting of billions of trees &#8212; demonstrate the country&#x2019;s commitment to restoring over <strong>20 million hectares</strong> of degraded land. The government collaborates with partners including the Ethiopian Agricultural Transformation Institute (ATI) and global NGOs to modernize farming and secure food systems for future generations.</p>
+    </div><!-- view-content -->
+  </div><!-- view-body-wrap -->
 
-        <div class="mv-info-lang-row" style="margin-top:1.8rem">
-          <span class="mv-lang-pill mv-lang-om">&#127466;&#127481; Afaan Oromoo</span>
-        </div>
-        <h3 class="mv-info-title">AFOLU fi Tarsiimoo Dinagdee Magariisaa Itoophiyaa</h3>
-        <p class="mv-info-body-om">Dameen Qonnya, Bosona, fi Ittifayyadama Lafaa Biroo (AFOLU) utubaa dinagdee Itiyoophiyaa yoo ta&#x2019;u, jireenya uummata biyyattii <strong>dhibbeentaa 80 ol</strong> ta&#x2019;aniif madda galii ta&#x2019;uun gumaacha olaanaa guddina biyyaa (GDP) keessatti qaba. Ta&#x2019;us, dameen kun sababa gochaalee akka horsiisa loonii, qonna aadaa, fi jijjiirama itti fayyadama lafaatiin gaasii ho&#x2019;ina dabalan <strong>dhibbeentaa 80 gumaacha.</strong></p>
-        <p class="mv-info-body-om">Rakkoo kana hiikuuf, Itiyoophiyaan AFOLU tarsiimoo <strong>Dinagdee Madaqama Qilleensaa fi Magariisa (CRGE)</strong> keessatti qindaysuun, hanga bara 2025tti guddina kaarboonii hin maddisiisneen biyya galii giddu-galeessaa qabdu ta&#x2019;uuf karoorfattee hojjechaa jirti. Inisheetiivonni akka <strong>Madda Magariisaa (Green Legacy)</strong>, kan biiliyoonaan muka dhaabuu dandeessise, biyyattiin lafa manca&#x2019;e hektaara miiliyoona 20 ol deebistee misoomsuuf waadaa galte agarsiisa.</p>
-      </div>
-
-      <!-- STRATEGIC OBJECTIVES -->
-      <div class="mv-objectives-wrap">
-        <div class="mv-objectives-header">
-          <div class="mv-objectives-eyebrow">Xiyyeeffannoolee Tarsiimoo &#8212; Strategic Objectives</div>
-        </div>
-        <div class="mv-objectives-grid">
-
-          <div class="mv-objective-card">
-            <div class="mv-obj-num">01</div>
-            <div class="mv-obj-icon">&#128200;</div>
-            <div class="mv-obj-text">
-              <div class="mv-obj-om">Imaammataa bulchiinsa lafaa itti fufiinsa qabu ragaa irratti hundaa&#x2019;e Itoophiyaa guutuu cimsuu</div>
-              <div class="mv-obj-en">Advance evidence-based sustainable land management policy across Ethiopia</div>
-            </div>
-          </div>
-
-          <div class="mv-objective-card">
-            <div class="mv-obj-num">02</div>
-            <div class="mv-obj-icon">&#127807;</div>
-            <div class="mv-obj-text">
-              <div class="mv-obj-om">Naannoolee manca&#x2019;an deebisuu fi hawaasa waliin hojjechuun ekoosistema haaromsu</div>
-              <div class="mv-obj-en">Restore degraded landscapes through community-driven ecosystem rehabilitation</div>
-            </div>
-          </div>
-
-          <div class="mv-objective-card">
-            <div class="mv-obj-num">03</div>
-            <div class="mv-obj-icon">&#127777;</div>
-            <div class="mv-obj-text">
-              <div class="mv-obj-om">Hawaasota qonnaa fi bosona irratti hirkatan keessatti dandeettii damdamannaa qilleensaa ijaaruu</div>
-              <div class="mv-obj-en">Build climate resilience in vulnerable agricultural and forest-dependent communities</div>
-            </div>
-          </div>
-
-          <div class="mv-objective-card">
-            <div class="mv-obj-num">04</div>
-            <div class="mv-obj-icon">&#129419;</div>
-            <div class="mv-obj-text">
-              <div class="mv-obj-om">Kunuunsa biodiversitii gosa ekoosistemaa dursa kennamu hunda keessatti cimsu</div>
-              <div class="mv-obj-en">Strengthen biodiversity conservation across priority ecosystem types</div>
-            </div>
-          </div>
-
-          <div class="mv-objective-card">
-            <div class="mv-obj-num">05</div>
-            <div class="mv-obj-icon">&#127960;</div>
-            <div class="mv-obj-text">
-              <div class="mv-obj-om">Jireenya baadiyaa ol&#x2019;aanaa value chain AFOLU walitti hidhamaa ta&#x2019;een fooyyessuu</div>
-              <div class="mv-obj-en">Improve rural livelihoods through integrated AFOLU value chain development</div>
-            </div>
-          </div>
-
-          <div class="mv-objective-card">
-            <div class="mv-obj-num">06</div>
-            <div class="mv-obj-icon">&#127758;</div>
-            <div class="mv-obj-text">
-              <div class="mv-obj-om">Waadaalee qilleensaa biyyaalessaa Itoophiyaa gara hojiitti jijjiiruuf kutaalee AFOLU gargaaruu</div>
-              <div class="mv-obj-en">Contribute to Ethiopia&#x2019;s national climate commitments through AFOLU sector action</div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- CLOSING HIGHLIGHT -->
-      <div class="mv-closing">
-        <div class="mv-closing-quote-mark">&#8220;</div>
-        <p class="mv-closing-om">AFOLU Itoophiyaa ergamaa fi mul&#x2019;ati isaa kallattii fi waamicha hojii ta&#x2019;uun tajaajila &#8212; amantii itti fufiinsa itti fayyadama lafaa bu&#x2019;uura ta&#x2019;uu isaa irratti ijaarame.</p>
-        <p class="mv-closing-en">AFOLU Ethiopia&#x2019;s mission and vision serve as both a compass and a call to action &#8212; a living framework anchored in the conviction that sustainable land use is essential to Ethiopia&#x2019;s ecological and social future.</p>
-      </div>
-
-    </div>
-    <div class="view-nav">
-      <button class="view-nav-btn" data-view="About">&#8592; Waa&#x2019;ee AFOLU</button>
-      <button class="view-nav-btn" data-view="Leadership">Hoggansi &#8594;</button>
-    </div>
-  </div></div>
-</div>
+</div><!-- end view-Mission -->
 <!-- ================================================================
      BLOCK 1 — LEADERSHIP VIEW
      id="view-Leadership"
